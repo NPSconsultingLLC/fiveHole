@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class">
+        <attribute name="gameDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="goalsAgainst" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="goalsFor" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isWin" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="opponent" optional="YES" attributeType="String"/>
+        <attribute name="saves" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="season" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalShots" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="toGoalie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goalie" inverseName="toGame" inverseEntity="Goalie"/>
+    </entity>
+    <entity name="Goalie" representedClassName="Goalie" syncable="YES" codeGenerationType="class">
+        <attribute name="fName" optional="YES" attributeType="String"/>
+        <attribute name="lName" optional="YES" attributeType="String"/>
+        <attribute name="selectedGoalie" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="tName" optional="YES" attributeType="String"/>
+        <relationship name="toGame" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="toGoalie" inverseEntity="Game"/>
+    </entity>
+    <elements>
+        <element name="Game" positionX="-297.77734375" positionY="-41.39453125" width="128" height="178"/>
+        <element name="Goalie" positionX="-625.265625" positionY="18.50390625" width="128" height="118"/>
+    </elements>
+</model>
