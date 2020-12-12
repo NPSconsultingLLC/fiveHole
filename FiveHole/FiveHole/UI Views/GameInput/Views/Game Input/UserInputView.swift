@@ -21,102 +21,106 @@ struct UserInputView: View {
     ) var goalies: FetchedResults<Goalie>
     
     var body: some View {
-        VStack {
-            Button("Add Goalie"){
-                self.showAddGoalieView.toggle()
-            }.frame(height: 40)
-            HStack{
-                Text("Saves")
-                Spacer()
-                Text("Save %")
-                Spacer()
-                Text("Goals")
-            }
-            HStack{
-                ZStack{
-                    Rectangle()
-                        .fill(Color.red)
-                        .frame(width: 50, height: 50)
-                    Text(String(format:"%.0f", savesVar))
+        ZStack {
+            LinearGradient(Color.NPSBackgroundGradientStart)
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                Button("Add Goalie"){
+                    self.showAddGoalieView.toggle()
+                }.frame(height: 40)
+                HStack{
+                    Text("Saves")
+                    Spacer()
+                    Text("Save %")
+                    Spacer()
+                    Text("Goals")
                 }
-                Spacer()
-                ZStack{
-                    Rectangle()
-                        .fill(Color.red)
-                        .frame(width: 50, height: 50)
-                    Text(String(format:"%.0f", savePercentVar))
-                        + Text("%")
-                }
-                Spacer()
-                ZStack{
-                    Rectangle()
-                        .fill(Color.red)
-                        .frame(width: 50, height: 50)
-                    Text(String(format:"%.0f", goalsVar))
-                }
-            }
-            Divider().background(Color.white)
-            HStack{
-                Button(action: {
-                    savesVar += 1
-                    calculateSavePercent()
-                }){
-                    Text("Save")
-                }.buttonStyle(ColorfulButtonStyle())
-                .offset(x:-12)
-                Spacer()
-                VStack{
-                    ZStack {
+                HStack{
+                    ZStack{
                         Rectangle()
                             .fill(Color.red)
                             .frame(width: 50, height: 50)
-                        Text(String(format: "%.0f", totalShotsVar))
+                        Text(String(format:"%.0f", savesVar))
                     }
-                    Text("Total Shots")
+                    Spacer()
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.red)
+                            .frame(width: 50, height: 50)
+                        Text(String(format:"%.0f", savePercentVar))
+                            + Text("%")
+                    }
+                    Spacer()
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.red)
+                            .frame(width: 50, height: 50)
+                        Text(String(format:"%.0f", goalsVar))
+                    }
                 }
-                Spacer()
-                Button(action: {
-                    goalsVar += 1
-                    calculateSavePercent()
-                }){
-                    Text("Goal")
-                }.buttonStyle(ColorfulButtonStyle())
-                .offset(x:12)
+                Divider().background(Color.white)
+                HStack{
+                    Button(action: {
+                        savesVar += 1
+                        calculateSavePercent()
+                    }){
+                        Text("Save")
+                    }.buttonStyle(ColorfulButtonStyle())
+                    .offset(x:-12)
+                    Spacer()
+                    VStack{
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.red)
+                                .frame(width: 50, height: 50)
+                            Text(String(format: "%.0f", totalShotsVar))
+                        }
+                        Text("Total Shots")
+                    }
+                    Spacer()
+                    Button(action: {
+                        goalsVar += 1
+                        calculateSavePercent()
+                    }){
+                        Text("Goal")
+                    }.buttonStyle(ColorfulButtonStyle())
+                    .offset(x:12)
+                }
+                Divider().background(Color.white)
+                HStack{
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.blue)
+                            .frame(width: 50, height: 50)
+                        Text("-")
+                    }.gesture(
+                        TapGesture()
+                            .onEnded{
+                                if savesVar > 0 {
+                                    savesVar -= 1
+                                    calculateSavePercent()
+                                }
+                            })
+                    Spacer()
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.blue)
+                            .frame(width: 50, height: 50)
+                        Text("-")
+                    }.gesture(
+                        TapGesture()
+                            .onEnded{
+                                if goalsVar > 0 {
+                                    goalsVar -= 1
+                                    calculateSavePercent()
+                                }
+                            })
+                }
             }
-            Divider().background(Color.white)
-            HStack{
-                ZStack{
-                    Rectangle()
-                        .fill(Color.blue)
-                        .frame(width: 50, height: 50)
-                    Text("-")
-                }.gesture(
-                    TapGesture()
-                        .onEnded{
-                            if savesVar > 0 {
-                                savesVar -= 1
-                                calculateSavePercent()
-                            }
-                        })
-                Spacer()
-                ZStack{
-                    Rectangle()
-                        .fill(Color.blue)
-                        .frame(width: 50, height: 50)
-                    Text("-")
-                }.gesture(
-                    TapGesture()
-                        .onEnded{
-                            if goalsVar > 0 {
-                                goalsVar -= 1
-                                calculateSavePercent()
-                            }
-                        })
+            
+            .sheet(isPresented: $showAddGoalieView) {
+                AddGoalieView(showAddGoalieView: $showAddGoalieView)
             }
-        }
-        
-        .sheet(isPresented: $showAddGoalieView) {
-            AddGoalieView(showAddGoalieView: $showAddGoalieView)
         }
     }
     

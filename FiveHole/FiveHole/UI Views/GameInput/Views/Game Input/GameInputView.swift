@@ -13,17 +13,21 @@ struct GameInputView: View {
     var body: some View {
         ZStack {
             NavigationView{
-                VStack{
-                    // GADBannerViewController()
-                    UserInputView()
-                    Spacer()
-                }.blur(radius: showSaveGameView ? 30 : 0)
-                .padding()
-                .navigationBarItems(trailing:
-                                        Button("Save") {
-                                            self.showSaveGameView.toggle()
-                                        })
-                
+                ZStack {
+                    LinearGradient(Color.NPSBackgroundGradientStart)
+                        .edgesIgnoringSafeArea(.all)
+                    VStack{
+                        // GADBannerViewController()
+                        UserInputView()
+                        Spacer()
+                    }.blur(radius: showSaveGameView ? 30 : 0)
+                    .padding()
+                    .navigationBarItems(trailing:
+                                            Button("Save") {
+                                                self.showSaveGameView.toggle()
+                                            })
+                    
+                }
             }
             
             if showSaveGameView {

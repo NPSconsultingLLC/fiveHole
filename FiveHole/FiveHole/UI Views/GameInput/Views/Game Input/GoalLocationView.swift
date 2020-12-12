@@ -22,84 +22,88 @@ struct GoalLocationView: View {
     //Track the selected goal location
     //@Binding var selectedItem: SmartView
     var body: some View {
-        VStack {
-            HStack {
-                VStack {
-                    Toggle(isOn: $isToggled) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.white)
+        ZStack {
+            LinearGradient(Color.NPSBackgroundGradientStart)
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                HStack {
+                    VStack {
+                        Toggle(isOn: $isToggled) {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.white)
+                        }
+                        .toggleStyle(ColorfulToggleStyle())
+                        
+                        Text("Button Label")
+                            .foregroundColor(Color("NPSTextColor"))
                     }
-                    .toggleStyle(ColorfulToggleStyle())
-                    
-                    Text("Button Label")
-                        .foregroundColor(Color("NPSTextColor"))
+                    Spacer()
+                    VStack {
+                        Toggle(isOn: $isToggled) {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.white)
+                        }
+                        .toggleStyle(ColorfulToggleStyle())
+                        Text("Button Label")
+                            .foregroundColor(Color("NPSTextColor"))
+                    }
                 }
                 Spacer()
-                VStack {
-                    Toggle(isOn: $isToggled) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.white)
+                HStack {
+                    VStack {
+                        Toggle(isOn: $isToggled) {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.white)
+                        }
+                        .toggleStyle(ColorfulToggleStyle())
+                        Text("Button Label")
+                            .foregroundColor(Color("NPSTextColor"))
                     }
-                    .toggleStyle(ColorfulToggleStyle())
-                    Text("Button Label")
-                        .foregroundColor(Color("NPSTextColor"))
-                }
-            }
-            Spacer()
-            HStack {
-                VStack {
-                    Toggle(isOn: $isToggled) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.white)
+                    Spacer()
+                    VStack {
+                        Toggle(isOn: $isToggled) {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.white)
+                        }
+                        .toggleStyle(ColorfulToggleStyle())
+                        Text("Button Label")
+                            .foregroundColor(Color("NPSTextColor"))
                     }
-                    .toggleStyle(ColorfulToggleStyle())
-                    Text("Button Label")
-                        .foregroundColor(Color("NPSTextColor"))
-                }
-                Spacer()
-                VStack {
-                    Toggle(isOn: $isToggled) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.white)
-                    }
-                    .toggleStyle(ColorfulToggleStyle())
-                    Text("Button Label")
-                        .foregroundColor(Color("NPSTextColor"))
-                }
-            }
-            Spacer()
-            HStack {
-                VStack {
-                    Toggle(isOn: $isToggled) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.white)
-                    }
-                    .toggleStyle(ColorfulToggleStyle())
-                    Text("Button Label")
-                        .foregroundColor(Color("NPSTextColor"))
                 }
                 Spacer()
-                VStack {
-                    Toggle(isOn: $isToggled) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.white)
+                HStack {
+                    VStack {
+                        Toggle(isOn: $isToggled) {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.white)
+                        }
+                        .toggleStyle(ColorfulToggleStyle())
+                        Text("Button Label")
+                            .foregroundColor(Color("NPSTextColor"))
                     }
-                    .toggleStyle(ColorfulToggleStyle())
-                    Text("Button Label")
-                        .foregroundColor(Color("NPSTextColor"))
-                }
-                Spacer()
-                VStack {
-                    Toggle(isOn: $isToggled) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.white)
+                    Spacer()
+                    VStack {
+                        Toggle(isOn: $isToggled) {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.white)
+                        }
+                        .toggleStyle(ColorfulToggleStyle())
+                        Text("Button Label")
+                            .foregroundColor(Color("NPSTextColor"))
                     }
-                    .toggleStyle(ColorfulToggleStyle())
-                    Text("Button Label")
-                        .foregroundColor(Color("NPSTextColor"))
+                    Spacer()
+                    VStack {
+                        Toggle(isOn: $isToggled) {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.white)
+                        }
+                        .toggleStyle(ColorfulToggleStyle())
+                        Text("Button Label")
+                            .foregroundColor(Color("NPSTextColor"))
+                    }
                 }
-            }
-        }.padding()
+            }.padding()
+        }
     }
 }
 

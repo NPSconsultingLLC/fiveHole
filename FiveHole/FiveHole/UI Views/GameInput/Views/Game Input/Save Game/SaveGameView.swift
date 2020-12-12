@@ -25,6 +25,8 @@ struct SaveGameView: View {
     
     var body: some View {
         ZStack {
+            LinearGradient(Color.NPSBackgroundGradientStart)
+                .edgesIgnoringSafeArea(.all)
             Rectangle()
                 .fill(LinearGradient(
                     gradient: .init(colors: [Color.NPSBackgroundGradientStart, Color.NPSBackgroundGradientEnd]),

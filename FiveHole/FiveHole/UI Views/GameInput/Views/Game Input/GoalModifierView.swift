@@ -14,27 +14,31 @@ struct GoalModifierView: View {
     @State private var overTimeGoal = false
     
     var body: some View {
-        HStack{
-            VStack{
-                Toggle(isOn: $redirected){
+        ZStack {
+            LinearGradient(Color.NPSBackgroundGradientStart)
+                .edgesIgnoringSafeArea(.all)
+            HStack{
+                VStack{
+                    Toggle(isOn: $redirected){
+                    }
+                    .labelsHidden()
+                    Text("Redirected")
                 }
-                .labelsHidden()
-                Text("Redirected")
-            }
-            Spacer()
-            VStack(alignment: .leading){
-                Toggle(isOn: $penaltyShot){
-                    
+                Spacer()
+                VStack(alignment: .leading){
+                    Toggle(isOn: $penaltyShot){
+                        
+                    }
+                    .labelsHidden()
+                    Text("Penalty Shot")
                 }
-                .labelsHidden()
-                Text("Penalty Shot")
-            }
-            Spacer()
-            VStack(alignment: .leading){
-                Toggle(isOn: $overTimeGoal){
+                Spacer()
+                VStack(alignment: .leading){
+                    Toggle(isOn: $overTimeGoal){
+                    }
+                    .labelsHidden()
+                    Text("Overtime Shot")
                 }
-                .labelsHidden()
-                Text("Overtime Shot")
             }
         }
     }
