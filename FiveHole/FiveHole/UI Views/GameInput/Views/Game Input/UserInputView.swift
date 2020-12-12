@@ -55,7 +55,7 @@ struct UserInputView: View {
                     Text(String(format:"%.0f", goalsVar))
                 }
             }
-            Divider()
+            Divider().background(Color.white)
             HStack{
                 Button(action: {
                     savesVar += 1
@@ -83,7 +83,7 @@ struct UserInputView: View {
                 }.buttonStyle(ColorfulButtonStyle())
                 .offset(x:12)
             }
-            Divider()
+            Divider().background(Color.white)
             HStack{
                 ZStack{
                     Rectangle()
@@ -133,6 +133,6 @@ struct UserInputView: View {
 
 struct UserInputView_Previews: PreviewProvider {
     static var previews: some View {
-        UserInputView()
+        UserInputView().colorScheme(.dark)
     }
 }

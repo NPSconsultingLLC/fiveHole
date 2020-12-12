@@ -6,29 +6,6 @@ extension LinearGradient {
     }
 }
 
-struct DarkBackground<S: Shape>: View {
-    var isHighlighted: Bool
-    var shape: S
-
-    var body: some View {
-        ZStack {
-            if isHighlighted {
-                shape
-                    .fill(LinearGradient(Color.darkEnd, Color.darkStart))
-                    .overlay(shape.stroke(LinearGradient(Color.darkStart, Color.darkEnd), lineWidth: 4))
-                    .shadow(color: Color.darkStart, radius: 10, x: 5, y: 5)
-                    .shadow(color: Color.darkEnd, radius: 10, x: -5, y: -5)
-            } else {
-                shape
-                    .fill(LinearGradient(Color.darkStart, Color.darkEnd))
-                    .overlay(shape.stroke(Color.darkEnd, lineWidth: 4))
-                    .shadow(color: Color.darkStart, radius: 10, x: -10, y: -10)
-                    .shadow(color: Color.darkEnd, radius: 10, x: 10, y: 10)
-            }
-        }
-    }
-}
-
 struct ColorfulBackground<S: Shape>: View {
     var isHighlighted: Bool
     var shape: S
@@ -37,45 +14,18 @@ struct ColorfulBackground<S: Shape>: View {
         ZStack {
             if isHighlighted {
                 shape
-                    .fill(LinearGradient(Color.NPSAlternateButtonColorEnd, Color.NPSButtonEnd))
-                    .overlay(shape.stroke(LinearGradient(Color.NPSAlternateButtonColorStart, Color.lightEnd), lineWidth: 4))
-                    .shadow(color: Color.darkStart, radius: 10, x: 5, y: 5)
-                    .shadow(color: Color.darkEnd, radius: 10, x: -5, y: -5)
+                    .fill(LinearGradient(Color.NPSButtonStart, Color.NPSButtonEnd))
+                    .overlay(shape.stroke(LinearGradient(Color.NPSButtonStart, Color.NPSButtonEnd), lineWidth: 4))
+                    .shadow(color: Color.NPSDarkStart, radius: 10, x: 5, y: 5)
+                    .shadow(color: Color.NPSDarkEnd, radius: 10, x: -5, y: -5)
             } else {
                 shape
-                    .fill(LinearGradient(Color.NPSButtonEnd, Color.NPSButtonStart))
-                    .overlay(shape.stroke(LinearGradient(Color.NPSAlternateButtonColorStart, Color.lightEnd), lineWidth: 4))
-                    .shadow(color: Color.darkStart, radius: 10, x: -10, y: -10)
-                    .shadow(color: Color.darkEnd, radius: 10, x: 10, y: 10)
+                    .fill(LinearGradient(Color.NPSDarkStart, Color.NPSDarkEnd))
+                    .overlay(shape.stroke(LinearGradient(Color.NPSButtonStart, Color.NPSButtonEnd), lineWidth: 4))
+                    .shadow(color: Color.NPSDarkStart, radius: 10, x: -10, y: -10)
+                    .shadow(color: Color.NPSDarkEnd, radius: 10, x: 10, y: 10)
             }
         }
-    }
-}
-
-struct DarkButtonStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .padding(30)
-            .contentShape(Circle())
-            .background(
-                DarkBackground(isHighlighted: configuration.isPressed, shape: Circle())
-            )
-            .animation(nil)
-    }
-}
-
-struct DarkToggleStyle: ToggleStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        Button(action: {
-            configuration.isOn.toggle()
-        }) {
-            configuration.label
-                .padding(30)
-                .contentShape(Circle())
-        }
-        .background(
-            DarkBackground(isHighlighted: configuration.isOn, shape: Circle())
-        )
     }
 }
 
@@ -111,20 +61,20 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            LinearGradient(Color.darkStart, Color.darkEnd)
+            LinearGradient(Color.NPSBackgroundGradientStart, Color.NPSBackgroundGradientEnd)
 
             VStack(spacing: 40) {
                 Button(action: {
                     print("Button tapped")
                 }) {
                     Image(systemName: "heart.fill")
-                        .foregroundColor(.white)
+                        .foregroundColor(.NPSAlternateButtonColorStart)
                 }
                 .buttonStyle(ColorfulButtonStyle())
 
                 Toggle(isOn: $isToggled) {
                     Image(systemName: "heart.fill")
-                        .foregroundColor(.white)
+                        .foregroundColor(.NPSAlternateButtonColorStart)
                 }
                 .toggleStyle(ColorfulToggleStyle())
             }
@@ -135,7 +85,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().colorScheme(.light)
     }
 }
 

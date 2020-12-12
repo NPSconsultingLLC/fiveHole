@@ -61,7 +61,7 @@ struct SaveGameView_Previews: PreviewProvider {
             Color.black
                 .ignoresSafeArea()
             Group {
-                SaveGameView(showSaveGameView: .constant(true), passedGoalsAgainst: 3, passedTotalShots: 32).colorScheme(.dark)
+                SaveGameView(showSaveGameView: .constant(true), passedGoalsAgainst: 3, passedTotalShots: 32).colorScheme(.light)
             }
         }
     }
