@@ -24,7 +24,6 @@ extension Color {
     static let lightEnd                             = Color("NPSLightEnd")
 }
 
-
 extension Color {
     init(hex: String) {
         let scanner = Scanner(string: hex)

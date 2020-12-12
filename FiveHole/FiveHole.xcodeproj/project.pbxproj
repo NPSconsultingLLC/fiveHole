@@ -210,7 +210,6 @@
 		977797E9256EF8F9004BEBF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				97A31155257FD39100D54B19 /* AlertView */,
 				9748C304257DEB78005D3EE2 /* AdMob */,
 				9778F4B9257D7D8E00C276C4 /* Settings */,
 				9778F4B5257D7BCA00C276C4 /* Tab Container */,
@@ -259,13 +258,6 @@
 				978722662583E81100390367 /* circleButton.swift */,
 			);
 			path = Buttons;
-			sourceTree = "<group>";
-		};
-		97A31155257FD39100D54B19 /* AlertView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AlertView;
 			sourceTree = "<group>";
 		};
 		97ABDFB6257D5B2A008686C3 /* Game Input */ = {

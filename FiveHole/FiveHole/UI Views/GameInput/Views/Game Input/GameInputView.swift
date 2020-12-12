@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct GameInputView: View {
     @State var showSaveGameView = false
     
@@ -44,16 +42,16 @@ struct BlueButtonStyle: ButtonStyle {
         configuration.label
             .frame(width: 75, height: 75)
             .foregroundColor(Color.black)
-            .background(Color.blue)
             .clipShape(Circle())
+            .background(Color.blue)
     }
 }
 
 //MARK: Previewer
-//struct GameInputView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Group {
-//            GameInputView(saveGameView: SaveGameView)
-//        }
-//    }
-//}
+struct GameInputView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            GameInputView()
+        }
+    }
+}

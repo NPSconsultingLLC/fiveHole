@@ -55,13 +55,14 @@ struct UserInputView: View {
                     Text(String(format:"%.0f", goalsVar))
                 }
             }
+            Divider()
             HStack{
                 Button(action: {
                     savesVar += 1
                     calculateSavePercent()
                 }){
                     Text("Save")
-                }.buttonStyle(BlueButtonStyle())
+                }.buttonStyle(ColorfulButtonStyle())
                 .offset(x:-12)
                 Spacer()
                 VStack{
@@ -79,9 +80,10 @@ struct UserInputView: View {
                     calculateSavePercent()
                 }){
                     Text("Goal")
-                }.buttonStyle(BlueButtonStyle())
+                }.buttonStyle(ColorfulButtonStyle())
                 .offset(x:12)
             }
+            Divider()
             HStack{
                 ZStack{
                     Rectangle()
@@ -112,6 +114,7 @@ struct UserInputView: View {
                         })
             }
         }
+        
         .sheet(isPresented: $showAddGoalieView) {
             AddGoalieView(showAddGoalieView: $showAddGoalieView)
         }
