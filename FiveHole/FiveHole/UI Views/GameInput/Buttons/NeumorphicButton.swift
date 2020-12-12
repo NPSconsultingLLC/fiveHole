@@ -41,6 +41,18 @@ struct ColorfulButtonStyle: ButtonStyle {
     }
 }
 
+struct ColorfulSquareButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding(30)
+            .contentShape(Rectangle())
+            .background(
+                ColorfulBackground(isHighlighted: configuration.isPressed, shape: Rectangle())
+            )
+            .animation(nil)
+    }
+}
+
 struct ColorfulToggleStyle: ToggleStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         Button(action: {
@@ -55,6 +67,7 @@ struct ColorfulToggleStyle: ToggleStyle {
         )
     }
 }
+
 
 struct ContentView: View {
     @State private var isToggled = false

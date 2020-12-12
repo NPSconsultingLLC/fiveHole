@@ -24,47 +24,54 @@ struct UserInputView: View {
         ZStack {
             LinearGradient(Color.NPSBackgroundGradientStart)
                 .edgesIgnoringSafeArea(.all)
-            VStack {
+            VStack(spacing:10) {
                 Button("Add Goalie"){
                     self.showAddGoalieView.toggle()
                 }.frame(height: 40)
                 HStack{
                     Text("Saves")
+                        .foregroundColor(.NPSTextColor)
                     Spacer()
                     Text("Save %")
+                        .foregroundColor(.NPSTextColor)
                     Spacer()
                     Text("Goals")
+                        .foregroundColor(.NPSTextColor)
                 }
                 HStack{
                     ZStack{
                         Rectangle()
-                            .fill(Color.red)
+                            .fill(Color.clear)
                             .frame(width: 50, height: 50)
                         Text(String(format:"%.0f", savesVar))
+                            .foregroundColor(.NPSTextColor)
                     }
                     Spacer()
                     ZStack{
                         Rectangle()
-                            .fill(Color.red)
+                            .fill(Color.clear)
                             .frame(width: 50, height: 50)
                         Text(String(format:"%.0f", savePercentVar))
+                            .foregroundColor(.NPSTextColor)
                             + Text("%")
+                            .foregroundColor(.NPSTextColor)
                     }
                     Spacer()
                     ZStack{
                         Rectangle()
-                            .fill(Color.red)
+                            .fill(Color.clear)
                             .frame(width: 50, height: 50)
                         Text(String(format:"%.0f", goalsVar))
+                            .foregroundColor(.NPSTextColor)
                     }
                 }
-                Divider().background(Color.white)
                 HStack{
                     Button(action: {
                         savesVar += 1
                         calculateSavePercent()
                     }){
                         Text("Save")
+                            .foregroundColor(.NPSTextColor)
                     }.buttonStyle(ColorfulButtonStyle())
                     .offset(x:-12)
                     Spacer()
@@ -76,6 +83,7 @@ struct UserInputView: View {
                             Text(String(format: "%.0f", totalShotsVar))
                         }
                         Text("Total Shots")
+                            .foregroundColor(.NPSTextColor)
                     }
                     Spacer()
                     Button(action: {
@@ -83,10 +91,10 @@ struct UserInputView: View {
                         calculateSavePercent()
                     }){
                         Text("Goal")
+                            .foregroundColor(.NPSTextColor)
                     }.buttonStyle(ColorfulButtonStyle())
                     .offset(x:12)
                 }
-                Divider().background(Color.white)
                 HStack{
                     ZStack{
                         Rectangle()

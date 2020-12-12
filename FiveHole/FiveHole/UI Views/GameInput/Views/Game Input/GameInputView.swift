@@ -41,21 +41,11 @@ struct GameInputView: View {
     }
 }
 
-struct BlueButtonStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .frame(width: 75, height: 75)
-            .foregroundColor(Color.black)
-            .clipShape(Circle())
-            .background(Color.blue)
-    }
-}
-
 //MARK: Previewer
 struct GameInputView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            GameInputView()
+            GameInputView().colorScheme(.dark)
         }
     }
 }
