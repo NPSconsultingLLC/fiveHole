@@ -322,6 +322,8 @@
 			dependencies = (
 			);
 			name = FiveHole;
+			packageProductDependencies = (
+			);
 			productName = FiveHole;
 			productReference = 97742EAA256EA9260074EF6F /* FiveHole.app */;
 			productType = "com.apple.product-type.application";
@@ -393,6 +395,8 @@
 				Base,
 			);
 			mainGroup = 97742EA1256EA9260074EF6F;
+			packageReferences = (
+			);
 			productRefGroup = 97742EAB256EA9260074EF6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

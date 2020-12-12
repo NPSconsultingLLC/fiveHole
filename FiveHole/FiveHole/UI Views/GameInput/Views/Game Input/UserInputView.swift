@@ -69,6 +69,8 @@ struct UserInputView: View {
                     Button(action: {
                         savesVar += 1
                         calculateSavePercent()
+                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                        impactMed.impactOccurred()
                     }){
                         Text("Save")
                             .foregroundColor(.NPSTextColor)
@@ -78,9 +80,10 @@ struct UserInputView: View {
                     VStack{
                         ZStack {
                             Rectangle()
-                                .fill(Color.red)
+                                .fill(Color.clear)
                                 .frame(width: 50, height: 50)
                             Text(String(format: "%.0f", totalShotsVar))
+                                .foregroundColor(.NPSTextColor)
                         }
                         Text("Total Shots")
                             .foregroundColor(.NPSTextColor)
@@ -89,9 +92,12 @@ struct UserInputView: View {
                     Button(action: {
                         goalsVar += 1
                         calculateSavePercent()
+                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                        impactMed.impactOccurred()
                     }){
                         Text("Goal")
                             .foregroundColor(.NPSTextColor)
+                        
                     }.buttonStyle(ColorfulButtonStyle())
                     .offset(x:12)
                 }
@@ -104,6 +110,8 @@ struct UserInputView: View {
                     }.gesture(
                         TapGesture()
                             .onEnded{
+                                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                                impactMed.impactOccurred()
                                 if savesVar > 0 {
                                     savesVar -= 1
                                     calculateSavePercent()
@@ -118,6 +126,8 @@ struct UserInputView: View {
                     }.gesture(
                         TapGesture()
                             .onEnded{
+                                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                                impactMed.impactOccurred()
                                 if goalsVar > 0 {
                                     goalsVar -= 1
                                     calculateSavePercent()
