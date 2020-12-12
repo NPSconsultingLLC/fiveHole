@@ -124,6 +124,7 @@ struct UserInputView: View {
                                 }
                             })
                 }
+                Spacer()
             }
             
             .sheet(isPresented: $showAddGoalieView) {
