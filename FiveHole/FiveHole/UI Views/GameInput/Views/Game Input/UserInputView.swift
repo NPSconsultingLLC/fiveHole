@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserInputView: View {
     @State var showAddGoalieView = false
+    @State var showSaveGameView = false
     @State var savesVar = 0.0
     @State var goalsVar = 0.0
     @State var savePercentVar = 100.0
@@ -92,6 +93,7 @@ struct UserInputView: View {
                     Button(action: {
                         goalsVar += 1
                         calculateSavePercent()
+                        self.showSaveGameView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){

@@ -18,9 +18,15 @@ enum GoalLocation {
 }
 
 struct GoalLocationView: View {
-    @State private var isToggled = false
-    //Track the selected goal location
-    //@Binding var selectedItem: SmartView
+    @State private var isToggled           = false
+    @State private var topLeftIsOn         = false
+    @State private var topRightIsOn        = false
+    @State private var middleLeftIsOn      = false
+    @State private var middleRightIsOn     = false
+    @State private var bottomLeftIsOn      = false
+    @State private var bottomMiddleIsOn    = false
+    @State private var bottomRightIsOn     = false
+    
     var body: some View {
         ZStack {
             LinearGradient(Color.NPSBackgroundGradientStart)
@@ -28,77 +34,76 @@ struct GoalLocationView: View {
             VStack {
                 HStack {
                     VStack {
-                        Toggle(isOn: $isToggled) {
+                        Toggle(isOn: $topLeftIsOn) {
                             Image(systemName: "heart.fill")
                                 .foregroundColor(.white)
                         }
                         .toggleStyle(ColorfulToggleStyle())
-                        
-                        Text("Button Label")
+                        Text("Top Left")
                             .foregroundColor(Color("NPSTextColor"))
                     }
                     Spacer()
                     VStack {
-                        Toggle(isOn: $isToggled) {
+                        Toggle(isOn: $topRightIsOn) {
                             Image(systemName: "heart.fill")
                                 .foregroundColor(.white)
                         }
                         .toggleStyle(ColorfulToggleStyle())
-                        Text("Button Label")
+                        Text("Top Right")
                             .foregroundColor(Color("NPSTextColor"))
                     }
                 }
                 Spacer()
                 HStack {
                     VStack {
-                        Toggle(isOn: $isToggled) {
+                        Toggle(isOn: $middleLeftIsOn) {
                             Image(systemName: "heart.fill")
                                 .foregroundColor(.white)
                         }
                         .toggleStyle(ColorfulToggleStyle())
-                        Text("Button Label")
+                        Text("Middle Left")
                             .foregroundColor(Color("NPSTextColor"))
                     }
                     Spacer()
                     VStack {
-                        Toggle(isOn: $isToggled) {
+                        Toggle(isOn: $middleRightIsOn) {
                             Image(systemName: "heart.fill")
                                 .foregroundColor(.white)
                         }
                         .toggleStyle(ColorfulToggleStyle())
-                        Text("Button Label")
+                        Text("Middle Right")
                             .foregroundColor(Color("NPSTextColor"))
                     }
                 }
                 Spacer()
                 HStack {
                     VStack {
-                        Toggle(isOn: $isToggled) {
+                        Toggle(isOn: $bottomLeftIsOn) {
                             Image(systemName: "heart.fill")
                                 .foregroundColor(.white)
                         }
                         .toggleStyle(ColorfulToggleStyle())
-                        Text("Button Label")
+                        Text("Bottom Left")
                             .foregroundColor(Color("NPSTextColor"))
                     }
                     Spacer()
                     VStack {
-                        Toggle(isOn: $isToggled) {
+                        Toggle(isOn: $bottomMiddleIsOn) {
                             Image(systemName: "heart.fill")
                                 .foregroundColor(.white)
                         }
                         .toggleStyle(ColorfulToggleStyle())
-                        Text("Button Label")
+                        Text("Bottom Middle")
                             .foregroundColor(Color("NPSTextColor"))
                     }
                     Spacer()
                     VStack {
-                        Toggle(isOn: $isToggled) {
+                        Toggle(isOn: $bottomRightIsOn) {
                             Image(systemName: "heart.fill")
                                 .foregroundColor(.white)
                         }
                         .toggleStyle(ColorfulToggleStyle())
-                        Text("Button Label")
+                        Text("Bottom Right")
                             .foregroundColor(Color("NPSTextColor"))
                     }
                 }

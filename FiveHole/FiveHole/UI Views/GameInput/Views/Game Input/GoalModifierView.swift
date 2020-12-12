@@ -22,6 +22,7 @@ struct GoalModifierView: View {
                     Toggle(isOn: $redirected){
                     }
                     .labelsHidden()
+                    .toggleStyle(SwitchToggleStyle(tint: Color.NPSButtonStart))
                     Text("Redirected")
                 }
                 Spacer()
@@ -30,6 +31,7 @@ struct GoalModifierView: View {
                         
                     }
                     .labelsHidden()
+                    .toggleStyle(SwitchToggleStyle(tint: Color.NPSButtonStart))
                     Text("Penalty Shot")
                 }
                 Spacer()
@@ -37,6 +39,7 @@ struct GoalModifierView: View {
                     Toggle(isOn: $overTimeGoal){
                     }
                     .labelsHidden()
+                    .toggleStyle(SwitchToggleStyle(tint: Color.NPSButtonStart))
                     Text("Overtime Shot")
                 }
             }
