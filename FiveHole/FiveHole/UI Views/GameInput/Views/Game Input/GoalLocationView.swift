@@ -27,11 +27,14 @@ struct GoalLocationView: View {
     @State private var bottomMiddleIsOn    = false
     @State private var bottomRightIsOn     = false
     
+    @State var showGoalLocationView = false
+    
     var body: some View {
         ZStack {
             LinearGradient(Color.NPSBackgroundGradientStart)
                 .edgesIgnoringSafeArea(.all)
             VStack {
+                
                 HStack {
                     VStack {
                         Toggle(isOn: $topLeftIsOn) {
@@ -108,6 +111,39 @@ struct GoalLocationView: View {
                     }
                 }
             }.padding()
+            VStack{
+                HStack{
+                    Button(action: {
+                        self.showGoalLocationView.toggle()
+                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                        impactMed.impactOccurred()
+                    }){
+                        Text("Save")
+                            .foregroundColor(.NPSTextColor)
+                            .minimumScaleFactor(0.01)
+                            .scaledToFill()
+                            .lineLimit(1)
+                        
+                    }.buttonStyle(ColorfulButtonStyle())
+                }
+                HStack{
+                    Button(action: {
+                        self.showGoalLocationView.toggle()
+                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                        impactMed.impactOccurred()
+                    }){
+                        Text("Dismiss")
+                            .foregroundColor(.NPSTextColor)
+                            .minimumScaleFactor(0.01)
+                            .scaledToFill()
+                            .lineLimit(1)
+                        
+                    }.buttonStyle(ColorfulButtonStyle())
+                }
+                .padding()
+                Spacer()
+            }
+           
         }
     }
 }

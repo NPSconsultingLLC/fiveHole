@@ -266,6 +266,7 @@
 				977797CF256EEE9B004BEBF8 /* GoalModifierView.swift */,
 				977797D7256EEF24004BEBF8 /* UserInputView.swift */,
 				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
+				97ABDFB8257D5B59008686C3 /* SaveGoalView.swift */,
 			);
 			path = "Game Input";
 			sourceTree = "<group>";
@@ -273,7 +274,6 @@
 		97ABDFB7257D5B38008686C3 /* Save Game */ = {
 			isa = PBXGroup;
 			children = (
-				97ABDFB8257D5B59008686C3 /* SaveGoalView.swift */,
 			);
 			path = "Save Game";
 			sourceTree = "<group>";

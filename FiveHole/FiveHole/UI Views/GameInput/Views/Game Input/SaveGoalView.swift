@@ -56,15 +56,15 @@ struct SaveGoalView: View {
     }
 }
 
-////MARK: Previewer
-//struct SaveGameView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ZStack {
-//            Color.black
-//                .ignoresSafeArea()
-//            Group {
-//                GoalLocationView(showSaveGameView: .constant(true), passedGoalsAgainst: 3, passedTotalShots: 32).colorScheme(.light)
-//            }
-//        }
-//    }
-//}
+//MARK: Previewer
+struct SaveGameView_Previews: PreviewProvider {
+    static var previews: some View {
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            Group {
+                GoalLocationView().colorScheme(.light)
+            }
+        }
+    }
+}
