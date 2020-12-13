@@ -8,11 +8,10 @@
 import SwiftUI
 import CoreData
 
-struct SaveGameView: View {
-    @Binding var showSaveGameView: Bool
+struct SaveGoalView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
-    var passedGoalsAgainst: Int16?
-    var passedTotalShots: Int16?
+//    var passedGoalsAgainst: Int16?
+//    var passedTotalShots: Int16?
     
     //things that need to be entered
     //GameDate
@@ -22,6 +21,7 @@ struct SaveGameView: View {
     //calculate total saves (total shots - goals against)
     //set Season
     //TODO: Make buttons change color on toggle (so that you can tell which goal location was tapped
+    //TODO: Fix Alignment of the buttons (Validate that the layout isnt fixed on the prmary screen 
     
     var body: some View {
         ZStack {
@@ -56,15 +56,15 @@ struct SaveGameView: View {
     }
 }
 
-//MARK: Previewer
-struct SaveGameView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
-            Group {
-                SaveGameView(showSaveGameView: .constant(true), passedGoalsAgainst: 3, passedTotalShots: 32).colorScheme(.light)
-            }
-        }
-    }
-}
+////MARK: Previewer
+//struct SaveGameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ZStack {
+//            Color.black
+//                .ignoresSafeArea()
+//            Group {
+//                GoalLocationView(showSaveGameView: .constant(true), passedGoalsAgainst: 3, passedTotalShots: 32).colorScheme(.light)
+//            }
+//        }
+//    }
+//}

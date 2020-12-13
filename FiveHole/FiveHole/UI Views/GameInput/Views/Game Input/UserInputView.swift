@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserInputView: View {
     @State var showAddGoalieView = false
-    @State var showSaveGameView = false
+    @Binding var showSaveGoalView: Bool
     @State var savesVar = 0.0
     @State var goalsVar = 0.0
     @State var savePercentVar = 100.0
@@ -75,6 +75,9 @@ struct UserInputView: View {
                     }){
                         Text("Save")
                             .foregroundColor(.NPSTextColor)
+                            .minimumScaleFactor(0.01)
+                            .scaledToFill()
+                            .lineLimit(1)
                     }.buttonStyle(ColorfulButtonStyle())
                     .offset(x:-12)
                     Spacer()
@@ -93,12 +96,15 @@ struct UserInputView: View {
                     Button(action: {
                         goalsVar += 1
                         calculateSavePercent()
-                        self.showSaveGameView.toggle()
+                        self.showSaveGoalView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
                         Text("Goal")
                             .foregroundColor(.NPSTextColor)
+                            .minimumScaleFactor(0.01)
+                            .scaledToFill()
+                            .lineLimit(1)
                         
                     }.buttonStyle(ColorfulButtonStyle())
                     .offset(x:12)
@@ -158,6 +164,6 @@ struct UserInputView: View {
 
 struct UserInputView_Previews: PreviewProvider {
     static var previews: some View {
-        UserInputView().colorScheme(.dark)
+        UserInputView(showSaveGoalView: .constant(true)).colorScheme(.dark)
     }
 }

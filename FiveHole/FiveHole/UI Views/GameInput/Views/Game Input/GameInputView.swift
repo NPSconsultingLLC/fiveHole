@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct GameInputView: View {
-    @State var showSaveGameView = false
+    //@Binding var showGoalLocationView: Bool
+    @State var showGoalLocationView = false
     
     var body: some View {
         ZStack {
@@ -17,30 +18,30 @@ struct GameInputView: View {
                         LinearGradient(Color.NPSBackgroundGradientStart)
                             .edgesIgnoringSafeArea(.all)
                         VStack{
-                            UserInputView()
-                        }.blur(radius: showSaveGameView ? 30 : 0)
+                            UserInputView(showSaveGoalView: $showGoalLocationView)
+                        }.blur(radius: showGoalLocationView ? 30 : 0)
                         .padding()
                         .navigationBarItems(trailing:
                                                 Button("Save") {
-                                                    self.showSaveGameView.toggle()
+                                                    //Toggle saving the whole game
                                                 })
                     }
                 }
-                if showSaveGameView {
-                    SaveGameView(showSaveGameView: $showSaveGameView,
-                                 passedGoalsAgainst: Int16(UserInputView().goalsVar), passedTotalShots: 32)
+                if showGoalLocationView {
+                    SaveGoalView()
                 } else {
-                    SaveGameView(showSaveGameView: $showSaveGameView).hidden()
+                    SaveGoalView().hidden()
                 }
+            
             }.animation(.spring())
         }
 }
 
-//MARK: Previewer
+////MARK: Previewer
 struct GameInputView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            GameInputView().colorScheme(.dark)
+            GameInputView(showGoalLocationView: true).colorScheme(.dark)
         }
     }
 }
