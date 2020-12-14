@@ -17,12 +17,11 @@
 		97742EC5256EA9280074EF6F /* FiveHoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97742EC4256EA9280074EF6F /* FiveHoleTests.swift */; };
 		97742ED0256EA9280074EF6F /* FiveHoleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97742ECF256EA9280074EF6F /* FiveHoleUITests.swift */; };
 		97779785256EAAA6004BEBF8 /* GameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97779784256EAAA6004BEBF8 /* GameInputView.swift */; };
-		977797D0256EEE9B004BEBF8 /* GoalModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977797CF256EEE9B004BEBF8 /* GoalModifierView.swift */; };
-		977797D8256EEF24004BEBF8 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977797D7256EEF24004BEBF8 /* UserInputView.swift */; };
 		977797DD256EEF78004BEBF8 /* GoalLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977797DC256EEF78004BEBF8 /* GoalLocationView.swift */; };
 		9778F49F257D790F00C276C4 /* GameReviewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778F49E257D790F00C276C4 /* GameReviewTab.swift */; };
 		9778F4AE257D7B4800C276C4 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778F4AD257D7B4800C276C4 /* TabContainerView.swift */; };
 		9778F4BB257D7D9A00C276C4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778F4BA257D7D9A00C276C4 /* SettingsView.swift */; };
+		978074752587ED0F00C572B8 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978074742587ED0F00C572B8 /* UserInputView.swift */; };
 		978722542583D74200390367 /* NeumorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978722532583D74200390367 /* NeumorphicButton.swift */; };
 		978722592583D86700390367 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978722582583D86700390367 /* ColorExtensions.swift */; };
 		97ABDFB9257D5B59008686C3 /* SaveGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ABDFB8257D5B59008686C3 /* SaveGoalView.swift */; };
@@ -66,12 +65,11 @@
 		97742ECF256EA9280074EF6F /* FiveHoleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveHoleUITests.swift; sourceTree = "<group>"; };
 		97742ED1256EA9280074EF6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97779784256EAAA6004BEBF8 /* GameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInputView.swift; sourceTree = "<group>"; };
-		977797CF256EEE9B004BEBF8 /* GoalModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModifierView.swift; sourceTree = "<group>"; };
-		977797D7256EEF24004BEBF8 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		977797DC256EEF78004BEBF8 /* GoalLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalLocationView.swift; sourceTree = "<group>"; };
 		9778F49E257D790F00C276C4 /* GameReviewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewTab.swift; sourceTree = "<group>"; };
 		9778F4AD257D7B4800C276C4 /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
 		9778F4BA257D7D9A00C276C4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		978074742587ED0F00C572B8 /* UserInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		978722532583D74200390367 /* NeumorphicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicButton.swift; sourceTree = "<group>"; };
 		978722582583D86700390367 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		97ABDFB8257D5B59008686C3 /* SaveGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGoalView.swift; sourceTree = "<group>"; };
@@ -261,21 +259,12 @@
 			isa = PBXGroup;
 			children = (
 				97AE92BC257DBB6D000FF8C2 /* Add Goalie */,
-				97ABDFB7257D5B38008686C3 /* Save Game */,
+				978074742587ED0F00C572B8 /* UserInputView.swift */,
 				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
-				977797CF256EEE9B004BEBF8 /* GoalModifierView.swift */,
-				977797D7256EEF24004BEBF8 /* UserInputView.swift */,
 				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
 				97ABDFB8257D5B59008686C3 /* SaveGoalView.swift */,
 			);
 			path = "Game Input";
-			sourceTree = "<group>";
-		};
-		97ABDFB7257D5B38008686C3 /* Save Game */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Save Game";
 			sourceTree = "<group>";
 		};
 		97AE92BC257DBB6D000FF8C2 /* Add Goalie */ = {
@@ -465,13 +454,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				977797DD256EEF78004BEBF8 /* GoalLocationView.swift in Sources */,
+				978074752587ED0F00C572B8 /* UserInputView.swift in Sources */,
 				978722542583D74200390367 /* NeumorphicButton.swift in Sources */,
 				97ABDFB9257D5B59008686C3 /* SaveGoalView.swift in Sources */,
 				97742EB7256EA9280074EF6F /* Persistence.swift in Sources */,
 				97779785256EAAA6004BEBF8 /* GameInputView.swift in Sources */,
-				977797D0256EEE9B004BEBF8 /* GoalModifierView.swift in Sources */,
 				97AE92B2257DBAB2000FF8C2 /* AddGoalieView.swift in Sources */,
-				977797D8256EEF24004BEBF8 /* UserInputView.swift in Sources */,
 				9748C306257DEBC2005D3EE2 /* GADBannerViewController.swift in Sources */,
 				9778F4AE257D7B4800C276C4 /* TabContainerView.swift in Sources */,
 				97742EAE256EA9260074EF6F /* FiveHoleApp.swift in Sources */,

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct UserInputView: View {
     @State var showAddGoalieView = false
-    @Binding var showSaveGoalView: Bool
+    @State var showGoalLocationView = false
+    //@Binding var showSaveGoalView: Bool
     @State var savesVar = 0.0
     @State var goalsVar = 0.0
     @State var savePercentVar = 100.0
@@ -96,7 +97,7 @@ struct UserInputView: View {
                     Button(action: {
                         goalsVar += 1
                         calculateSavePercent()
-                        self.showSaveGoalView.toggle()
+                        self.showGoalLocationView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
@@ -162,8 +163,8 @@ struct UserInputView: View {
     }
 }
 
-struct UserInputView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserInputView(showSaveGoalView: .constant(true)).colorScheme(.dark)
-    }
-}
+//struct UserInputView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserInputView(showSaveGoalView: .constant(true)).colorScheme(.dark)
+//    }
+//}

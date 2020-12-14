@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct GameInputView: View {
-    //@Binding var showGoalLocationView: Bool
     @State var showGoalLocationView = false
-
     //TODO: Make the add goal location view disiss properly 
     var body: some View {
         ZStack {
@@ -19,7 +17,7 @@ struct GameInputView: View {
                         LinearGradient(Color.NPSBackgroundGradientStart)
                             .edgesIgnoringSafeArea(.all)
                         VStack{
-                            UserInputView(showSaveGoalView: $showGoalLocationView)
+                            UserInputView()
                         }.blur(radius: showGoalLocationView ? 30 : 0)
                         .padding()
                         .navigationBarItems(trailing:
@@ -29,9 +27,9 @@ struct GameInputView: View {
                     }
                 }
                 if showGoalLocationView {
-                    SaveGoalView()
+                    SaveGoalView(showGoalLocationView: $showGoalLocationView)
                 } else {
-                    SaveGoalView().hidden()
+                    SaveGoalView(showGoalLocationView: $showGoalLocationView).hidden()
                 }
             
             }.animation(.spring())

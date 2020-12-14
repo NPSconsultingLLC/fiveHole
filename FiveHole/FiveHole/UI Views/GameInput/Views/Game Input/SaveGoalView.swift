@@ -10,6 +10,7 @@ import CoreData
 
 struct SaveGoalView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
+    @Binding var showGoalLocationView: Bool
 //    var passedGoalsAgainst: Int16?
 //    var passedTotalShots: Int16?
     
@@ -37,10 +38,7 @@ struct SaveGoalView: View {
                 .clipped()
             
             VStack {
-                GoalModifierView()
-                Spacer()
-                GoalLocationView()
-                Spacer()
+                GoalLocationView(showGoalLocationView: showGoalLocationView)
             }
         }
         .border(Color.black)
@@ -58,14 +56,14 @@ struct SaveGoalView: View {
 }
 
 //MARK: Previewer
-struct SaveGameView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
-            Group {
-                GoalLocationView().colorScheme(.light)
-            }
-        }
-    }
-}
+//struct SaveGameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ZStack {
+//            Color.black
+//                .ignoresSafeArea()
+//            Group {
+//                GoalLocationView(showGoalLocationView: <#Binding<Bool>#>).colorScheme(.light)
+//            }
+//        }
+//    }
+//}

@@ -26,15 +26,43 @@ struct GoalLocationView: View {
     @State private var bottomLeftIsOn      = false
     @State private var bottomMiddleIsOn    = false
     @State private var bottomRightIsOn     = false
+    @State private var redirected   = false
+    @State private var penaltyShot  = false
+    @State private var overTimeGoal = false
     
-    @State var showGoalLocationView = true
+    @State var showGoalLocationView = false 
     
     var body: some View {
         ZStack {
             LinearGradient(Color.NPSBackgroundGradientStart)
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                
+                HStack{
+                    VStack{
+                        Toggle(isOn: $redirected){
+                        }
+                        .labelsHidden()
+                        .toggleStyle(SwitchToggleStyle(tint: Color.NPSButtonStart))
+                        Text("Redirected")
+                    }
+                    Spacer()
+                    VStack(alignment: .leading){
+                        Toggle(isOn: $penaltyShot){
+                            
+                        }
+                        .labelsHidden()
+                        .toggleStyle(SwitchToggleStyle(tint: Color.NPSButtonStart))
+                        Text("Penalty Shot")
+                    }
+                    Spacer()
+                    VStack(alignment: .leading){
+                        Toggle(isOn: $overTimeGoal){
+                        }
+                        .labelsHidden()
+                        .toggleStyle(SwitchToggleStyle(tint: Color.NPSButtonStart))
+                        Text("Overtime Shot")
+                    }
+                }
                 HStack {
                     VStack {
                         Toggle(isOn: $topLeftIsOn) {
@@ -112,9 +140,11 @@ struct GoalLocationView: View {
                 }
             }.padding()
             VStack{
+                Spacer() 
                 HStack{
                     Button(action: {
-                        showGoalLocationView.toggle()
+                        //self.showSaveGoalView.toggle()
+                        self.showGoalLocationView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
@@ -128,7 +158,8 @@ struct GoalLocationView: View {
                 }
                 HStack{
                     Button(action: {
-                        showGoalLocationView.toggle()
+                        //self.showSaveGoalView.toggle()
+                        self.showGoalLocationView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
@@ -143,7 +174,7 @@ struct GoalLocationView: View {
                 .padding()
                 Spacer()
             }
-           
+            
         }
     }
 }
