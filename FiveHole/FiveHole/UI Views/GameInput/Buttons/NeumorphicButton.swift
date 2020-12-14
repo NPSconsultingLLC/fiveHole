@@ -16,14 +16,14 @@ struct ColorfulBackground<S: Shape>: View {
                 shape
                     .fill(LinearGradient(Color.NPSButtonStart, Color.NPSButtonEnd))
                     .overlay(shape.stroke(LinearGradient(Color.NPSButtonStart, Color.NPSButtonEnd), lineWidth: 4))
-                    .shadow(color: Color.NPSDarkStart, radius: 10, x: 5, y: 5)
-                    .shadow(color: Color.NPSDarkEnd, radius: 10, x: -5, y: -5)
+                    .shadow(color: Color.NPSDarkStart, radius: 5, x: 3, y: 3)
+                    .shadow(color: Color.NPSDarkEnd, radius: 5, x: -3, y: -3)
             } else {
                 shape
                     .fill(LinearGradient(Color.NPSDarkStart, Color.NPSDarkEnd))
                     .overlay(shape.stroke(LinearGradient(Color.NPSButtonStart, Color.NPSButtonEnd), lineWidth: 4))
-                    .shadow(color: Color.NPSDarkStart, radius: 10, x: -10, y: -10)
-                    .shadow(color: Color.NPSDarkEnd, radius: 10, x: 10, y: 10)
+                    .shadow(color: Color.NPSDarkStart, radius: 5, x: -5, y: -5)
+                    .shadow(color: Color.NPSDarkEnd, radius: 5, x: 3, y: 3)
             }
         }
     }

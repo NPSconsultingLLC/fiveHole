@@ -24,6 +24,7 @@ struct SaveGoalView: View {
     //TODO: Fix Alignment of the buttons (Validate that the layout isnt fixed on the prmary screen 
     
     var body: some View {
+        
         ZStack {
             LinearGradient(Color.NPSBackgroundGradientStart)
                 .edgesIgnoringSafeArea(.all)

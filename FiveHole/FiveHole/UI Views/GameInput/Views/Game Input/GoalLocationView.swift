@@ -27,7 +27,7 @@ struct GoalLocationView: View {
     @State private var bottomMiddleIsOn    = false
     @State private var bottomRightIsOn     = false
     
-    @State var showGoalLocationView = false
+    @State var showGoalLocationView = true
     
     var body: some View {
         ZStack {
@@ -114,7 +114,6 @@ struct GoalLocationView: View {
             VStack{
                 HStack{
                     Button(action: {
-                        self.showGoalLocationView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
@@ -128,7 +127,7 @@ struct GoalLocationView: View {
                 }
                 HStack{
                     Button(action: {
-                        self.showGoalLocationView.toggle()
+                        showGoalLocationView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
