@@ -114,6 +114,7 @@ struct GoalLocationView: View {
             VStack{
                 HStack{
                     Button(action: {
+                        showGoalLocationView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
