@@ -9,19 +9,12 @@ import SwiftUI
 
 struct UserInputView: View {
     @State var showAddGoalieView = false
-    @State var showGoalLocationView = false
-    //@Binding var showSaveGoalView: Bool
+    @Binding var showGoalDetailsView: Bool
     @State var savesVar = 0.0
     @State var goalsVar = 0.0
     @State var savePercentVar = 100.0
     @State var totalShotsVar = 0.0
-    @FetchRequest(
-        entity: Goalie.entity(),
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \Goalie.fName, ascending: true)
-        ]
-    ) var goalies: FetchedResults<Goalie>
-    
+        
     var body: some View {
         ZStack {
             LinearGradient(Color.NPSBackgroundGradientStart)
@@ -97,7 +90,7 @@ struct UserInputView: View {
                     Button(action: {
                         goalsVar += 1
                         calculateSavePercent()
-                        self.showGoalLocationView.toggle()
+                        self.showGoalDetailsView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){

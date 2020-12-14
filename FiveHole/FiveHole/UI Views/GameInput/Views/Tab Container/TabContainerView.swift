@@ -9,12 +9,12 @@ import SwiftUI
 
 struct TabContainerView: View {
     @State private var selectedTab = 0
-    @State var showGoalLocaitonView = false
+    @State var showGoalDetailsView = false
     var body: some View {
         //TODO: update icons
         //TODO: apply style 
         TabView(selection: $selectedTab) {
-            GameInputView(showGoalLocationView: showGoalLocaitonView)
+            GameInputView(showGoalDetailsView: showGoalDetailsView)
                 .tabItem {
                     Image(systemName: "star")
                     Text("Game")

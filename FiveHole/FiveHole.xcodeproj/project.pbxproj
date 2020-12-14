@@ -24,7 +24,6 @@
 		978074752587ED0F00C572B8 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978074742587ED0F00C572B8 /* UserInputView.swift */; };
 		978722542583D74200390367 /* NeumorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978722532583D74200390367 /* NeumorphicButton.swift */; };
 		978722592583D86700390367 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978722582583D86700390367 /* ColorExtensions.swift */; };
-		97ABDFB9257D5B59008686C3 /* SaveGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ABDFB8257D5B59008686C3 /* SaveGoalView.swift */; };
 		97AE92B2257DBAB2000FF8C2 /* AddGoalieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AE92B1257DBAB2000FF8C2 /* AddGoalieView.swift */; };
 		97AE92DB257DE976000FF8C2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AE92DA257DE976000FF8C2 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
@@ -72,7 +71,6 @@
 		978074742587ED0F00C572B8 /* UserInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		978722532583D74200390367 /* NeumorphicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicButton.swift; sourceTree = "<group>"; };
 		978722582583D86700390367 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
-		97ABDFB8257D5B59008686C3 /* SaveGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGoalView.swift; sourceTree = "<group>"; };
 		97AE92B1257DBAB2000FF8C2 /* AddGoalieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalieView.swift; sourceTree = "<group>"; };
 		97AE92D5257DE939000FF8C2 /* FiveHole.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FiveHole.entitlements; sourceTree = "<group>"; };
 		97AE92DA257DE976000FF8C2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -262,7 +260,6 @@
 				978074742587ED0F00C572B8 /* UserInputView.swift */,
 				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
 				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
-				97ABDFB8257D5B59008686C3 /* SaveGoalView.swift */,
 			);
 			path = "Game Input";
 			sourceTree = "<group>";
@@ -456,7 +453,6 @@
 				977797DD256EEF78004BEBF8 /* GoalLocationView.swift in Sources */,
 				978074752587ED0F00C572B8 /* UserInputView.swift in Sources */,
 				978722542583D74200390367 /* NeumorphicButton.swift in Sources */,
-				97ABDFB9257D5B59008686C3 /* SaveGoalView.swift in Sources */,
 				97742EB7256EA9280074EF6F /* Persistence.swift in Sources */,
 				97779785256EAAA6004BEBF8 /* GameInputView.swift in Sources */,
 				97AE92B2257DBAB2000FF8C2 /* AddGoalieView.swift in Sources */,

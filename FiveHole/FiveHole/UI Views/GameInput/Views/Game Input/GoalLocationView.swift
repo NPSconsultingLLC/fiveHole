@@ -30,12 +30,19 @@ struct GoalLocationView: View {
     @State private var penaltyShot  = false
     @State private var overTimeGoal = false
     
-    @State var showGoalLocationView = false 
+    @Binding var showGoalDetailsView: Bool
     
     var body: some View {
         ZStack {
             LinearGradient(Color.NPSBackgroundGradientStart)
                 .edgesIgnoringSafeArea(.all)
+            Rectangle()
+                .fill(LinearGradient(
+                    gradient: .init(colors: [Color.NPSBackgroundGradientStart, Color.NPSBackgroundGradientEnd]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                ))
+                .clipped()
             VStack {
                 HStack{
                     VStack{
@@ -144,7 +151,7 @@ struct GoalLocationView: View {
                 HStack{
                     Button(action: {
                         //self.showSaveGoalView.toggle()
-                        self.showGoalLocationView.toggle()
+                        showGoalDetailsView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
@@ -159,7 +166,7 @@ struct GoalLocationView: View {
                 HStack{
                     Button(action: {
                         //self.showSaveGoalView.toggle()
-                        self.showGoalLocationView.toggle()
+                        showGoalDetailsView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
@@ -175,12 +182,15 @@ struct GoalLocationView: View {
                 Spacer()
             }
             
-        }
+        }            
+        .border(Color.black)
+        .clipShape(RoundedRectangle(cornerRadius: 16))       // << here !!
+        .frame(width: UIScreen.main.bounds.width - 5, height: 500, alignment: .center)
     }
 }
 
-struct GoalLocationView_Previews: PreviewProvider {
-    static var previews: some View {
-        GoalLocationView().colorScheme(.dark)
-    }
-}
+//struct GoalLocationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GoalLocationView().colorScheme(.dark)
+//    }
+//}

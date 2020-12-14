@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameInputView: View {
-    @State var showGoalLocationView = false
+    @State var showGoalDetailsView = false
     //TODO: Make the add goal location view disiss properly 
     var body: some View {
         ZStack {
@@ -17,8 +17,8 @@ struct GameInputView: View {
                         LinearGradient(Color.NPSBackgroundGradientStart)
                             .edgesIgnoringSafeArea(.all)
                         VStack{
-                            UserInputView()
-                        }.blur(radius: showGoalLocationView ? 30 : 0)
+                            UserInputView(showGoalDetailsView: $showGoalDetailsView)
+                        }.blur(radius: showGoalDetailsView ? 30 : 0)
                         .padding()
                         .navigationBarItems(trailing:
                                                 Button("Save") {
@@ -26,10 +26,10 @@ struct GameInputView: View {
                                                 })
                     }
                 }
-                if showGoalLocationView {
-                    SaveGoalView(showGoalLocationView: $showGoalLocationView)
+                if showGoalDetailsView {
+                    GoalLocationView(showGoalDetailsView: $showGoalDetailsView)
                 } else {
-                    SaveGoalView(showGoalLocationView: $showGoalLocationView).hidden()
+                    GoalLocationView(showGoalDetailsView: $showGoalDetailsView).hidden()
                 }
             
             }.animation(.spring())
@@ -37,10 +37,10 @@ struct GameInputView: View {
 }
 
 ////MARK: Previewer
-struct GameInputView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            GameInputView(showGoalLocationView: true).colorScheme(.dark)
-        }
-    }
-}
+//struct GameInputView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            GameInputView(showGoalLocationView: true).colorScheme(.dark)
+//        }
+//    }
+//}
