@@ -68,7 +68,8 @@ struct GoalieProfileView: View {
                     .padding()
                 }.frame(width: UIScreen.main.bounds.width, height: 200)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            }
+            }.blur(radius: showingAddNewGoalie ? 30 : 0)
+
             if showingAddNewGoalie {
                 AddNewGoalieAlert(showingAddNewGoalie: $showingAddNewGoalie)
             } else {
