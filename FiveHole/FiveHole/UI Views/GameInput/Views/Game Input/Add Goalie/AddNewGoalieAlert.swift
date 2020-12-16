@@ -14,6 +14,7 @@ struct AddNewGoalieAlert: View {
     @State private var fName = ""
     @State private var lName = ""
     @State private var teamName = ""
+    @State private var inputImage: UIImage?
     
     var body: some View {
         
@@ -97,10 +98,18 @@ struct AddNewGoalieAlert: View {
                             .onTapGesture(count: 1, perform: {
                                 self.isPhotoPresented.toggle()
                             }).sheet(isPresented: $isPhotoPresented) {
-                                        let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
-                                        PhotoPicker(configuration: configuration, isPhotoPresented: $isPhotoPresented)
-                                    }
-                        Image(systemName: "camera")
+                                let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
+                                PhotoPicker(configuration: configuration, isPhotoPresented: $isPhotoPresented, image: $inputImage)
+                            }
+                        
+                        if inputImage != nil {
+                            Image(uiImage: inputImage!)
+                                .frame(width: 150, height: 160, alignment: .center)
+                        }else {
+                            Image(systemName: "camera")
+                                .frame(width: 150, height: 160, alignment: .center)
+                        }
+                        
                     }
                     Spacer()
                 }
@@ -113,9 +122,11 @@ struct AddNewGoalieAlert: View {
 }
 
 struct PhotoPicker: UIViewControllerRepresentable {
-
+    
     let configuration: PHPickerConfiguration
     @Binding var isPhotoPresented: Bool
+    @Binding var image: UIImage?
+    
     func makeUIViewController(context: Context) -> PHPickerViewController {
         let controller = PHPickerViewController(configuration: configuration)
         controller.delegate = context.coordinator
@@ -128,7 +139,7 @@ struct PhotoPicker: UIViewControllerRepresentable {
     
     // Use a Coordinator to act as your PHPickerViewControllerDelegate
     class Coordinator: PHPickerViewControllerDelegate {
-      
+        
         private let parent: PhotoPicker
         
         init(_ parent: PhotoPicker) {
@@ -136,9 +147,11 @@ struct PhotoPicker: UIViewControllerRepresentable {
         }
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
             print(results)
+            //TODO Asgn image results here to the picker results... Not sure how to do that
             parent.isPhotoPresented = false // Set isPresented to false because picking has finished.
         }
     }
+    
     
 }
 
