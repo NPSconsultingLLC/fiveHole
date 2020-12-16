@@ -155,9 +155,3 @@ struct UserInputView: View {
         }
     }
 }
-
-//struct UserInputView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        UserInputView(showSaveGoalView: .constant(true)).colorScheme(.dark)
-//    }
-//}

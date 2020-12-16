@@ -31,15 +31,3 @@ struct gameCell: View {
         game.opponent.map(Text.init)
     }
 }
-
-//struct GameReviewTab_Previews: PreviewProvider {
-//    @FetchRequest(
-//        entity: Game.entity(),
-//        sortDescriptors: [
-//            NSSortDescriptor(keyPath: \Game.gameDate, ascending: true)
-//        ]
-//    ) var games: FetchedResults<Game>
-//    static var previews: some View {
-//        GameReviewTab(games: Game)
-//    }
-//}
