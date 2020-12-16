@@ -17,7 +17,6 @@ extension Color {
     static let NPSAlternateButtonColorStart         = Color("NPSAlternatButtonStart")
     static let NPSAlternateButtonColorEnd           = Color("NPSAlternatButtonEnd")
     static let NPSShadowColor                       = Color("NPSShadowColor")
-    static let offWhite                             = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
     static let NPSDarkStart                         = Color("NPSDarkStart")
     static let NPSDarkEnd                           = Color("NPSDarkEnd")
     static let NPSLightStart                        = Color("NPSLightStart")

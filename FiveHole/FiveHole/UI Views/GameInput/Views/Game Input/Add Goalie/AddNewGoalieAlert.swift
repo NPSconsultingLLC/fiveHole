@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddNewGoalieAlert: View {
-    @State var showingAddNewGoalie = false
+    @Binding var showingAddNewGoalie: Bool
     @State private var fName = ""
     @State private var lName = ""
     @State private var teamName = ""
@@ -17,13 +17,12 @@ struct AddNewGoalieAlert: View {
         ZStack {
             VStack {
                 RoundedRectangle(cornerRadius: 8.0, style: .continuous)
-                    .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
-                    .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
-                    .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
+                    .fill(LinearGradient(.NPSDarkStart, .NPSDarkEnd))
                 HStack{
                     Button(action: {
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
+                        self.showingAddNewGoalie.toggle()
                     }){
                         Text("Save")
                             .foregroundColor(.NPSTextColor)
@@ -35,6 +34,7 @@ struct AddNewGoalieAlert: View {
                     Button(action: {
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
+                        self.showingAddNewGoalie.toggle()
                     }){
                         Text("Cancel")
                             .foregroundColor(.NPSTextColor)
@@ -53,32 +53,29 @@ struct AddNewGoalieAlert: View {
                     .textFieldStyle(PlainTextFieldStyle())
                     .padding([.leading, .trailing], 10)
                     .cornerRadius(16)
-                    .background(Color.NPSDarkStart)
+                    .background(Color.NPSShadowColor)
                     .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
                     .padding([.leading, .trailing], 24)
-                    .foregroundColor(.NPSTextColor)
                     
                 TextField("Last Name", text: $lName)
                     .frame(height: 44)
                     .textFieldStyle(PlainTextFieldStyle())
                     .padding([.leading, .trailing], 10)
                     .cornerRadius(16)
-                    .background(Color.NPSDarkStart)
+                    .background(Color.NPSShadowColor)
                     .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
                     .padding([.leading, .trailing], 24)
-                    .foregroundColor(.NPSTextColor)
                 TextField("Team Name", text: $teamName)
                     .frame(height: 44)
                     .textFieldStyle(PlainTextFieldStyle())
                     .padding([.leading, .trailing], 10)
                     .cornerRadius(16)
-                    .background(Color.NPSDarkStart)
+                    .background(Color.NPSShadowColor)
                     .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
                     .padding([.leading, .trailing], 24)
-                    .foregroundColor(.NPSTextColor)
                 Spacer()
                     .frame(height: 95)
             }.padding()
@@ -90,6 +87,6 @@ struct AddNewGoalieAlert: View {
 
 struct AddNewGoalieAlert_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewGoalieAlert(showingAddNewGoalie: true)
+        AddNewGoalieAlert(showingAddNewGoalie: .constant(true)).colorScheme(.dark)
     }
 }

@@ -11,68 +11,73 @@ struct GoalieAddSelectPage: View {
     @State var showingAddNewGoalie = false
     var body: some View {
         ScrollView{
-            GoalieProfileView(showingAddNewGoalie: $showingAddNewGoalie)
+            GoalieProfileView(showingAddNewGoalie: showingAddNewGoalie)
         }
     }
 }
 
 struct GoalieProfileView: View {
-    @Binding var showingAddNewGoalie: Bool
+    @State var showingAddNewGoalie = false
     
     var body: some View {
         VStack{
-            TabView{
-                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { _ in
-                    VStack{
-                        ZStack{
+                TabView{
+                    ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { _ in
+                        VStack{
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 8.0, style: .continuous)
+                                    .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
+                                    .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
+                                    .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
+                                    .onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
+                                        self.showingAddNewGoalie.toggle()
+                                    })
+                                
+                                Text("Add New Goalie")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.NPSTextColor)
+                                
+                                if showingAddNewGoalie {
+                                    AddNewGoalieAlert(showingAddNewGoalie: $showingAddNewGoalie)
+                                } else {
+                                    AddNewGoalieAlert(showingAddNewGoalie: $showingAddNewGoalie).hidden()
+                                }
+                            }
                             
-                        RoundedRectangle(cornerRadius: 8.0, style: .continuous)
-                            .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
-                            .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
-                            .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
-                            .onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
-                                self.showingAddNewGoalie.toggle()
-                            })
-                            
-                            Text("Add New Goalie")
-                                .font(.largeTitle)
-                                .foregroundColor(.NPSTextColor)
+                            Spacer()
                         }
-                        
-                        Spacer()
                     }
+                    .padding()
+                }.frame(width: UIScreen.main.bounds.width, height: 400)
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                HStack(alignment: .top){
+                    VStack(alignment: .leading){
+                        Text("First / Last Name")
+                            .font(.title)
+                            .foregroundColor(.NPSTextColor)
+                        Text("team Name")
+                            .font(.subheadline)
+                            .foregroundColor(.NPSTextColor)
+                    }.padding()
+                    Spacer()
                 }
-                .padding()
-            }.frame(width: UIScreen.main.bounds.width, height: 400)
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            HStack(alignment: .top){
-                VStack(alignment: .leading){
-                    Text("First / Last Name")
-                        .font(.title)
-                        .foregroundColor(.NPSTextColor)
-                    Text("team Name")
-                        .font(.subheadline)
-                        .foregroundColor(.NPSTextColor)
-                }.padding()
                 Spacer()
-            }
-            Spacer()
-            TabView{
-                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { _ in
-                    VStack{
-                        RoundedRectangle(cornerRadius: 8.0, style: .continuous)
-                            .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
-                            .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
-                            .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
+                TabView{
+                    ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { _ in
+                        VStack{
+                            RoundedRectangle(cornerRadius: 8.0, style: .continuous)
+                                .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
+                                .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
+                                .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
                             
-                        Spacer()
+                            Spacer()
+                        }
                     }
-                }
-                .padding()
-            }.frame(width: UIScreen.main.bounds.width, height: 200)
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                    .padding()
+                }.frame(width: UIScreen.main.bounds.width, height: 200)
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            }
         }
-    }
 }
 
 struct GoalieAddSelectPage_Previews: PreviewProvider {
