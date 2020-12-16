@@ -140,7 +140,7 @@ struct UserInputView: View {
             }
             
             .sheet(isPresented: $showAddGoalieView) {
-                AddGoalieView(showAddGoalieView: $showAddGoalieView)
+                //AddGoalieView(showAddGoalieView: $showAddGoalieView)
             }
         }
     }
