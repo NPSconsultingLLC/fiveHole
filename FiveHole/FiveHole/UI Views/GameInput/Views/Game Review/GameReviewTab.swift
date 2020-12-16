@@ -9,11 +9,11 @@ import SwiftUI
 
 struct GameReviewTab: View {
     @FetchRequest(
-        entity: Game.entity(),
+        entity: Games.entity(),
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Game.gameDate, ascending: true)
+            NSSortDescriptor(keyPath: \Games.gameDate, ascending: true)
         ]
-    ) var games: FetchedResults<Game>
+    ) var games: FetchedResults<Games>
     
     var body: some View {
         List {
@@ -25,7 +25,7 @@ struct GameReviewTab: View {
 }
 
 struct gameCell: View {
-    let game: Game
+    let game: Games
     
     var body: some View {
         game.opponent.map(Text.init)
