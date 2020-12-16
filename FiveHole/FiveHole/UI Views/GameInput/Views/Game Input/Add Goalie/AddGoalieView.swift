@@ -16,11 +16,11 @@ struct AddGoalieView: View {
     @State var teamName: String = ""
     
     @FetchRequest(
-        entity: Goalie.entity(),
+        entity: Goalies.entity(),
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Goalie.fName, ascending: true)
+            NSSortDescriptor(keyPath: \Goalies.fName, ascending: true)
         ]
-    ) var goalies: FetchedResults<Goalie>
+    ) var goalies: FetchedResults<Goalies>
     //TODO - Cancle Button
     //TODO - Populate Name info with selected goalie
     
@@ -46,7 +46,7 @@ struct AddGoalieView: View {
     }
     
     private func addGoalie() {
-        let newGoalie = Goalie(context: managedObjectContext)
+        let newGoalie = Goalies(context: managedObjectContext)
         newGoalie.fName = firstName
         newGoalie.lName = lastName
         newGoalie.tName = teamName
