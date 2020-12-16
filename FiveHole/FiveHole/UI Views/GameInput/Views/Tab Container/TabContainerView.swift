@@ -20,7 +20,7 @@ struct TabContainerView: View {
                     Text("Game")
                 }
                 .tag(0)
-            GameReviewTab()
+            GoalieAddSelectPage()
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("Goalies")
@@ -32,7 +32,7 @@ struct TabContainerView: View {
                     Text("Settings")
                 }
                 .tag(2)
-        }
+        }.accentColor(.NPSButtonStart)
         
     }
 }

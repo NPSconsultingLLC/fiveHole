@@ -68,6 +68,7 @@ struct AddNewGoalieAlert: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
                         .padding([.leading, .trailing], 5)
+                    
                     TextField("Team Name", text: $teamName)
                         .frame(height: 44)
                         .textFieldStyle(PlainTextFieldStyle())
@@ -77,6 +78,7 @@ struct AddNewGoalieAlert: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
                         .padding([.leading, .trailing], 5)
+                    
                     Spacer()
                         .frame(height: 95)
                 }.padding()
