@@ -45,41 +45,56 @@ struct AddNewGoalieAlert: View {
                 }
                 
             }.padding()
-            VStack{
-                Spacer()
+            HStack {
+                VStack{
+                    Spacer()
                         .frame(height: 5)
-                TextField("First Name", text: $fName)
-                    .frame(height: 44)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .padding([.leading, .trailing], 10)
-                    .cornerRadius(16)
-                    .background(Color.NPSShadowColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
-                    .padding([.leading, .trailing], 24)
+                    TextField("First Name", text: $fName)
+                        .frame(height: 44)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .padding([.leading, .trailing], 10)
+                        .cornerRadius(16)
+                        .background(Color.NPSShadowColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
+                        .padding([.leading, .trailing], 5)
                     
-                TextField("Last Name", text: $lName)
-                    .frame(height: 44)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .padding([.leading, .trailing], 10)
-                    .cornerRadius(16)
-                    .background(Color.NPSShadowColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
-                    .padding([.leading, .trailing], 24)
-                TextField("Team Name", text: $teamName)
-                    .frame(height: 44)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .padding([.leading, .trailing], 10)
-                    .cornerRadius(16)
-                    .background(Color.NPSShadowColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
-                    .padding([.leading, .trailing], 24)
+                    TextField("Last Name", text: $lName)
+                        .frame(height: 44)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .padding([.leading, .trailing], 10)
+                        .cornerRadius(16)
+                        .background(Color.NPSShadowColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
+                        .padding([.leading, .trailing], 5)
+                    TextField("Team Name", text: $teamName)
+                        .frame(height: 44)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .padding([.leading, .trailing], 10)
+                        .cornerRadius(16)
+                        .background(Color.NPSShadowColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
+                        .padding([.leading, .trailing], 5)
+                    Spacer()
+                        .frame(height: 95)
+                }.padding()
+                VStack {
+                    Spacer()
+                        .frame(height: 5)
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 8.0, style: .continuous)
+                            .fill(LinearGradient(.NPSBackgroundGradientEnd, .NPSButtonEnd))
+                            .frame(width: 150, height: 160)
+                            .padding()
+                        Image(systemName: "camera")
+                    }
+                    Spacer()
+                }
                 Spacer()
-                    .frame(height: 95)
-            }.padding()
-        
+            }
+            
         }.frame(width: UIScreen.main.bounds.width, height: 290)
         
     }
@@ -87,6 +102,6 @@ struct AddNewGoalieAlert: View {
 
 struct AddNewGoalieAlert_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewGoalieAlert(showingAddNewGoalie: .constant(true)).colorScheme(.dark)
+        AddNewGoalieAlert(showingAddNewGoalie: .constant(true))
     }
 }
