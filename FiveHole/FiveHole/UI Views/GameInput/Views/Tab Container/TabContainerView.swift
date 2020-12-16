@@ -12,7 +12,6 @@ struct TabContainerView: View {
     @State var showGoalDetailsView = false
     var body: some View {
         //TODO: update icons
-        //TODO: apply style 
         TabView(selection: $selectedTab) {
             GameInputView(showGoalDetailsView: showGoalDetailsView)
                 .tabItem {
@@ -33,7 +32,6 @@ struct TabContainerView: View {
                 }
                 .tag(2)
         }.accentColor(.NPSButtonStart)
-        
     }
 }
 
