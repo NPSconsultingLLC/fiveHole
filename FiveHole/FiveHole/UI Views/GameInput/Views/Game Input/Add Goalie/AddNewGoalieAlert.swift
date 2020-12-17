@@ -16,9 +16,8 @@ struct AddNewGoalieAlert: View {
     @State private var teamName = ""
     @State private var inputImage: UIImage?
     
+    
     var body: some View {
-        
-        
         ZStack {
             VStack {
                 RoundedRectangle(cornerRadius: 8.0, style: .continuous)
@@ -107,6 +106,7 @@ struct AddNewGoalieAlert: View {
                                 .frame(width: 150, height: 160, alignment: .center)
                         }else {
                             Image(systemName: "camera")
+                                .font(.largeTitle)
                                 .frame(width: 150, height: 160, alignment: .center)
                         }
                         
