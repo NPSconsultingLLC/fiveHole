@@ -29,14 +29,30 @@ struct GoalieProfileView: View {
         ZStack{
             VStack{
                 TabView{
-                    if goalies.count > 1 {
+                    if goalies.count > 0 {
                         ForEach(goalies) { goalie in
                             VStack{
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: 8.0, style: .continuous)
-                                        .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
-                                        .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
-                                        .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
+                                        RoundedRectangle(cornerRadius: 8.0, style: .continuous)
+                                            .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
+                                            .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
+                                            .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
+                                    VStack {
+                                        Spacer()
+                                        Button(action: {
+                                            print("sign up bin tapped")
+                                        }) {
+                                            Text("Delete")
+                                                .frame(minWidth: 0, maxWidth: .infinity)
+                                                .font(.system(size: 18))
+                                                .padding()
+                                                .foregroundColor(.NPSDarkEnd)
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 25)
+                                                        .stroke(Color.NPSDarkEnd, lineWidth: 2)
+                                                )
+                                        }
+                                    }.padding()
                                 }.padding()
                                 HStack(alignment: .top){
                                     VStack(alignment: .leading){
@@ -94,7 +110,6 @@ struct GoalieProfileView: View {
                     }
                 }.frame(width: UIScreen.main.bounds.width, height: 400)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                
                 Spacer()
                 TabView{
                     ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { _ in
@@ -118,5 +133,11 @@ struct GoalieProfileView: View {
                 AddNewGoalieAlert(showingAddNewGoalie: $showingAddNewGoalie).hidden()
             }
         }
+    }
+}
+
+struct GoalieProfileView_preview: PreviewProvider {
+    static var previews: some View {
+        GoalieProfileView()
     }
 }

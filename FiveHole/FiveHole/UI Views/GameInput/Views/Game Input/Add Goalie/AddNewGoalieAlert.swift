@@ -174,8 +174,6 @@ struct PhotoPicker: UIViewControllerRepresentable {
             parent.isPhotoPresented = false // Set isPresented to false because picking has finished.
         }
     }
-    
-    
 }
 
 struct AddNewGoalieAlert_Previews: PreviewProvider {
