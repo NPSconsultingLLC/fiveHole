@@ -10,12 +10,19 @@ import PhotosUI
 
 struct AddNewGoalieAlert: View {
     @Binding var showingAddNewGoalie: Bool
+    @Environment(\.managedObjectContext) var managedObjectContext
     @State private var isPhotoPresented: Bool = false
     @State private var fName = ""
     @State private var lName = ""
     @State private var teamName = ""
     @State private var inputImage: UIImage?
     
+        @FetchRequest(
+            entity: Goalies.entity(),
+            sortDescriptors: [
+                NSSortDescriptor(keyPath: \Goalies.fName, ascending: true)
+            ]
+        ) var goalies: FetchedResults<Goalies>
     
     var body: some View {
         ZStack {
@@ -26,6 +33,7 @@ struct AddNewGoalieAlert: View {
                     Button(action: {
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
+                        self.saveNewGoalie()
                         self.showingAddNewGoalie.toggle()
                     }){
                         Text("Save")
@@ -109,15 +117,30 @@ struct AddNewGoalieAlert: View {
                                 .font(.largeTitle)
                                 .frame(width: 150, height: 160, alignment: .center)
                         }
-                        
                     }
                     Spacer()
                 }
                 Spacer()
             }
-            
         }.frame(width: UIScreen.main.bounds.width, height: 290)
+    }
+    
+    private func saveNewGoalie(){
+        let newGoalie = Goalies(context: managedObjectContext)
+        newGoalie.fName = fName
+        newGoalie.lName = lName
+        newGoalie.tName = teamName
+        newGoalie.selectedGoalie = true
+        saveContext()
+    }
+
+    private func saveContext() {
         
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Error saving managed object context: \(error)")
+        }
     }
 }
 
