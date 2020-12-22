@@ -27,7 +27,7 @@ struct GoalieProfileView: View {
             NSSortDescriptor(keyPath: \Goalies.fName, ascending: true)
         ]
     ) var goalies: FetchedResults<Goalies>
-    
+
     var body: some View {
         ZStack{
             VStack{
@@ -121,7 +121,6 @@ struct GoalieProfileView: View {
                                 .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
                                 .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
                                 .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
-                            
                             Spacer()
                         }
                     }
@@ -143,7 +142,6 @@ struct GoalieProfileView: View {
     }
     
     private func saveContext() {
-        
         do {
             try managedObjectContext.save()
         } catch {
