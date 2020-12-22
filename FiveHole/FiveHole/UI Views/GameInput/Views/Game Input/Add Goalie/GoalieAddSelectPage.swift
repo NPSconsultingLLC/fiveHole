@@ -18,12 +18,47 @@ struct GoalieAddSelectPage: View {
 
 struct GoalieProfileView: View {
     @State var showingAddNewGoalie = false
+    @FetchRequest(
+        entity: Goalies.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Goalies.fName, ascending: true)
+        ]
+    ) var goalies: FetchedResults<Goalies>
     
     var body: some View {
         ZStack{
             VStack{
                 TabView{
-                    ForEach(0 ..< 5) { _ in
+                    if goalies.count > 1 {
+                        ForEach(goalies) { goalie in
+                            VStack{
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 8.0, style: .continuous)
+                                        .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
+                                        .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
+                                        .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
+                                }.padding()
+                                HStack(alignment: .top){
+                                    VStack(alignment: .leading){
+                                        HStack {
+                                            Text(goalie.fName ?? "First Name")
+                                                .font(.title)
+                                                .foregroundColor(.NPSTextColor)
+                                            Text(goalie.lName ?? "Last Name")
+                                                .font(.title)
+                                                .foregroundColor(.NPSTextColor)
+                                            Spacer()
+                                        }
+                                        
+                                        Text(goalie.tName ?? "Team Name")
+                                            .font(.subheadline)
+                                            .foregroundColor(.NPSTextColor)
+                                    }.padding()
+                                    Spacer()
+                                }
+                            }
+                        }
+                    } else {
                         VStack{
                             ZStack{
                                 RoundedRectangle(cornerRadius: 8.0, style: .continuous)
@@ -33,26 +68,33 @@ struct GoalieProfileView: View {
                                     .onTapGesture(count: 1, perform: {
                                         self.showingAddNewGoalie.toggle()
                                     })
-                                
                                 Text("Add New Goalie")
                                     .font(.largeTitle)
                                     .foregroundColor(.NPSTextColor)
                             }.padding()
+                            HStack(alignment: .top){
+                                VStack(alignment: .leading){
+                                    HStack {
+                                        Text("First Name")
+                                            .font(.title)
+                                            .foregroundColor(.NPSTextColor)
+                                        Text("Last Name")
+                                            .font(.title)
+                                            .foregroundColor(.NPSTextColor)
+                                        Spacer()
+                                    }
+                                    
+                                    Text("Team Name")
+                                        .font(.subheadline)
+                                        .foregroundColor(.NPSTextColor)
+                                }.padding()
+                                Spacer()
+                            }
                         }
                     }
                 }.frame(width: UIScreen.main.bounds.width, height: 400)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                HStack(alignment: .top){
-                    VStack(alignment: .leading){
-                        Text("First / Last Name")
-                            .font(.title)
-                            .foregroundColor(.NPSTextColor)
-                        Text("team Name")
-                            .font(.subheadline)
-                            .foregroundColor(.NPSTextColor)
-                    }.padding()
-                    Spacer()
-                }
+                
                 Spacer()
                 TabView{
                     ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { _ in
@@ -69,18 +111,12 @@ struct GoalieProfileView: View {
                 }.frame(width: UIScreen.main.bounds.width, height: 200)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }.blur(radius: showingAddNewGoalie ? 30 : 0)
-
+            
             if showingAddNewGoalie {
                 AddNewGoalieAlert(showingAddNewGoalie: $showingAddNewGoalie)
             } else {
                 AddNewGoalieAlert(showingAddNewGoalie: $showingAddNewGoalie).hidden()
             }
         }
-    }
-}
-
-struct GoalieAddSelectPage_Previews: PreviewProvider {
-    static var previews: some View {
-        GoalieAddSelectPage().colorScheme(.light)
     }
 }
