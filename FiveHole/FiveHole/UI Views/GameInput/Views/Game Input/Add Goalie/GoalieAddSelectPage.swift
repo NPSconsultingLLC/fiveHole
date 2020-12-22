@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GoalieAddSelectPage: View {
     @State var showingAddNewGoalie = false
+
     var body: some View {
         ScrollView{
             GoalieProfileView(showingAddNewGoalie: showingAddNewGoalie)
@@ -18,6 +19,8 @@ struct GoalieAddSelectPage: View {
 
 struct GoalieProfileView: View {
     @State var showingAddNewGoalie = false
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
     @FetchRequest(
         entity: Goalies.entity(),
         sortDescriptors: [
@@ -33,14 +36,14 @@ struct GoalieProfileView: View {
                         ForEach(goalies) { goalie in
                             VStack{
                                 ZStack{
-                                        RoundedRectangle(cornerRadius: 8.0, style: .continuous)
-                                            .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
-                                            .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
-                                            .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
+                                    RoundedRectangle(cornerRadius: 8.0, style: .continuous)
+                                        .fill(LinearGradient(.NPSButtonStart, .NPSButtonEnd))
+                                        .shadow(color: .NPSDarkStart, radius: 5, x: 3, y: 3)
+                                        .shadow(color: .NPSDarkEnd, radius: 5, x: -3, y: -3)
                                     VStack {
                                         Spacer()
                                         Button(action: {
-                                            print("sign up bin tapped")
+                                            removeGoalie(goalieToDelete: goalie)
                                         }) {
                                             Text("Delete")
                                                 .frame(minWidth: 0, maxWidth: .infinity)
@@ -132,6 +135,19 @@ struct GoalieProfileView: View {
             } else {
                 AddNewGoalieAlert(showingAddNewGoalie: $showingAddNewGoalie).hidden()
             }
+        }
+    }
+    private func removeGoalie(goalieToDelete: Goalies) {
+        managedObjectContext.delete(goalieToDelete)
+        saveContext()
+    }
+    
+    private func saveContext() {
+        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Error saving managed object context: \(error)")
         }
     }
 }

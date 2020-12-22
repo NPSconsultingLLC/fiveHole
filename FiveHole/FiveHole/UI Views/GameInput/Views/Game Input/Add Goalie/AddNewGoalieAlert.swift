@@ -134,8 +134,7 @@ struct AddNewGoalieAlert: View {
         saveContext()
     }
 
-    private func saveContext() {
-        
+    private func saveContext() {   
         do {
             try managedObjectContext.save()
         } catch {
