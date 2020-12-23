@@ -9,7 +9,20 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List{
+                NavigationLink(destination: SettingsDetailView()) {
+                    Text("Remove Ads")
+                }
+                NavigationLink(destination: SettingsDetailView()) {
+                    Text("Contact Support")
+                }
+                NavigationLink(destination: SettingsDetailView()) {
+                    Text("Credits")
+                }
+            }
+            .navigationBarTitle("Settings")
+        }
     }
 }
 

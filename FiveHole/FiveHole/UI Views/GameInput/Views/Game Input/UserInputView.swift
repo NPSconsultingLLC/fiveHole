@@ -20,8 +20,10 @@ struct UserInputView: View {
             LinearGradient(Color.NPSBackgroundGradientStart)
                 .edgesIgnoringSafeArea(.all)
             VStack(spacing:10) {
-                Button("Add Goalie"){
-                    self.showAddGoalieView.toggle()
+                Button("Current Goalie"){
+                    //TODO:
+                    //Show simple list of goalies
+                    //with checkbox/radio buttons
                 }.frame(height: 40)
                 HStack{
                     Text("Saves")
@@ -138,7 +140,6 @@ struct UserInputView: View {
                 }
                 Spacer()
             }
-            
             .sheet(isPresented: $showAddGoalieView) {
                 //AddGoalieView(showAddGoalieView: $showAddGoalieView)
             }
@@ -146,7 +147,6 @@ struct UserInputView: View {
     }
     
     private func calculateSavePercent(){
-        
         savePercentVar = Double(savesVar/(savesVar + goalsVar))
         totalShotsVar = savesVar + goalsVar
         savePercentVar = savePercentVar * 100

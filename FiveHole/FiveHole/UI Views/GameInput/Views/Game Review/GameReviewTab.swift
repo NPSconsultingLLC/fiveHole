@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//TODO: Review game, opponent, etc before saving to a goalie 
+
 struct GameReviewTab: View {
     @FetchRequest(
         entity: Games.entity(),
