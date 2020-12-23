@@ -39,4 +39,5 @@ class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate {
     func request(_ request: SKRequest, didFailWithError error: Error) {
         print("Request did fail: \(error)")
     }
+    //URL https://blckbirds.com/post/how-to-use-in-app-purchases-in-swiftui-apps/
 }
