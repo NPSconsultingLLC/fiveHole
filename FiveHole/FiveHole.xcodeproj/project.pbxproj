@@ -29,6 +29,9 @@
 		97BA9EE3258A8AD000D1B675 /* GoalieAddSelectPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA9EE2258A8AD000D1B675 /* GoalieAddSelectPage.swift */; };
 		97C3CB29258AB3D3002CE839 /* AddNewGoalieAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3CB28258AB3D3002CE839 /* AddNewGoalieAlert.swift */; };
 		97F6CBE72593E9760012853B /* RemoveAdsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F6CBE62593E9760012853B /* RemoveAdsCollection.swift */; };
+		97F6CBEE2593EEA30012853B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F6CBEC2593EEA30012853B /* Assets.xcassets */; };
+		97F6CBF52593F1720012853B /* FireworksParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F6CBF32593F1720012853B /* FireworksParticleView.swift */; };
+		97F6CBF62593F1720012853B /* FireWorks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97F6CBF42593F1720012853B /* FireWorks.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		97BA9EE2258A8AD000D1B675 /* GoalieAddSelectPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalieAddSelectPage.swift; sourceTree = "<group>"; };
 		97C3CB28258AB3D3002CE839 /* AddNewGoalieAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGoalieAlert.swift; sourceTree = "<group>"; };
 		97F6CBE62593E9760012853B /* RemoveAdsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAdsCollection.swift; sourceTree = "<group>"; };
+		97F6CBEC2593EEA30012853B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97F6CBF32593F1720012853B /* FireworksParticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireworksParticleView.swift; sourceTree = "<group>"; };
+		97F6CBF42593F1720012853B /* FireWorks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireWorks.sks; sourceTree = "<group>"; };
 		A0A8A5FBB3D540A2D64F1DA1 /* Pods-FiveHole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveHole.debug.xcconfig"; path = "Target Support Files/Pods-FiveHole/Pods-FiveHole.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +244,7 @@
 		9778F4B9257D7D8E00C276C4 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				97F6CBF22593F1720012853B /* Easter Eggs */,
 				9778F4BA257D7D9A00C276C4 /* SettingsView.swift */,
 				97B86B8E2593E76A004231DC /* SettingsDetailView.swift */,
 				97F6CBE62593E9760012853B /* RemoveAdsCollection.swift */,
@@ -289,6 +296,16 @@
 				464C6FF0F3BE16ED2A801202 /* Pods_FiveHole.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97F6CBF22593F1720012853B /* Easter Eggs */ = {
+			isa = PBXGroup;
+			children = (
+				97F6CBF32593F1720012853B /* FireworksParticleView.swift */,
+				97F6CBF42593F1720012853B /* FireWorks.sks */,
+				97F6CBEC2593EEA30012853B /* Assets.xcassets */,
+			);
+			path = "Easter Eggs";
 			sourceTree = "<group>";
 		};
 		B68A6A77B739ABCD7887B1AC /* Pods */ = {
@@ -408,7 +425,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F6CBF62593F1720012853B /* FireWorks.sks in Resources */,
 				97742EB5256EA9280074EF6F /* Preview Assets.xcassets in Resources */,
+				97F6CBEE2593EEA30012853B /* Assets.xcassets in Resources */,
 				97742EB2256EA9280074EF6F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +491,7 @@
 				97742EAE256EA9260074EF6F /* FiveHoleApp.swift in Sources */,
 				97BA9EE3258A8AD000D1B675 /* GoalieAddSelectPage.swift in Sources */,
 				978722592583D86700390367 /* ColorExtensions.swift in Sources */,
+				97F6CBF52593F1720012853B /* FireworksParticleView.swift in Sources */,
 				97742EBA256EA9280074EF6F /* FiveHole.xcdatamodeld in Sources */,
 				9778F49F257D790F00C276C4 /* GameReviewTab.swift in Sources */,
 				9778F4BB257D7D9A00C276C4 /* SettingsView.swift in Sources */,

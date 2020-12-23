@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import SpriteKit
+
+//TODO add Fireworks View when somebody buys something successfully
 
 struct RemoveAdsCollection: View {
+    
     var body: some View {
         VStack (alignment: .leading){
             HStack{
@@ -50,7 +54,7 @@ struct RemoveAdsCollection: View {
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .fill(Color.red)
                     .frame(width: 100, height: 100)
-                Text("Nobody has every given me 99.99 seriously dont do this")
+                Text("Nobody has every given me 99.99 seriously don't do this")
             }.padding()
             .onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
                 //Remove ads for 5.99
