@@ -17,13 +17,6 @@ struct AddNewGoalieAlert: View {
     @State private var teamName = ""
     @State private var inputImage: UIImage?
     
-        @FetchRequest(
-            entity: Goalies.entity(),
-            sortDescriptors: [
-                NSSortDescriptor(keyPath: \Goalies.fName, ascending: true)
-            ]
-        ) var goalies: FetchedResults<Goalies>
-    
     var body: some View {
         ZStack {
             VStack {

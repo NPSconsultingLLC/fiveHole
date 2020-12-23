@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameInputView: View {
     @State var showGoalDetailsView = false
-    //TODO: Make the add goal location view disiss properly 
+
     var body: some View {
         ZStack {
                 NavigationView{

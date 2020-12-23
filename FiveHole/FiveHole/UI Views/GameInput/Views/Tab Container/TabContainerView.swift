@@ -10,6 +10,7 @@ import SwiftUI
 struct TabContainerView: View {
     @State private var selectedTab = 0
     @State var showGoalDetailsView = false
+    @State var showAddnewGoalie = false
     var body: some View {
         //TODO: update icons
         TabView(selection: $selectedTab) {
@@ -19,7 +20,7 @@ struct TabContainerView: View {
                     Text("Game")
                 }
                 .tag(0)
-            GoalieAddSelectPage()
+            GoalieAddSelectPage(showingAddNewGoalie: showAddnewGoalie)
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("Goalies")
