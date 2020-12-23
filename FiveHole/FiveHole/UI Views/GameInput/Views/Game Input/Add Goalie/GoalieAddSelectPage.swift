@@ -131,7 +131,7 @@ struct AddGoalieView: View{
                 Text("Add New Goalie")
                     .font(.largeTitle)
             }.padding()
-            .blur(radius: showingAddNewGoalie ? 30 : 0)
+            
             
             if showingAddNewGoalie {
                 AddNewGoalieAlert(showingAddNewGoalie: $showingAddNewGoalie)

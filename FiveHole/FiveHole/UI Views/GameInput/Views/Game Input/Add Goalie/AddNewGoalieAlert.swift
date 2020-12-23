@@ -59,9 +59,10 @@ struct AddNewGoalieAlert: View {
                         .textFieldStyle(PlainTextFieldStyle())
                         .padding([.leading, .trailing], 10)
                         .cornerRadius(16)
-                        .background(Color.NPSShadowColor)
+                        .background(Color.gray)
                         .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
+                        .foregroundColor(.white)
                         .padding([.leading, .trailing], 5)
                     
                     TextField("Last Name", text: $lName)
@@ -69,8 +70,9 @@ struct AddNewGoalieAlert: View {
                         .textFieldStyle(PlainTextFieldStyle())
                         .padding([.leading, .trailing], 10)
                         .cornerRadius(16)
-                        .background(Color.NPSShadowColor)
+                        .background(Color.gray)
                         .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
+                        .foregroundColor(.white)
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
                         .padding([.leading, .trailing], 5)
                     
@@ -79,8 +81,9 @@ struct AddNewGoalieAlert: View {
                         .textFieldStyle(PlainTextFieldStyle())
                         .padding([.leading, .trailing], 10)
                         .cornerRadius(16)
-                        .background(Color.NPSShadowColor)
+                        .background(Color.gray)
                         .clipShape(RoundedRectangle(cornerRadius: 10)) // clip corners
+                        .foregroundColor(.white)
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
                         .padding([.leading, .trailing], 5)
                     
