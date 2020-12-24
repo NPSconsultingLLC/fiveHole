@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+
     var body: some View {
         NavigationView {
             List{
-                NavigationLink(destination: SettingsDetailView()) {
+                NavigationLink(destination: SettingsDetailView(detailView: .removeAds )) {
                     Text("Remove Ads")
                 }
                 NavigationLink(destination: SettingsDetailView()) {
                     Text("Contact Support")
                 }
-                NavigationLink(destination: SettingsDetailView()) {
+                NavigationLink(destination: SettingsDetailView(detailView: .credits)) {
                     Text("Credits")
                 }
             }

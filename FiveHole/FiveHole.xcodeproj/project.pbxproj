@@ -34,6 +34,7 @@
 		97F6CBEE2593EEA30012853B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F6CBEC2593EEA30012853B /* Assets.xcassets */; };
 		97F6CBF52593F1720012853B /* FireworksParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F6CBF32593F1720012853B /* FireworksParticleView.swift */; };
 		97F6CBF62593F1720012853B /* FireWorks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97F6CBF42593F1720012853B /* FireWorks.sks */; };
+		ED2E3A51259534E500297584 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A50259534E500297584 /* CreditsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		97F6CBF32593F1720012853B /* FireworksParticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireworksParticleView.swift; sourceTree = "<group>"; };
 		97F6CBF42593F1720012853B /* FireWorks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireWorks.sks; sourceTree = "<group>"; };
 		A0A8A5FBB3D540A2D64F1DA1 /* Pods-FiveHole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveHole.debug.xcconfig"; path = "Target Support Files/Pods-FiveHole/Pods-FiveHole.debug.xcconfig"; sourceTree = "<group>"; };
+		ED2E3A50259534E500297584 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 				9778F4BA257D7D9A00C276C4 /* SettingsView.swift */,
 				97B86B8E2593E76A004231DC /* SettingsDetailView.swift */,
 				97F6CBE62593E9760012853B /* RemoveAdsCollection.swift */,
+				ED2E3A50259534E500297584 /* CreditsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				97779785256EAAA6004BEBF8 /* GameInputView.swift in Sources */,
 				97F6CBE72593E9760012853B /* RemoveAdsCollection.swift in Sources */,
 				97C3CB29258AB3D3002CE839 /* AddNewGoalieAlert.swift in Sources */,
+				ED2E3A51259534E500297584 /* CreditsView.swift in Sources */,
 				9748C306257DEBC2005D3EE2 /* GADBannerViewController.swift in Sources */,
 				9778F4AE257D7B4800C276C4 /* TabContainerView.swift in Sources */,
 				97742EAE256EA9260074EF6F /* FiveHoleApp.swift in Sources */,

@@ -15,9 +15,6 @@ struct RemoveAdsCollection: View {
     @StateObject var storeManager: StoreManager
     
     var body: some View {
-        List(storeManager.myProducts, id: \.self) { product in
-            
-        }
         NavigationView{
             List{
                 HStack{

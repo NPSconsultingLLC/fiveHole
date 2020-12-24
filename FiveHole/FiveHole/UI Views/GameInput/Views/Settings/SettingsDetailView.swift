@@ -10,7 +10,12 @@ import StoreKit
 
 struct SettingsDetailView: View {
     @StateObject var storeManager = StoreManager()
-    
+    @State var detailView = DetailViews.removeAds
+    enum DetailViews {
+        case removeAds
+        case credits
+    }
+
     let productIDs = [
         "com.strykeout.goalieScout2.RemoveAds",
         "com.strykeout.goalieScout2.Beer",
@@ -20,16 +25,23 @@ struct SettingsDetailView: View {
     ]
     
     var body: some View {
-        RemoveAdsCollection(storeManager: storeManager)
-            .onAppear(perform: {
-                SKPaymentQueue.default().add(storeManager)
-                storeManager.getProducts(productIDs: productIDs)
-            })
+        Group {
+            if detailView == .removeAds {
+            RemoveAdsCollection(storeManager: storeManager)
+                .onAppear(perform: {
+                    SKPaymentQueue.default().add(storeManager)
+                    storeManager.getProducts(productIDs: productIDs)
+                })
+            } else if detailView == .credits {
+                CreditsView()
+            }
+        }
     }
 }
 
-struct SettingsDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsDetailView()
-    }
-}
+//struct SettingsDetailView_Previews: PreviewProvider {
+//    @State var detailViews = .removeAds
+//    static var previews: some View {
+//        SettingsDetailView(, detailViews: detailViews.removeAds)
+//    }
+//}
