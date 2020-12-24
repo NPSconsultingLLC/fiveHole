@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MessageUI
+
 struct SettingsView: View {
 
     @State var result: Result<MFMailComposeResult, Error>? = nil

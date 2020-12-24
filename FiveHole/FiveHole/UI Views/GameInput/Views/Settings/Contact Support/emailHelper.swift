@@ -47,6 +47,8 @@ struct MailView: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
         let vc = MFMailComposeViewController()
         vc.mailComposeDelegate = context.coordinator
+        vc.setToRecipients(["Nathan@Strykeout.com"])
+        vc.setSubject("Goalie Stats 2 Support Request")
         return vc
     }
 
