@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
-
+import MessageUI
 struct SettingsView: View {
+
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+    @State var isShowingMailView = false
 
     var body: some View {
         NavigationView {
@@ -15,14 +18,18 @@ struct SettingsView: View {
                 NavigationLink(destination: SettingsDetailView(detailView: .removeAds )) {
                     Text("Remove Ads")
                 }
-                NavigationLink(destination: SettingsDetailView()) {
+                Button(action: {
+                    self.isShowingMailView.toggle()
+                }, label: {
                     Text("Contact Support")
-                }
+                })
                 NavigationLink(destination: SettingsDetailView(detailView: .credits)) {
                     Text("Credits")
                 }
             }
             .navigationBarTitle("Settings")
+        }.sheet(isPresented: $isShowingMailView) {
+            MailView(isShowing: self.$isShowingMailView, result: self.$result)
         }
     }
 }
@@ -32,3 +39,4 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsView()
     }
 }
+
