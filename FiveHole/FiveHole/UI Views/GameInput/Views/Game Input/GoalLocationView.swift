@@ -184,13 +184,17 @@ struct GoalLocationView: View {
             
         }            
         .border(Color.black)
-        .clipShape(RoundedRectangle(cornerRadius: 16))       // << here !!
+        .clipShape(RoundedRectangle(cornerRadius: 16))
         .frame(width: UIScreen.main.bounds.width - 5, height: 500, alignment: .center)
+        .overlay(
+            RoundedRectangle(cornerRadius: 15)
+                .stroke(Color.NPSButtonEnd, lineWidth: 2)
+        )
     }
 }
 
-//struct GoalLocationView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GoalLocationView().colorScheme(.dark)
-//    }
-//}
+struct GoalLocationView_Previews: PreviewProvider {
+    static var previews: some View {
+        GoalLocationView(showGoalDetailsView: .constant(true)).colorScheme(.dark)
+    }
+}

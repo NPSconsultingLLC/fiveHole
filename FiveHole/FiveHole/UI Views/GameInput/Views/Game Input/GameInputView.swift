@@ -18,12 +18,22 @@ struct GameInputView: View {
                             .edgesIgnoringSafeArea(.all)
                         VStack{
                             UserInputView(showGoalDetailsView: $showGoalDetailsView)
+                            Button(action: {
+                                //Save Game Action
+                            }) {
+                                Text("Save Game")
+                                    .frame(minWidth: 0, maxWidth: .infinity)
+                                    .font(.system(size: 18))
+                                    .padding()
+                                    .foregroundColor(.NPSButtonEnd)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.NPSButtonEnd, lineWidth: 2)
+                                    )
+                            }
+
                         }.blur(radius: showGoalDetailsView ? 30 : 0)
                         .padding()
-                        .navigationBarItems(trailing:
-                                                Button("Save") {
-                                                    //Toggle saving the whole game
-                                                })
                     }
                 }
                 if showGoalDetailsView {
@@ -35,12 +45,3 @@ struct GameInputView: View {
             }.animation(.spring())
         }
 }
-
-////MARK: Previewer
-//struct GameInputView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Group {
-//            GameInputView(showGoalLocationView: true).colorScheme(.dark)
-//        }
-//    }
-//}

@@ -236,6 +236,7 @@
 				9748C304257DEB78005D3EE2 /* AdMob */,
 				9778F4B9257D7D8E00C276C4 /* Settings */,
 				9778F4B5257D7BCA00C276C4 /* Tab Container */,
+				97AE92BC257DBB6D000FF8C2 /* Add Goalie */,
 				9778F4A3257D791900C276C4 /* Game Review */,
 				97ABDFB6257D5B2A008686C3 /* Game Input */,
 			);
@@ -291,7 +292,6 @@
 		97ABDFB6257D5B2A008686C3 /* Game Input */ = {
 			isa = PBXGroup;
 			children = (
-				97AE92BC257DBB6D000FF8C2 /* Add Goalie */,
 				978074742587ED0F00C572B8 /* UserInputView.swift */,
 				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
 				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
