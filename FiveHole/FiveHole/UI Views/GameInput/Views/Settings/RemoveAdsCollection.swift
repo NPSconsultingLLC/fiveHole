@@ -25,6 +25,10 @@ struct RemoveAdsCollection: View {
                 }.padding()
                 .onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
                     //Remove ads for .99
+                    //TODO: update this to return the product on purchase when tapped
+                    //Stuck trying to log in to the simluator
+                    //the username / password is StackingDrawer@gmail.com / V!kings36
+                   // storeManager.purchaseProduct(product: product)
                 })
                 HStack{
                     RoundedRectangle(cornerRadius: 10, style: .continuous)

@@ -8,9 +8,9 @@
 import Foundation
 import StoreKit
 
-class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate {
-    
+class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     @Published var myProducts = [SKProduct]()
+    @Published var transactionState: SKPaymentTransactionState?
     var request: SKProductsRequest!
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
@@ -29,6 +29,23 @@ class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate {
         }
     }
     
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            switch transaction.transactionState {
+            case .purchasing:
+                transactionState = .purchasing
+            case .purchased:
+                transactionState = .purchased
+            case .restored:
+                transactionState = .restored
+            case .failed, .deferred:
+                transactionState = .failed
+            default:
+                queue.finishTransaction(transaction)
+            }
+        }
+    }
+    
     func getProducts(productIDs: [String]) {
         print("Start requesting products ...")
         let request = SKProductsRequest(productIdentifiers: Set(productIDs))
@@ -39,5 +56,15 @@ class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate {
     func request(_ request: SKRequest, didFailWithError error: Error) {
         print("Request did fail: \(error)")
     }
+    
+    func purchaseProduct(product: SKProduct) {
+        if SKPaymentQueue.canMakePayments() {
+            let payment = SKPayment(product: product)
+            SKPaymentQueue.default().add(payment)
+        } else {
+            print("User can't make payment.")
+        }
+    }
+    
     //URL https://blckbirds.com/post/how-to-use-in-app-purchases-in-swiftui-apps/
 }
