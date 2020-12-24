@@ -36,6 +36,7 @@
 		97F6CBF62593F1720012853B /* FireWorks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97F6CBF42593F1720012853B /* FireWorks.sks */; };
 		ED2E3A51259534E500297584 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A50259534E500297584 /* CreditsView.swift */; };
 		ED2E3A6025953E2200297584 /* emailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A5F25953E2200297584 /* emailHelper.swift */; };
+		ED2E3A74259559A700297584 /* GameReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A73259559A700297584 /* GameReviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		A0A8A5FBB3D540A2D64F1DA1 /* Pods-FiveHole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveHole.debug.xcconfig"; path = "Target Support Files/Pods-FiveHole/Pods-FiveHole.debug.xcconfig"; sourceTree = "<group>"; };
 		ED2E3A50259534E500297584 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		ED2E3A5F25953E2200297584 /* emailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailHelper.swift; sourceTree = "<group>"; };
+		ED2E3A73259559A700297584 /* GameReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				9778F49E257D790F00C276C4 /* GameReviewTab.swift */,
+				ED2E3A73259559A700297584 /* GameReviewView.swift */,
 			);
 			path = "Game Review";
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				97F6CBF52593F1720012853B /* FireworksParticleView.swift in Sources */,
 				97742EBA256EA9280074EF6F /* FiveHole.xcdatamodeld in Sources */,
 				9718B6692593FD3A0072C63B /* StoreManager.swift in Sources */,
+				ED2E3A74259559A700297584 /* GameReviewView.swift in Sources */,
 				9778F49F257D790F00C276C4 /* GameReviewTab.swift in Sources */,
 				9778F4BB257D7D9A00C276C4 /* SettingsView.swift in Sources */,
 			);

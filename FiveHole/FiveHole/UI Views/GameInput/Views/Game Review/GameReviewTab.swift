@@ -33,3 +33,5 @@ struct gameCell: View {
         game.opponent.map(Text.init)
     }
 }
+
+
