@@ -15,6 +15,9 @@ struct RemoveAdsCollection: View {
     @StateObject var storeManager: StoreManager
     
     var body: some View {
+        List(storeManager.myProducts, id: \.self) { product in
+            
+        }
         NavigationView{
             List{
                 HStack{
@@ -24,10 +27,6 @@ struct RemoveAdsCollection: View {
                     Text("Remove adds for the low low price of $0.99")
                 }.padding()
                 .onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
-                    //Remove ads for .99
-                    //TODO: update this to return the product on purchase when tapped
-                    //Stuck trying to log in to the simluator
-                    //the username / password is StackingDrawer@gmail.com / V!kings36
                    // storeManager.purchaseProduct(product: product)
                 })
                 HStack{
@@ -71,7 +70,7 @@ struct RemoveAdsCollection: View {
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        //Restore products already purchased
+                        storeManager.restoreProducts()
                     }) {
                         Text("Restore Purchases")
                     }
