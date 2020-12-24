@@ -9,24 +9,28 @@ import SwiftUI
 import MessageUI
 
 struct SettingsView: View {
-
+    
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
-
+    
     var body: some View {
         NavigationView {
             List{
                 NavigationLink(destination: SettingsDetailView(detailView: .removeAds )) {
                     Text("Remove Ads")
                 }
-                Button(action: {
-                    self.isShowingMailView.toggle()
-                }, label: {
-                    Text("Contact Support")
-                })
                 NavigationLink(destination: SettingsDetailView(detailView: .credits)) {
                     Text("Credits")
                 }
+                Button(action: {
+                    self.isShowingMailView.toggle()
+                }, label: {
+                    HStack {
+                        Text("Contact Support")
+                        Spacer()
+                        Image(systemName: "envelope.badge.fill")
+                    }
+                })
             }
             .navigationBarTitle("Settings")
         }.sheet(isPresented: $isShowingMailView) {
