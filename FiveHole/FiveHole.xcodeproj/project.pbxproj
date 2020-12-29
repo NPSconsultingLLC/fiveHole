@@ -296,8 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				978074742587ED0F00C572B8 /* UserInputView.swift */,
-				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
 				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
+				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
 			);
 			path = "Game Input";
 			sourceTree = "<group>";

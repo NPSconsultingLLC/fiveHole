@@ -8,32 +8,49 @@
 import SwiftUI
 
 struct GameReviewView: View {
+    @Binding var showingSaveGameView: Bool
+    
     @State private var opponentName = ""
-    @State var homeScore = ""
-    @State var awayScore = ""
+    @State var saveUserScore = ""
+    @State var saveOpponentScore = ""
+    
+    var userScore: String
+    var opponentScore: String
+    
+
     
     var body: some View {
         VStack{
+            Text("Game Review")
+                .font(.largeTitle)
+                .foregroundColor(.NPSTextColor)
+            Spacer()
+                .frame(height: 50)
             HStack{
-                Text("Home Team")
+                Button(action: {
+                    //Show Goalie Picker
+                }) {
+                    Text("Goalie Team Name")
+                        .foregroundColor(.NPSButtonEnd)
+                }
                 Spacer()
-                Text("Away Team")
+                Text("Opponent Team")
+                    .foregroundColor(.NPSTextColor)
             }
             HStack {
-                TextField("6", text: $homeScore)
+                TextField(userScore, text: $saveUserScore)
                     .frame(width: 100, height: 100)
-                    .multilineTextAlignment(.center)
                     .background(RoundedRectangle(cornerRadius: 4)
                                     .stroke(Color.NPSButtonStart)
                                     .frame(width: 100, height: 100))
                 Spacer()
-                TextField("23", text: $homeScore)
+                TextField(opponentScore, text: $saveOpponentScore)
                     .frame(width: 100, height: 100)
-                    .multilineTextAlignment(.center)
                     .background(RoundedRectangle(cornerRadius: 4)
                                     .stroke(Color.NPSButtonStart)
                                     .frame(width: 100, height: 100))
-            }
+            }.font(Font.system(size: 60, design: .default))
+            .multilineTextAlignment(.center)
             
             
             TextField("Opponent", text: $opponentName)
@@ -46,13 +63,53 @@ struct GameReviewView: View {
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray))
                 .foregroundColor(.white)
                 .padding([.leading, .trailing], 5)
+            
+            TextField("Ice time", text: $opponentName)
+                .frame(height: 44)
+                .textFieldStyle(PlainTextFieldStyle())
+                .padding([.leading, .trailing], 10)
+                .cornerRadius(16)
+                .background(Color.gray)
+                .clipShape(RoundedRectangle(cornerRadius: 4)) // clip corners
+                .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray))
+                .foregroundColor(.white)
+                .padding([.leading, .trailing], 5)
             Spacer()
+            Button(action: {
+                //Cancel
+                showingSaveGameView.toggle()
+            }) {
+                Text("Cancel")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .font(.system(size: 18))
+                    .padding()
+                    .foregroundColor(.NPSButtonEnd)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.NPSButtonEnd, lineWidth: 2)
+                    )
+            }
+            Button(action: {
+                //Save Game Action
+                showingSaveGameView.toggle()
+            }) {
+                Text("Save Game")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .font(.system(size: 18))
+                    .padding()
+                    .foregroundColor(.NPSButtonEnd)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.NPSButtonEnd, lineWidth: 2)
+                    )
+            }
         }.padding()
     }
 }
 
 struct GameReviewView_Previews: PreviewProvider {
+
     static var previews: some View {
-        GameReviewView()
+        GameReviewView(showingSaveGameView: .constant(true), userScore: "5", opponentScore: "3")
     }
 }

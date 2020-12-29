@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct UserInputView: View {
+    @State var showGoalDetailsView = false
     @State var showAddGoalieView = false
-    @Binding var showGoalDetailsView: Bool
+    
     @State var savesVar = 0.0
     @State var goalsVar = 0.0
     @State var savePercentVar = 100.0
@@ -153,5 +154,11 @@ struct UserInputView: View {
         if savePercentVar.isNaN {
             savePercentVar = 100.0
         }
+    }
+}
+
+struct UserInputView_Previews: PreviewProvider {
+    static var previews: some View {
+        UserInputView()
     }
 }
