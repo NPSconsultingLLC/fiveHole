@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserInputView: View {
-    @State var showGoalDetailsView = false
+    @Binding var showGoalDetailsView: Bool
     @State var showAddGoalieView = false
     
     @State var savesVar = 0.0
@@ -159,6 +159,6 @@ struct UserInputView: View {
 
 struct UserInputView_Previews: PreviewProvider {
     static var previews: some View {
-        UserInputView()
+        UserInputView(showGoalDetailsView: .constant(true))
     }
 }

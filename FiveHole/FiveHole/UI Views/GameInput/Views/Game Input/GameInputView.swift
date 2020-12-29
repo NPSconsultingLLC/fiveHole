@@ -18,7 +18,7 @@ struct GameInputView: View {
                     LinearGradient(Color.NPSBackgroundGradientStart)
                         .edgesIgnoringSafeArea(.all)
                     VStack{
-                        UserInputView()
+                        UserInputView(showGoalDetailsView: $showGoalDetailsView)
                         Button(action: {
                             showingSaveGameView.toggle()
                         }) {
@@ -33,7 +33,7 @@ struct GameInputView: View {
                                 )
                         }
                         
-                    }.blur(radius: showGoalDetailsView ? 30 : 0)
+                    }.blur(radius: showGoalDetailsView || showingSaveGameView ? 30 : 0)
                     .padding()
                 }
             }
