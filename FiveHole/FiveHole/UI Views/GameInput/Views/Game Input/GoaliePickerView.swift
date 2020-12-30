@@ -24,6 +24,7 @@ struct GoaliePickerView: View {
             List(fetchedGoalies) { goalie in
                 Button(action: {
                     changeSelectedGoalie(selectedGoalie: goalie)
+                    showGoaliePickerView.toggle()
                 }) {
                     HStack{
                         VStack{

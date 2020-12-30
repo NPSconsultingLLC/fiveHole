@@ -126,7 +126,7 @@ struct AddNewGoalieAlert: View {
         newGoalie.fName = fName
         newGoalie.lName = lName
         newGoalie.tName = teamName
-        newGoalie.selectedGoalie = true
+        newGoalie.selectedGoalie = false
         saveContext()
     }
 
