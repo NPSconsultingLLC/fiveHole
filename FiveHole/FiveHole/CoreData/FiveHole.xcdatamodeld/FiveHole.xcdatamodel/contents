@@ -24,7 +24,7 @@
     </entity>
     <elements>
         <element name="Games" positionX="-672.0078125" positionY="-433.3125" width="128" height="178"/>
-        <element name="Goalies" positionX="-892.5" positionY="-485.44140625" width="128" height="118"/>
+        <element name="Goalies" positionX="-892.5" positionY="-485.44140625" width="128" height="28"/>
         <element name="GoalsAgainst" positionX="-437.94921875" positionY="-235.453125" width="128" height="73"/>
     </elements>
 </model>

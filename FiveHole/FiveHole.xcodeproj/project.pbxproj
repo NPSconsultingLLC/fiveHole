@@ -11,6 +11,7 @@
 		9718B6662593FC890072C63B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9718B6652593FC890072C63B /* StoreKit.framework */; };
 		9718B6692593FD3A0072C63B /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9718B6682593FD3A0072C63B /* StoreManager.swift */; };
 		9748C306257DEBC2005D3EE2 /* GADBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9748C305257DEBC2005D3EE2 /* GADBannerViewController.swift */; };
+		975252E5259CD6F500C395CA /* GoaliePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975252E4259CD6F500C395CA /* GoaliePickerView.swift */; };
 		97742EAE256EA9260074EF6F /* FiveHoleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97742EAD256EA9260074EF6F /* FiveHoleApp.swift */; };
 		97742EB2256EA9280074EF6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97742EB1256EA9280074EF6F /* Assets.xcassets */; };
 		97742EB5256EA9280074EF6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97742EB4256EA9280074EF6F /* Preview Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		9718B6682593FD3A0072C63B /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		9748C305257DEBC2005D3EE2 /* GADBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADBannerViewController.swift; sourceTree = "<group>"; };
 		9748C337257DECEA005D3EE2 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
+		975252E4259CD6F500C395CA /* GoaliePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoaliePickerView.swift; sourceTree = "<group>"; };
 		97742EAA256EA9260074EF6F /* FiveHole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiveHole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97742EAD256EA9260074EF6F /* FiveHoleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveHoleApp.swift; sourceTree = "<group>"; };
 		97742EB1256EA9280074EF6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				978074742587ED0F00C572B8 /* UserInputView.swift */,
 				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
 				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
+				975252E4259CD6F500C395CA /* GoaliePickerView.swift */,
 			);
 			path = "Game Input";
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				977797DD256EEF78004BEBF8 /* GoalLocationView.swift in Sources */,
 				97B86B8F2593E76A004231DC /* SettingsDetailView.swift in Sources */,
 				978074752587ED0F00C572B8 /* UserInputView.swift in Sources */,
+				975252E5259CD6F500C395CA /* GoaliePickerView.swift in Sources */,
 				978722542583D74200390367 /* NeumorphicButton.swift in Sources */,
 				ED2E3A6025953E2200297584 /* emailHelper.swift in Sources */,
 				97742EB7256EA9280074EF6F /* Persistence.swift in Sources */,

@@ -9,23 +9,32 @@ import SwiftUI
 
 struct UserInputView: View {
     @Binding var showGoalDetailsView: Bool
-    @State var showAddGoalieView = false
+    @State var showGoaliePickerView = false
     
     @State var savesVar = 0.0
     @State var goalsVar = 0.0
     @State var savePercentVar = 100.0
     @State var totalShotsVar = 0.0
-        
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(
+        entity: Goalies.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Goalies.fName, ascending: true)
+        ]
+    ) var fetchedGoalies: FetchedResults<Goalies>
+    
     var body: some View {
         ZStack {
             LinearGradient(Color.NPSBackgroundGradientStart)
                 .edgesIgnoringSafeArea(.all)
             VStack(spacing:10) {
-                Button("Current Goalie"){
-                    //TODO:
-                    //Show simple list of goalies
-                    //with checkbox/radio buttons
-                }.frame(height: 40)
+                Button(action: {
+                    showGoaliePickerView.toggle()
+                }){
+                    let selectedGoalie = setSelectedGoalie()
+                    Text(selectedGoalie)
+                }
                 HStack{
                     Text("Saves")
                         .foregroundColor(.NPSTextColor)
@@ -141,8 +150,8 @@ struct UserInputView: View {
                 }
                 Spacer()
             }
-            .sheet(isPresented: $showAddGoalieView) {
-                //AddGoalieView(showAddGoalieView: $showAddGoalieView)
+            .sheet(isPresented: $showGoaliePickerView) {
+                GoaliePickerView(showGoaliePickerView: $showGoaliePickerView)
             }
         }
     }
@@ -154,6 +163,16 @@ struct UserInputView: View {
         if savePercentVar.isNaN {
             savePercentVar = 100.0
         }
+    }
+    
+    private func setSelectedGoalie() -> String{
+        var selectedGoalie = "Choose Goalie"
+        for goalie in fetchedGoalies {
+            if goalie.selectedGoalie {
+                selectedGoalie = goalie.fName! + " " + goalie.lName!
+            }
+        }
+        return selectedGoalie
     }
 }
 
