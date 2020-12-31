@@ -25,8 +25,10 @@ struct GoalieAddSelectPage: View {
     var body: some View {
         TabView{
             if(fetchedGoalies.count > 0){
-                ForEach(fetchedGoalies) { goalie in
-                    GoalieProfileView(showingAddNewGoalie: showingAddNewGoalie, goalie: goalie, managedObjectContext: _managedObjectContext)
+                //Switched this to the .count itteration because I'm trying to reload the table and jump to the i index
+                
+                ForEach(0..<fetchedGoalies.count) { i in
+                    GoalieProfileView(showingAddNewGoalie: showingAddNewGoalie, goalie: fetchedGoalies[i], managedObjectContext: _managedObjectContext)
                 }
                 AddGoalieView(showingAddNewGoalie: false)
             } else{
