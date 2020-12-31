@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,8 @@
 		9778F4AE257D7B4800C276C4 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778F4AD257D7B4800C276C4 /* TabContainerView.swift */; };
 		9778F4BB257D7D9A00C276C4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778F4BA257D7D9A00C276C4 /* SettingsView.swift */; };
 		978074752587ED0F00C572B8 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978074742587ED0F00C572B8 /* UserInputView.swift */; };
+		97851F18259E258200A769A0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 97851F17259E258200A769A0 /* FirebaseAnalytics */; };
+		97851F1A259E258200A769A0 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 97851F19259E258200A769A0 /* FirebaseCrashlytics */; };
 		978722542583D74200390367 /* NeumorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978722532583D74200390367 /* NeumorphicButton.swift */; };
 		978722592583D86700390367 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978722582583D86700390367 /* ColorExtensions.swift */; };
 		97AE92DB257DE976000FF8C2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AE92DA257DE976000FF8C2 /* CloudKit.framework */; };
@@ -105,7 +107,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9718B6662593FC890072C63B /* StoreKit.framework in Frameworks */,
+				97851F1A259E258200A769A0 /* FirebaseCrashlytics in Frameworks */,
 				97AE92DB257DE976000FF8C2 /* CloudKit.framework in Frameworks */,
+				97851F18259E258200A769A0 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +383,10 @@
 			dependencies = (
 			);
 			name = FiveHole;
+			packageProductDependencies = (
+				97851F17259E258200A769A0 /* FirebaseAnalytics */,
+				97851F19259E258200A769A0 /* FirebaseCrashlytics */,
+			);
 			productName = FiveHole;
 			productReference = 97742EAA256EA9260074EF6F /* FiveHole.app */;
 			productType = "com.apple.product-type.application";
@@ -450,6 +458,9 @@
 				Base,
 			);
 			mainGroup = 97742EA1256EA9260074EF6F;
+			packageReferences = (
+				97851F16259E258200A769A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 97742EAB256EA9260074EF6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -684,6 +695,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stryekout.goalieScout2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -707,6 +719,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stryekout.goalieScout2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -838,6 +851,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		97851F16259E258200A769A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		97851F17259E258200A769A0 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97851F16259E258200A769A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		97851F19259E258200A769A0 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97851F16259E258200A769A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		97742EB8256EA9280074EF6F /* FiveHole.xcdatamodeld */ = {

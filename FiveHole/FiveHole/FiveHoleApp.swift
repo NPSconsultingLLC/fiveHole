@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct FiveHoleApp: App {
@@ -13,7 +14,8 @@ struct FiveHoleApp: App {
     let persistenceController = PersistenceController.shared
     
     init(){
-        //config app - 
+        //config app -
+        FirebaseApp.configure()
     }
 
     var body: some Scene {
