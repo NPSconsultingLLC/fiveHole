@@ -145,6 +145,25 @@
 			path = AdMob;
 			sourceTree = "<group>";
 		};
+		97525343259E1D8000C395CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				978074742587ED0F00C572B8 /* UserInputView.swift */,
+				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
+				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
+				975252E4259CD6F500C395CA /* GoaliePickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97525344259E1D9200C395CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97525336259E183D00C395CA /* gameCalculator.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		97742EA1256EA9260074EF6F = {
 			isa = PBXGroup;
 			children = (
@@ -296,11 +315,8 @@
 		97ABDFB6257D5B2A008686C3 /* Game Input */ = {
 			isa = PBXGroup;
 			children = (
-				978074742587ED0F00C572B8 /* UserInputView.swift */,
-				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
-				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
-				975252E4259CD6F500C395CA /* GoaliePickerView.swift */,
-				97525336259E183D00C395CA /* gameCalculator.swift */,
+				97525344259E1D9200C395CA /* Controllers */,
+				97525343259E1D8000C395CA /* Views */,
 			);
 			path = "Game Input";
 			sourceTree = "<group>";
