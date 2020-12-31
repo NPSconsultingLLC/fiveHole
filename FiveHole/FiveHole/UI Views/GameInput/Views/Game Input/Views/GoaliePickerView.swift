@@ -59,6 +59,8 @@ struct GoaliePickerView: View {
         } else {
             Button(action: {
                 //pop to add goalie page
+                
+                showGoaliePickerView.toggle()
             }) {
                 Text("Click here to add your first goalie")
             }
@@ -85,8 +87,8 @@ struct GoaliePickerView: View {
     }
 }
 
-//struct GoaliePickerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GoaliePickerView(showGoaliePickerView: .constant(true))
-//    }
-//}
+struct GoaliePickerView_Previews: PreviewProvider {
+    static var previews: some View {
+        GoaliePickerView(showGoaliePickerView: .constant(true))
+    }
+}

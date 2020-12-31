@@ -9,8 +9,8 @@ import SwiftUI
 
 struct UserInputView: View {
     @Binding var showGoalDetailsView: Bool
-    @State var showGoaliePickerView = false
     
+    @State var showGoaliePickerView = false
     @State var savesVar = 0.0
     @State var goalsVar = 0.0
     @State var savePercentVar = 100.0

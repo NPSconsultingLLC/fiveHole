@@ -16,9 +16,7 @@ struct GameReviewView: View {
     
     var userScore: String
     var opponentScore: String
-    
 
-    
     var body: some View {
         VStack{
             Text("Game Review")

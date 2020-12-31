@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabContainerView: View {
-    @State private var selectedTab = 0
+    @State var selectedTab = 0
     @State var showGoalDetailsView = false
     @State var showAddnewGoalie = false
     var body: some View {
