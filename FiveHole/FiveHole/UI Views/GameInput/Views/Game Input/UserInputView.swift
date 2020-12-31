@@ -75,7 +75,8 @@ struct UserInputView: View {
                 HStack{
                     Button(action: {
                         savesVar += 1
-                        calculateSavePercent()
+                        savePercentVar = gameCalculator.calculateSavePercent(savesVar: savesVar, goalsVar: goalsVar)
+                        totalShotsVar = gameCalculator.calculateTotalShots(savesVar: savesVar, goalsVar: goalsVar)
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }){
@@ -101,7 +102,8 @@ struct UserInputView: View {
                     Spacer()
                     Button(action: {
                         goalsVar += 1
-                        calculateSavePercent()
+                        savePercentVar = gameCalculator.calculateSavePercent(savesVar: savesVar, goalsVar: goalsVar)
+                        totalShotsVar = gameCalculator.calculateTotalShots(savesVar: savesVar, goalsVar: goalsVar)
                         self.showGoalDetailsView.toggle()
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
@@ -128,7 +130,8 @@ struct UserInputView: View {
                                 impactMed.impactOccurred()
                                 if savesVar > 0 {
                                     savesVar -= 1
-                                    calculateSavePercent()
+                                    savePercentVar = gameCalculator.calculateSavePercent(savesVar: savesVar, goalsVar: goalsVar)
+                                    totalShotsVar = gameCalculator.calculateTotalShots(savesVar: savesVar, goalsVar: goalsVar)
                                 }
                             })
                     Spacer()
@@ -144,7 +147,8 @@ struct UserInputView: View {
                                 impactMed.impactOccurred()
                                 if goalsVar > 0 {
                                     goalsVar -= 1
-                                    calculateSavePercent()
+                                    savePercentVar = gameCalculator.calculateSavePercent(savesVar: savesVar, goalsVar: goalsVar)
+                                    totalShotsVar = gameCalculator.calculateTotalShots(savesVar: savesVar, goalsVar: goalsVar)
                                 }
                             })
                 }
@@ -153,15 +157,6 @@ struct UserInputView: View {
             .sheet(isPresented: $showGoaliePickerView) {
                 GoaliePickerView(showGoaliePickerView: $showGoaliePickerView)
             }
-        }
-    }
-    
-    private func calculateSavePercent(){
-        savePercentVar = Double(savesVar/(savesVar + goalsVar))
-        totalShotsVar = savesVar + goalsVar
-        savePercentVar = savePercentVar * 100
-        if savePercentVar.isNaN {
-            savePercentVar = 100.0
         }
     }
     
