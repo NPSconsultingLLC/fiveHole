@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>75456835457-g7dknan6o5qm3ciqo0caqmd70paf154c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.75456835457-g7dknan6o5qm3ciqo0caqmd70paf154c</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAkVsTfknmBO92ceHmolcixLAazUEE91dk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>75456835457</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.stryekout.goalieScout2</string>
+	<key>PROJECT_ID</key>
+	<string>goaliescout-92844</string>
+	<key>STORAGE_BUCKET</key>
+	<string>goaliescout-92844.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:75456835457:ios:83b8094a2c4a355656c280</string>
+	<key>DATABASE_URL</key>
+	<string>https://goaliescout-92844.firebaseio.com</string>
+</dict>
+</plist>

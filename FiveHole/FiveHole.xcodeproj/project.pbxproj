@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26BC80E493D27FAF824607DE /* Pods_FiveHole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464C6FF0F3BE16ED2A801202 /* Pods_FiveHole.framework */; };
 		9718B6662593FC890072C63B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9718B6652593FC890072C63B /* StoreKit.framework */; };
 		9718B6692593FD3A0072C63B /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9718B6682593FD3A0072C63B /* StoreManager.swift */; };
 		9748C306257DEBC2005D3EE2 /* GADBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9748C305257DEBC2005D3EE2 /* GADBannerViewController.swift */; };
 		975252E5259CD6F500C395CA /* GoaliePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975252E4259CD6F500C395CA /* GoaliePickerView.swift */; };
 		97525337259E183D00C395CA /* gameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97525336259E183D00C395CA /* gameCalculator.swift */; };
+		97525351259E216100C395CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97525350259E216000C395CA /* GoogleService-Info.plist */; };
 		97742EAE256EA9260074EF6F /* FiveHoleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97742EAD256EA9260074EF6F /* FiveHoleApp.swift */; };
 		97742EB2256EA9280074EF6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97742EB1256EA9280074EF6F /* Assets.xcassets */; };
 		97742EB5256EA9280074EF6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97742EB4256EA9280074EF6F /* Preview Assets.xcassets */; };
@@ -58,14 +58,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		464C6FF0F3BE16ED2A801202 /* Pods_FiveHole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiveHole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A04E8F76BA8D2EBD6D35B91 /* Pods-FiveHole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveHole.release.xcconfig"; path = "Target Support Files/Pods-FiveHole/Pods-FiveHole.release.xcconfig"; sourceTree = "<group>"; };
 		9718B6652593FC890072C63B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9718B6682593FD3A0072C63B /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		9748C305257DEBC2005D3EE2 /* GADBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADBannerViewController.swift; sourceTree = "<group>"; };
 		9748C337257DECEA005D3EE2 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
 		975252E4259CD6F500C395CA /* GoaliePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoaliePickerView.swift; sourceTree = "<group>"; };
 		97525336259E183D00C395CA /* gameCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameCalculator.swift; sourceTree = "<group>"; };
+		97525350259E216000C395CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		97742EAA256EA9260074EF6F /* FiveHole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiveHole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97742EAD256EA9260074EF6F /* FiveHoleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveHoleApp.swift; sourceTree = "<group>"; };
 		97742EB1256EA9280074EF6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +94,6 @@
 		97F6CBEC2593EEA30012853B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97F6CBF32593F1720012853B /* FireworksParticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireworksParticleView.swift; sourceTree = "<group>"; };
 		97F6CBF42593F1720012853B /* FireWorks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireWorks.sks; sourceTree = "<group>"; };
-		A0A8A5FBB3D540A2D64F1DA1 /* Pods-FiveHole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveHole.debug.xcconfig"; path = "Target Support Files/Pods-FiveHole/Pods-FiveHole.debug.xcconfig"; sourceTree = "<group>"; };
 		ED2E3A50259534E500297584 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		ED2E3A5F25953E2200297584 /* emailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailHelper.swift; sourceTree = "<group>"; };
 		ED2E3A73259559A700297584 /* GameReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewView.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			files = (
 				9718B6662593FC890072C63B /* StoreKit.framework in Frameworks */,
 				97AE92DB257DE976000FF8C2 /* CloudKit.framework in Frameworks */,
-				26BC80E493D27FAF824607DE /* Pods_FiveHole.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +169,6 @@
 				97742ECE256EA9280074EF6F /* FiveHoleUITests */,
 				97742EAB256EA9260074EF6F /* Products */,
 				97AE92D9257DE976000FF8C2 /* Frameworks */,
-				B68A6A77B739ABCD7887B1AC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +190,7 @@
 				97779782256EAA4B004BEBF8 /* UI Views */,
 				97742EAD256EA9260074EF6F /* FiveHoleApp.swift */,
 				97742EB1256EA9280074EF6F /* Assets.xcassets */,
+				97525350259E216000C395CA /* GoogleService-Info.plist */,
 				97742EBB256EA9280074EF6F /* Info.plist */,
 				97742EB3256EA9280074EF6F /* Preview Content */,
 			);
@@ -336,7 +333,6 @@
 				9718B6652593FC890072C63B /* StoreKit.framework */,
 				9748C337257DECEA005D3EE2 /* GoogleMobileAds.xcframework */,
 				97AE92DA257DE976000FF8C2 /* CloudKit.framework */,
-				464C6FF0F3BE16ED2A801202 /* Pods_FiveHole.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -349,15 +345,6 @@
 				97F6CBEC2593EEA30012853B /* Assets.xcassets */,
 			);
 			path = "Easter Eggs";
-			sourceTree = "<group>";
-		};
-		B68A6A77B739ABCD7887B1AC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A0A8A5FBB3D540A2D64F1DA1 /* Pods-FiveHole.debug.xcconfig */,
-				4A04E8F76BA8D2EBD6D35B91 /* Pods-FiveHole.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		ED2E3A5D25953DFB00297584 /* Credits */ = {
@@ -383,7 +370,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97742ED4256EA9280074EF6F /* Build configuration list for PBXNativeTarget "FiveHole" */;
 			buildPhases = (
-				E638719FE4B2AF9261BC5725 /* [CP] Check Pods Manifest.lock */,
 				97742EA6256EA9260074EF6F /* Sources */,
 				97742EA7256EA9260074EF6F /* Frameworks */,
 				97742EA8256EA9260074EF6F /* Resources */,
@@ -393,8 +379,6 @@
 			dependencies = (
 			);
 			name = FiveHole;
-			packageProductDependencies = (
-			);
 			productName = FiveHole;
 			productReference = 97742EAA256EA9260074EF6F /* FiveHole.app */;
 			productType = "com.apple.product-type.application";
@@ -466,8 +450,6 @@
 				Base,
 			);
 			mainGroup = 97742EA1256EA9260074EF6F;
-			packageReferences = (
-			);
 			productRefGroup = 97742EAB256EA9260074EF6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -486,6 +468,7 @@
 			files = (
 				97F6CBF62593F1720012853B /* FireWorks.sks in Resources */,
 				97742EB5256EA9280074EF6F /* Preview Assets.xcassets in Resources */,
+				97525351259E216100C395CA /* GoogleService-Info.plist in Resources */,
 				97F6CBEE2593EEA30012853B /* Assets.xcassets in Resources */,
 				97742EB2256EA9280074EF6F /* Assets.xcassets in Resources */,
 			);
@@ -506,31 +489,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E638719FE4B2AF9261BC5725 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FiveHole-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		97742EA6256EA9260074EF6F /* Sources */ = {
@@ -712,7 +670,6 @@
 		};
 		97742ED5256EA9280074EF6F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0A8A5FBB3D540A2D64F1DA1 /* Pods-FiveHole.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -736,7 +693,6 @@
 		};
 		97742ED6256EA9280074EF6F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A04E8F76BA8D2EBD6D35B91 /* Pods-FiveHole.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
