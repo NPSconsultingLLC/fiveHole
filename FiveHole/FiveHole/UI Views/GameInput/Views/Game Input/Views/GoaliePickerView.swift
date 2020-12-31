@@ -14,7 +14,7 @@ struct GoaliePickerView: View {
     @FetchRequest(
         entity: Goalies.entity(),
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Goalies.fName, ascending: true)
+            NSSortDescriptor(keyPath: \Goalies.id, ascending: true)
         ]
     ) var fetchedGoalies: FetchedResults<Goalies>
     

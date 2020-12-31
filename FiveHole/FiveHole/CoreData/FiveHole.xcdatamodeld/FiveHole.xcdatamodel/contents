@@ -3,6 +3,7 @@
     <entity name="Games" representedClassName="Games" syncable="YES" codeGenerationType="class">
         <attribute name="gameDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="goalsFor" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="isWin" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="opponent" optional="YES" attributeType="String"/>
         <attribute name="saves" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -13,6 +14,7 @@
     </entity>
     <entity name="Goalies" representedClassName="Goalies" syncable="YES" codeGenerationType="class">
         <attribute name="fName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="lName" optional="YES" attributeType="String"/>
         <attribute name="selectedGoalie" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="tName" optional="YES" attributeType="String"/>
@@ -23,8 +25,8 @@
         <relationship name="toGames" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Games" inverseName="toGoalisAgainst" inverseEntity="Games"/>
     </entity>
     <elements>
-        <element name="Games" positionX="-672.0078125" positionY="-433.3125" width="128" height="178"/>
-        <element name="Goalies" positionX="-892.5" positionY="-485.44140625" width="128" height="28"/>
+        <element name="Games" positionX="-672.0078125" positionY="-433.3125" width="128" height="193"/>
+        <element name="Goalies" positionX="-892.5" positionY="-485.44140625" width="128" height="133"/>
         <element name="GoalsAgainst" positionX="-437.94921875" positionY="-235.453125" width="128" height="73"/>
     </elements>
 </model>

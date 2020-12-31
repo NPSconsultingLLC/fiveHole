@@ -49,29 +49,19 @@ struct GameReviewView: View {
                                     .frame(width: 100, height: 100))
             }.font(Font.system(size: 60, design: .default))
             .multilineTextAlignment(.center)
-            
-            
+            Text("Opponent Name")
             TextField("Opponent", text: $opponentName)
                 .frame(height: 44)
-                .textFieldStyle(PlainTextFieldStyle())
-                .padding([.leading, .trailing], 10)
-                .cornerRadius(16)
                 .background(Color.gray)
                 .clipShape(RoundedRectangle(cornerRadius: 4)) // clip corners
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray))
                 .foregroundColor(.white)
-                .padding([.leading, .trailing], 5)
-            
             TextField("Ice time", text: $opponentName)
                 .frame(height: 44)
-                .textFieldStyle(PlainTextFieldStyle())
-                .padding([.leading, .trailing], 10)
-                .cornerRadius(16)
                 .background(Color.gray)
                 .clipShape(RoundedRectangle(cornerRadius: 4)) // clip corners
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray))
                 .foregroundColor(.white)
-                .padding([.leading, .trailing], 5)
             Spacer()
             Button(action: {
                 //Cancel
