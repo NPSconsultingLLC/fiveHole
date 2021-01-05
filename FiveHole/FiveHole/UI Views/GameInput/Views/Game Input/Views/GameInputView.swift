@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 struct GameInputView: View {
     @State var showGoalDetailsView = false
@@ -15,6 +16,7 @@ struct GameInputView: View {
         ZStack {
             NavigationView{
                 ZStack {
+                    adView()
                     LinearGradient(Color.NPSBackgroundGradientStart)
                         .edgesIgnoringSafeArea(.all)
                     VStack{

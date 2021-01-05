@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import GoogleMobileAds
 
 @main
 struct FiveHoleApp: App {
@@ -16,6 +17,7 @@ struct FiveHoleApp: App {
     init(){
         //config app -
         FirebaseApp.configure()
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
 
     var body: some Scene {
