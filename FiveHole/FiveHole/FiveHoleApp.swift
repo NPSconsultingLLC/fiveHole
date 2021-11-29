@@ -16,6 +16,7 @@ struct FiveHoleApp: App {
     
     init(){
         //config app -
+        // Simple Comment
         FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
