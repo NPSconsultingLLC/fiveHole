@@ -11,6 +11,7 @@ import StoreKit
 struct SettingsDetailView: View {
     @StateObject var storeManager = StoreManager()
     @State var detailView = DetailViews.removeAds
+    
     enum DetailViews {
         case removeAds
         case credits

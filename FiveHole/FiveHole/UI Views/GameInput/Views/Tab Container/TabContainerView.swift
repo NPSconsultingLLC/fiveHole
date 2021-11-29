@@ -26,8 +26,8 @@ struct TabContainerView: View {
                     Text("Goalies")
                 }
                 .tag(1)
-            //SettingsView()
-            toDelete_AdView()
+            SettingsView()
+            //toDelete_AdView()
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("Settings")

@@ -70,10 +70,6 @@ class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate, SKPay
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
     
-//    func getProductFromString(productIDString: String) -> SKProduct {
-//        let request = SKProductsRequest(productIdentifiers: Set(productIDString))
-//
-//    }
         
     //URL https://blckbirds.com/post/how-to-use-in-app-purchases-in-swiftui-apps/
 }

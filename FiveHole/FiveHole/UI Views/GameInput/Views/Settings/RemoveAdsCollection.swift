@@ -24,7 +24,7 @@ struct RemoveAdsCollection: View {
                     Text("Remove adds for the low low price of $0.99")
                 }.padding()
                 .onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
-                   // storeManager.purchaseProduct(product: product)
+                    storeManager.purchaseProduct(product: storeManager.myProducts[0])
                 })
                 HStack{
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
