@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import FiveHole
+//@testable import FiveHole
 
 class FiveHoleTests: XCTestCase {
 

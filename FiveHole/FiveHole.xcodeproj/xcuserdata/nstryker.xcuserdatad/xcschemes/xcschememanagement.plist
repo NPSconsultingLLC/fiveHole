@@ -7,7 +7,7 @@
 		<key>FiveHole.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>Promises (Playground) 1.xcscheme</key>
 		<dict>
@@ -50,6 +50,24 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>19</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>97742EA9256EA9260074EF6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97742EBF256EA9280074EF6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97742ECA256EA9280074EF6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
