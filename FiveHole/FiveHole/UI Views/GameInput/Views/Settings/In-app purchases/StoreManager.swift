@@ -32,12 +32,16 @@ class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate, SKPay
         for transaction in transactions {
             switch transaction.transactionState {
             case .purchasing:
+                //processing show spinner possibly
                 transactionState = .purchasing
             case .purchased:
+                //set ads to hide
                 transactionState = .purchased
             case .restored:
+                //set ads to hide
                 transactionState = .restored
             case .failed, .deferred:
+                //alert user to falure
                 transactionState = .failed
             default:
                 queue.finishTransaction(transaction)
