@@ -1,0 +1,957 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9718B6662593FC890072C63B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9718B6652593FC890072C63B /* StoreKit.framework */; };
+		9718B6692593FD3A0072C63B /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9718B6682593FD3A0072C63B /* StoreManager.swift */; };
+		973CBF8525A39C9900C5D5AA /* toDelete_AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CBF8425A39C9900C5D5AA /* toDelete_AdView.swift */; };
+		975252E5259CD6F500C395CA /* GoaliePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975252E4259CD6F500C395CA /* GoaliePickerView.swift */; };
+		97525337259E183D00C395CA /* gameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97525336259E183D00C395CA /* gameCalculator.swift */; };
+		97525351259E216100C395CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97525350259E216000C395CA /* GoogleService-Info.plist */; };
+		976C7D6C2755690700422169 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 976C7D6B2755690700422169 /* FirebaseAnalyticsSwift-Beta */; };
+		976C7D6E2755690700422169 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 976C7D6D2755690700422169 /* FirebaseCrashlytics */; };
+		976C7D702755690700422169 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 976C7D6F2755690700422169 /* FirebasePerformance */; };
+		97742EAE256EA9260074EF6F /* FiveHoleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97742EAD256EA9260074EF6F /* FiveHoleApp.swift */; };
+		97742EB2256EA9280074EF6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97742EB1256EA9280074EF6F /* Assets.xcassets */; };
+		97742EB5256EA9280074EF6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97742EB4256EA9280074EF6F /* Preview Assets.xcassets */; };
+		97742EB7256EA9280074EF6F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97742EB6256EA9280074EF6F /* Persistence.swift */; };
+		97742EBA256EA9280074EF6F /* FiveHole.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97742EB8256EA9280074EF6F /* FiveHole.xcdatamodeld */; };
+		97742EC5256EA9280074EF6F /* FiveHoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97742EC4256EA9280074EF6F /* FiveHoleTests.swift */; };
+		97742ED0256EA9280074EF6F /* FiveHoleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97742ECF256EA9280074EF6F /* FiveHoleUITests.swift */; };
+		97779785256EAAA6004BEBF8 /* GameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97779784256EAAA6004BEBF8 /* GameInputView.swift */; };
+		977797DD256EEF78004BEBF8 /* GoalLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977797DC256EEF78004BEBF8 /* GoalLocationView.swift */; };
+		9778F4AE257D7B4800C276C4 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778F4AD257D7B4800C276C4 /* TabContainerView.swift */; };
+		9778F4BB257D7D9A00C276C4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778F4BA257D7D9A00C276C4 /* SettingsView.swift */; };
+		978074752587ED0F00C572B8 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978074742587ED0F00C572B8 /* UserInputView.swift */; };
+		978722542583D74200390367 /* NeumorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978722532583D74200390367 /* NeumorphicButton.swift */; };
+		978722592583D86700390367 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978722582583D86700390367 /* ColorExtensions.swift */; };
+		97AE92DB257DE976000FF8C2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AE92DA257DE976000FF8C2 /* CloudKit.framework */; };
+		97B86B8F2593E76A004231DC /* SettingsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B86B8E2593E76A004231DC /* SettingsDetailView.swift */; };
+		97BA9EE3258A8AD000D1B675 /* GoalieAddSelectPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA9EE2258A8AD000D1B675 /* GoalieAddSelectPage.swift */; };
+		97C3CB29258AB3D3002CE839 /* AddNewGoalieAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3CB28258AB3D3002CE839 /* AddNewGoalieAlert.swift */; };
+		97F6CBE72593E9760012853B /* RemoveAdsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F6CBE62593E9760012853B /* RemoveAdsCollection.swift */; };
+		97F6CBEE2593EEA30012853B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F6CBEC2593EEA30012853B /* Assets.xcassets */; };
+		97F6CBF52593F1720012853B /* FireworksParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F6CBF32593F1720012853B /* FireworksParticleView.swift */; };
+		97F6CBF62593F1720012853B /* FireWorks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97F6CBF42593F1720012853B /* FireWorks.sks */; };
+		ED2E3A51259534E500297584 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A50259534E500297584 /* CreditsView.swift */; };
+		ED2E3A6025953E2200297584 /* emailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A5F25953E2200297584 /* emailHelper.swift */; };
+		ED2E3A74259559A700297584 /* GameReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A73259559A700297584 /* GameReviewView.swift */; };
+		F54E6DCD5403067A1EFB8B35 /* Pods_FiveHole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5ECFF0B69032B52E8C14AA /* Pods_FiveHole.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97742EC1256EA9280074EF6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97742EA2256EA9260074EF6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97742EA9256EA9260074EF6F;
+			remoteInfo = FiveHole;
+		};
+		97742ECC256EA9280074EF6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97742EA2256EA9260074EF6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97742EA9256EA9260074EF6F;
+			remoteInfo = FiveHole;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A5ECFF0B69032B52E8C14AA /* Pods_FiveHole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiveHole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		400AF8D5B991431BDDA948B5 /* Pods-FiveHole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveHole.release.xcconfig"; path = "Target Support Files/Pods-FiveHole/Pods-FiveHole.release.xcconfig"; sourceTree = "<group>"; };
+		9718B6652593FC890072C63B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9718B6682593FD3A0072C63B /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		973CBF8425A39C9900C5D5AA /* toDelete_AdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDelete_AdView.swift; sourceTree = "<group>"; };
+		9748C337257DECEA005D3EE2 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
+		975252E4259CD6F500C395CA /* GoaliePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoaliePickerView.swift; sourceTree = "<group>"; };
+		97525336259E183D00C395CA /* gameCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameCalculator.swift; sourceTree = "<group>"; };
+		97525350259E216000C395CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		97742EAA256EA9260074EF6F /* FiveHole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiveHole.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97742EAD256EA9260074EF6F /* FiveHoleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveHoleApp.swift; sourceTree = "<group>"; };
+		97742EB1256EA9280074EF6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97742EB4256EA9280074EF6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		97742EB6256EA9280074EF6F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		97742EB9256EA9280074EF6F /* FiveHole.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FiveHole.xcdatamodel; sourceTree = "<group>"; };
+		97742EBB256EA9280074EF6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97742EC0256EA9280074EF6F /* FiveHoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiveHoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97742EC4256EA9280074EF6F /* FiveHoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveHoleTests.swift; sourceTree = "<group>"; };
+		97742EC6256EA9280074EF6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97742ECB256EA9280074EF6F /* FiveHoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiveHoleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97742ECF256EA9280074EF6F /* FiveHoleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveHoleUITests.swift; sourceTree = "<group>"; };
+		97742ED1256EA9280074EF6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97779784256EAAA6004BEBF8 /* GameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInputView.swift; sourceTree = "<group>"; };
+		977797DC256EEF78004BEBF8 /* GoalLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalLocationView.swift; sourceTree = "<group>"; };
+		9778F4AD257D7B4800C276C4 /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
+		9778F4BA257D7D9A00C276C4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		978074742587ED0F00C572B8 /* UserInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
+		978722532583D74200390367 /* NeumorphicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicButton.swift; sourceTree = "<group>"; };
+		978722582583D86700390367 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		97AE92D5257DE939000FF8C2 /* FiveHole.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FiveHole.entitlements; sourceTree = "<group>"; };
+		97AE92DA257DE976000FF8C2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		97B86B8E2593E76A004231DC /* SettingsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailView.swift; sourceTree = "<group>"; };
+		97BA9EE2258A8AD000D1B675 /* GoalieAddSelectPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalieAddSelectPage.swift; sourceTree = "<group>"; };
+		97C3CB28258AB3D3002CE839 /* AddNewGoalieAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGoalieAlert.swift; sourceTree = "<group>"; };
+		97F6CBE62593E9760012853B /* RemoveAdsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAdsCollection.swift; sourceTree = "<group>"; };
+		97F6CBEC2593EEA30012853B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97F6CBF32593F1720012853B /* FireworksParticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireworksParticleView.swift; sourceTree = "<group>"; };
+		97F6CBF42593F1720012853B /* FireWorks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireWorks.sks; sourceTree = "<group>"; };
+		ED2E3A50259534E500297584 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		ED2E3A5F25953E2200297584 /* emailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailHelper.swift; sourceTree = "<group>"; };
+		ED2E3A73259559A700297584 /* GameReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewView.swift; sourceTree = "<group>"; };
+		EFB794ED2FD370A8D7D6EC52 /* Pods-FiveHole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveHole.debug.xcconfig"; path = "Target Support Files/Pods-FiveHole/Pods-FiveHole.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97742EA7256EA9260074EF6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9718B6662593FC890072C63B /* StoreKit.framework in Frameworks */,
+				97AE92DB257DE976000FF8C2 /* CloudKit.framework in Frameworks */,
+				976C7D702755690700422169 /* FirebasePerformance in Frameworks */,
+				976C7D6E2755690700422169 /* FirebaseCrashlytics in Frameworks */,
+				976C7D6C2755690700422169 /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				F54E6DCD5403067A1EFB8B35 /* Pods_FiveHole.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97742EBD256EA9280074EF6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97742EC8256EA9280074EF6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9718B6672593FD230072C63B /* In-app purchases */ = {
+			isa = PBXGroup;
+			children = (
+				9718B6682593FD3A0072C63B /* StoreManager.swift */,
+			);
+			path = "In-app purchases";
+			sourceTree = "<group>";
+		};
+		97525343259E1D8000C395CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				978074742587ED0F00C572B8 /* UserInputView.swift */,
+				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
+				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
+				975252E4259CD6F500C395CA /* GoaliePickerView.swift */,
+				973CBF8425A39C9900C5D5AA /* toDelete_AdView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97525344259E1D9200C395CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97525336259E183D00C395CA /* gameCalculator.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		97742EA1256EA9260074EF6F = {
+			isa = PBXGroup;
+			children = (
+				97742EAC256EA9260074EF6F /* FiveHole */,
+				97742EC3256EA9280074EF6F /* FiveHoleTests */,
+				97742ECE256EA9280074EF6F /* FiveHoleUITests */,
+				97742EAB256EA9260074EF6F /* Products */,
+				97AE92D9257DE976000FF8C2 /* Frameworks */,
+				F7FAAF4D98900E95D7F3ECB9 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		97742EAB256EA9260074EF6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97742EAA256EA9260074EF6F /* FiveHole.app */,
+				97742EC0256EA9280074EF6F /* FiveHoleTests.xctest */,
+				97742ECB256EA9280074EF6F /* FiveHoleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97742EAC256EA9260074EF6F /* FiveHole */ = {
+			isa = PBXGroup;
+			children = (
+				97AE92D5257DE939000FF8C2 /* FiveHole.entitlements */,
+				97779783256EAA60004BEBF8 /* CoreData */,
+				97779782256EAA4B004BEBF8 /* UI Views */,
+				97742EAD256EA9260074EF6F /* FiveHoleApp.swift */,
+				97742EB1256EA9280074EF6F /* Assets.xcassets */,
+				97525350259E216000C395CA /* GoogleService-Info.plist */,
+				97742EBB256EA9280074EF6F /* Info.plist */,
+				97742EB3256EA9280074EF6F /* Preview Content */,
+			);
+			path = FiveHole;
+			sourceTree = "<group>";
+		};
+		97742EB3256EA9280074EF6F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				97742EB4256EA9280074EF6F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97742EC3256EA9280074EF6F /* FiveHoleTests */ = {
+			isa = PBXGroup;
+			children = (
+				97742EC4256EA9280074EF6F /* FiveHoleTests.swift */,
+				97742EC6256EA9280074EF6F /* Info.plist */,
+			);
+			path = FiveHoleTests;
+			sourceTree = "<group>";
+		};
+		97742ECE256EA9280074EF6F /* FiveHoleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				97742ECF256EA9280074EF6F /* FiveHoleUITests.swift */,
+				97742ED1256EA9280074EF6F /* Info.plist */,
+			);
+			path = FiveHoleUITests;
+			sourceTree = "<group>";
+		};
+		97779782256EAA4B004BEBF8 /* UI Views */ = {
+			isa = PBXGroup;
+			children = (
+				97779789256EB3BF004BEBF8 /* GameInput */,
+			);
+			path = "UI Views";
+			sourceTree = "<group>";
+		};
+		97779783256EAA60004BEBF8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				97742EB6256EA9280074EF6F /* Persistence.swift */,
+				97742EB8256EA9280074EF6F /* FiveHole.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		97779789256EB3BF004BEBF8 /* GameInput */ = {
+			isa = PBXGroup;
+			children = (
+				978722652583E7FC00390367 /* Buttons */,
+				9780743D258412A000C572B8 /* Extensions */,
+				977797E9256EF8F9004BEBF8 /* Views */,
+			);
+			path = GameInput;
+			sourceTree = "<group>";
+		};
+		977797E9256EF8F9004BEBF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9778F4B9257D7D8E00C276C4 /* Settings */,
+				9778F4B5257D7BCA00C276C4 /* Tab Container */,
+				97AE92BC257DBB6D000FF8C2 /* Add Goalie */,
+				9778F4A3257D791900C276C4 /* Game Review */,
+				97ABDFB6257D5B2A008686C3 /* Game Input */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9778F4A3257D791900C276C4 /* Game Review */ = {
+			isa = PBXGroup;
+			children = (
+				ED2E3A73259559A700297584 /* GameReviewView.swift */,
+			);
+			path = "Game Review";
+			sourceTree = "<group>";
+		};
+		9778F4B5257D7BCA00C276C4 /* Tab Container */ = {
+			isa = PBXGroup;
+			children = (
+				9778F4AD257D7B4800C276C4 /* TabContainerView.swift */,
+			);
+			path = "Tab Container";
+			sourceTree = "<group>";
+		};
+		9778F4B9257D7D8E00C276C4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				ED2E3A5E25953E0500297584 /* Contact Support */,
+				ED2E3A5D25953DFB00297584 /* Credits */,
+				9718B6672593FD230072C63B /* In-app purchases */,
+				97F6CBF22593F1720012853B /* Easter Eggs */,
+				9778F4BA257D7D9A00C276C4 /* SettingsView.swift */,
+				97B86B8E2593E76A004231DC /* SettingsDetailView.swift */,
+				97F6CBE62593E9760012853B /* RemoveAdsCollection.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9780743D258412A000C572B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				978722582583D86700390367 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		978722652583E7FC00390367 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				978722532583D74200390367 /* NeumorphicButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		97ABDFB6257D5B2A008686C3 /* Game Input */ = {
+			isa = PBXGroup;
+			children = (
+				97525344259E1D9200C395CA /* Controllers */,
+				97525343259E1D8000C395CA /* Views */,
+			);
+			path = "Game Input";
+			sourceTree = "<group>";
+		};
+		97AE92BC257DBB6D000FF8C2 /* Add Goalie */ = {
+			isa = PBXGroup;
+			children = (
+				97BA9EE2258A8AD000D1B675 /* GoalieAddSelectPage.swift */,
+				97C3CB28258AB3D3002CE839 /* AddNewGoalieAlert.swift */,
+			);
+			path = "Add Goalie";
+			sourceTree = "<group>";
+		};
+		97AE92D9257DE976000FF8C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9718B6652593FC890072C63B /* StoreKit.framework */,
+				9748C337257DECEA005D3EE2 /* GoogleMobileAds.xcframework */,
+				97AE92DA257DE976000FF8C2 /* CloudKit.framework */,
+				1A5ECFF0B69032B52E8C14AA /* Pods_FiveHole.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97F6CBF22593F1720012853B /* Easter Eggs */ = {
+			isa = PBXGroup;
+			children = (
+				97F6CBF32593F1720012853B /* FireworksParticleView.swift */,
+				97F6CBF42593F1720012853B /* FireWorks.sks */,
+				97F6CBEC2593EEA30012853B /* Assets.xcassets */,
+			);
+			path = "Easter Eggs";
+			sourceTree = "<group>";
+		};
+		ED2E3A5D25953DFB00297584 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				ED2E3A50259534E500297584 /* CreditsView.swift */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		ED2E3A5E25953E0500297584 /* Contact Support */ = {
+			isa = PBXGroup;
+			children = (
+				ED2E3A5F25953E2200297584 /* emailHelper.swift */,
+			);
+			path = "Contact Support";
+			sourceTree = "<group>";
+		};
+		F7FAAF4D98900E95D7F3ECB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFB794ED2FD370A8D7D6EC52 /* Pods-FiveHole.debug.xcconfig */,
+				400AF8D5B991431BDDA948B5 /* Pods-FiveHole.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97742EA9256EA9260074EF6F /* FiveHole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97742ED4256EA9280074EF6F /* Build configuration list for PBXNativeTarget "FiveHole" */;
+			buildPhases = (
+				A3E9B37961DBB7747EF35C8E /* [CP] Check Pods Manifest.lock */,
+				97742EA6256EA9260074EF6F /* Sources */,
+				97742EA7256EA9260074EF6F /* Frameworks */,
+				97742EA8256EA9260074EF6F /* Resources */,
+				9DBCDCB7FC0FF258D88059E3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FiveHole;
+			packageProductDependencies = (
+				976C7D6B2755690700422169 /* FirebaseAnalyticsSwift-Beta */,
+				976C7D6D2755690700422169 /* FirebaseCrashlytics */,
+				976C7D6F2755690700422169 /* FirebasePerformance */,
+			);
+			productName = FiveHole;
+			productReference = 97742EAA256EA9260074EF6F /* FiveHole.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97742EBF256EA9280074EF6F /* FiveHoleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97742ED7256EA9280074EF6F /* Build configuration list for PBXNativeTarget "FiveHoleTests" */;
+			buildPhases = (
+				97742EBC256EA9280074EF6F /* Sources */,
+				97742EBD256EA9280074EF6F /* Frameworks */,
+				97742EBE256EA9280074EF6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97742EC2256EA9280074EF6F /* PBXTargetDependency */,
+			);
+			name = FiveHoleTests;
+			productName = FiveHoleTests;
+			productReference = 97742EC0256EA9280074EF6F /* FiveHoleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		97742ECA256EA9280074EF6F /* FiveHoleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97742EDA256EA9280074EF6F /* Build configuration list for PBXNativeTarget "FiveHoleUITests" */;
+			buildPhases = (
+				97742EC7256EA9280074EF6F /* Sources */,
+				97742EC8256EA9280074EF6F /* Frameworks */,
+				97742EC9256EA9280074EF6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97742ECD256EA9280074EF6F /* PBXTargetDependency */,
+			);
+			name = FiveHoleUITests;
+			productName = FiveHoleUITests;
+			productReference = 97742ECB256EA9280074EF6F /* FiveHoleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97742EA2256EA9260074EF6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					97742EA9256EA9260074EF6F = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					97742EBF256EA9280074EF6F = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 97742EA9256EA9260074EF6F;
+					};
+					97742ECA256EA9280074EF6F = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 97742EA9256EA9260074EF6F;
+					};
+				};
+			};
+			buildConfigurationList = 97742EA5256EA9260074EF6F /* Build configuration list for PBXProject "FiveHole" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97742EA1256EA9260074EF6F;
+			packageReferences = (
+				976C7D6A2755690700422169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 97742EAB256EA9260074EF6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97742EA9256EA9260074EF6F /* FiveHole */,
+				97742EBF256EA9280074EF6F /* FiveHoleTests */,
+				97742ECA256EA9280074EF6F /* FiveHoleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97742EA8256EA9260074EF6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97F6CBF62593F1720012853B /* FireWorks.sks in Resources */,
+				97742EB5256EA9280074EF6F /* Preview Assets.xcassets in Resources */,
+				97525351259E216100C395CA /* GoogleService-Info.plist in Resources */,
+				97F6CBEE2593EEA30012853B /* Assets.xcassets in Resources */,
+				97742EB2256EA9280074EF6F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97742EBE256EA9280074EF6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97742EC9256EA9280074EF6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DBCDCB7FC0FF258D88059E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FiveHole/Pods-FiveHole-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FiveHole/Pods-FiveHole-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FiveHole/Pods-FiveHole-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3E9B37961DBB7747EF35C8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FiveHole-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97742EA6256EA9260074EF6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				977797DD256EEF78004BEBF8 /* GoalLocationView.swift in Sources */,
+				97B86B8F2593E76A004231DC /* SettingsDetailView.swift in Sources */,
+				978074752587ED0F00C572B8 /* UserInputView.swift in Sources */,
+				975252E5259CD6F500C395CA /* GoaliePickerView.swift in Sources */,
+				978722542583D74200390367 /* NeumorphicButton.swift in Sources */,
+				97525337259E183D00C395CA /* gameCalculator.swift in Sources */,
+				ED2E3A6025953E2200297584 /* emailHelper.swift in Sources */,
+				97742EB7256EA9280074EF6F /* Persistence.swift in Sources */,
+				97779785256EAAA6004BEBF8 /* GameInputView.swift in Sources */,
+				97F6CBE72593E9760012853B /* RemoveAdsCollection.swift in Sources */,
+				97C3CB29258AB3D3002CE839 /* AddNewGoalieAlert.swift in Sources */,
+				ED2E3A51259534E500297584 /* CreditsView.swift in Sources */,
+				9778F4AE257D7B4800C276C4 /* TabContainerView.swift in Sources */,
+				97742EAE256EA9260074EF6F /* FiveHoleApp.swift in Sources */,
+				97BA9EE3258A8AD000D1B675 /* GoalieAddSelectPage.swift in Sources */,
+				978722592583D86700390367 /* ColorExtensions.swift in Sources */,
+				97F6CBF52593F1720012853B /* FireworksParticleView.swift in Sources */,
+				97742EBA256EA9280074EF6F /* FiveHole.xcdatamodeld in Sources */,
+				9718B6692593FD3A0072C63B /* StoreManager.swift in Sources */,
+				ED2E3A74259559A700297584 /* GameReviewView.swift in Sources */,
+				9778F4BB257D7D9A00C276C4 /* SettingsView.swift in Sources */,
+				973CBF8525A39C9900C5D5AA /* toDelete_AdView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97742EBC256EA9280074EF6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97742EC5256EA9280074EF6F /* FiveHoleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97742EC7256EA9280074EF6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97742ED0256EA9280074EF6F /* FiveHoleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97742EC2256EA9280074EF6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97742EA9256EA9260074EF6F /* FiveHole */;
+			targetProxy = 97742EC1256EA9280074EF6F /* PBXContainerItemProxy */;
+		};
+		97742ECD256EA9280074EF6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97742EA9256EA9260074EF6F /* FiveHole */;
+			targetProxy = 97742ECC256EA9280074EF6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		97742ED2256EA9280074EF6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		97742ED3256EA9280074EF6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97742ED5256EA9280074EF6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFB794ED2FD370A8D7D6EC52 /* Pods-FiveHole.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FiveHole/FiveHole.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FiveHole/Preview Content\"";
+				DEVELOPMENT_TEAM = B53QXK3N3S;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = arm64;
+				INFOPLIST_FILE = FiveHole/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stryekout.goalieScout2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		97742ED6256EA9280074EF6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 400AF8D5B991431BDDA948B5 /* Pods-FiveHole.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FiveHole/FiveHole.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FiveHole/Preview Content\"";
+				DEVELOPMENT_TEAM = B53QXK3N3S;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = arm64;
+				INFOPLIST_FILE = FiveHole/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stryekout.goalieScout2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		97742ED8256EA9280074EF6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B53QXK3N3S;
+				INFOPLIST_FILE = FiveHoleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.strykeout.FiveHoleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FiveHole.app/FiveHole";
+			};
+			name = Debug;
+		};
+		97742ED9256EA9280074EF6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B53QXK3N3S;
+				INFOPLIST_FILE = FiveHoleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.strykeout.FiveHoleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FiveHole.app/FiveHole";
+			};
+			name = Release;
+		};
+		97742EDB256EA9280074EF6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B53QXK3N3S;
+				INFOPLIST_FILE = FiveHoleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.strykeout.FiveHoleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FiveHole;
+			};
+			name = Debug;
+		};
+		97742EDC256EA9280074EF6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B53QXK3N3S;
+				INFOPLIST_FILE = FiveHoleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.strykeout.FiveHoleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FiveHole;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97742EA5256EA9260074EF6F /* Build configuration list for PBXProject "FiveHole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97742ED2256EA9280074EF6F /* Debug */,
+				97742ED3256EA9280074EF6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97742ED4256EA9280074EF6F /* Build configuration list for PBXNativeTarget "FiveHole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97742ED5256EA9280074EF6F /* Debug */,
+				97742ED6256EA9280074EF6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97742ED7256EA9280074EF6F /* Build configuration list for PBXNativeTarget "FiveHoleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97742ED8256EA9280074EF6F /* Debug */,
+				97742ED9256EA9280074EF6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97742EDA256EA9280074EF6F /* Build configuration list for PBXNativeTarget "FiveHoleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97742EDB256EA9280074EF6F /* Debug */,
+				97742EDC256EA9280074EF6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		976C7D6A2755690700422169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		976C7D6B2755690700422169 /* FirebaseAnalyticsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 976C7D6A2755690700422169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAnalyticsSwift-Beta";
+		};
+		976C7D6D2755690700422169 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 976C7D6A2755690700422169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		976C7D6F2755690700422169 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 976C7D6A2755690700422169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		97742EB8256EA9280074EF6F /* FiveHole.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				97742EB9256EA9280074EF6F /* FiveHole.xcdatamodel */,
+			);
+			currentVersion = 97742EB9256EA9280074EF6F /* FiveHole.xcdatamodel */;
+			path = FiveHole.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 97742EA2256EA9260074EF6F /* Project object */;
+}
