@@ -172,8 +172,8 @@ struct PhotoPicker: UIViewControllerRepresentable {
     }
 }
 
-//struct AddNewGoalieAlert_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddNewGoalieAlert(showingAddNewGoalie: .constant(true))
-//    }
-//}
+struct AddNewGoalieAlert_Previews: PreviewProvider {
+    static var previews: some View {
+        AddNewGoalieAlert(showingAddNewGoalie: .constant(true))
+    }
+}
