@@ -146,20 +146,6 @@
 			path = InAppPurchases;
 			sourceTree = "<group>";
 		};
-		97525343259E1D8000C395CA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				EDADD4B62EFF46D00059050F /* GoalTypes.swift */,
-				EDADD4B22EFF2DE40059050F /* AdBannerView.swift */,
-				978074742587ED0F00C572B8 /* UserInputView.swift */,
-				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
-				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
-				975252E4259CD6F500C395CA /* GoaliePickerView.swift */,
-				EDADD4B42EFF431B0059050F /* GoalieNetVisualization.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		97525344259E1D9200C395CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				97AE92D5257DE939000FF8C2 /* FiveHole.entitlements */,
+				97525344259E1D9200C395CA /* Controllers */,
+				EDADD4B82EFF4AEC0059050F /* Components */,
 				97779783256EAA60004BEBF8 /* CoreData */,
 				97779782256EAA4B004BEBF8 /* Views */,
 				97742EAD256EA9260074EF6F /* FiveHoleApp.swift */,
@@ -233,6 +221,11 @@
 		97779782256EAA4B004BEBF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9778F4A3257D791900C276C4 /* GameReview */,
+				EDADD4BA2EFF4C690059050F /* Goalies */,
+				9778F4B9257D7D8E00C276C4 /* Settings */,
+				EDADD4B92EFF4B290059050F /* Extensions */,
+				9778F4B5257D7BCA00C276C4 /* TabContainer */,
 				97779789256EB3BF004BEBF8 /* GameInput */,
 			);
 			path = Views;
@@ -250,23 +243,14 @@
 		97779789256EB3BF004BEBF8 /* GameInput */ = {
 			isa = PBXGroup;
 			children = (
-				978722652583E7FC00390367 /* Buttons */,
-				9780743D258412A000C572B8 /* Extensions */,
-				977797E9256EF8F9004BEBF8 /* Views */,
+				EDADD4B62EFF46D00059050F /* GoalTypes.swift */,
+				97BA9EE2258A8AD000D1B675 /* GoalieAddSelectPage.swift */,
+				978074742587ED0F00C572B8 /* UserInputView.swift */,
+				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
+				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
+				EDADD4B42EFF431B0059050F /* GoalieNetVisualization.swift */,
 			);
 			path = GameInput;
-			sourceTree = "<group>";
-		};
-		977797E9256EF8F9004BEBF8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9778F4B9257D7D8E00C276C4 /* Settings */,
-				9778F4B5257D7BCA00C276C4 /* TabContainer */,
-				97AE92BC257DBB6D000FF8C2 /* AddGoalie */,
-				9778F4A3257D791900C276C4 /* GameReview */,
-				97ABDFB6257D5B2A008686C3 /* GameInput */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		9778F4A3257D791900C276C4 /* GameReview */ = {
@@ -299,38 +283,12 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		9780743D258412A000C572B8 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				978722582583D86700390367 /* ColorExtensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		978722652583E7FC00390367 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				978722532583D74200390367 /* NeumorphicButton.swift */,
 			);
 			path = Buttons;
-			sourceTree = "<group>";
-		};
-		97ABDFB6257D5B2A008686C3 /* GameInput */ = {
-			isa = PBXGroup;
-			children = (
-				97525344259E1D9200C395CA /* Controllers */,
-				97525343259E1D8000C395CA /* Views */,
-			);
-			path = GameInput;
-			sourceTree = "<group>";
-		};
-		97AE92BC257DBB6D000FF8C2 /* AddGoalie */ = {
-			isa = PBXGroup;
-			children = (
-				97BA9EE2258A8AD000D1B675 /* GoalieAddSelectPage.swift */,
-				97C3CB28258AB3D3002CE839 /* AddNewGoalieAlert.swift */,
-			);
-			path = AddGoalie;
 			sourceTree = "<group>";
 		};
 		97AE92D9257DE976000FF8C2 /* Frameworks */ = {
@@ -367,6 +325,32 @@
 				ED2E3A5F25953E2200297584 /* EmailHelper.swift */,
 			);
 			path = ContactSupport;
+			sourceTree = "<group>";
+		};
+		EDADD4B82EFF4AEC0059050F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EDADD4B22EFF2DE40059050F /* AdBannerView.swift */,
+				978722652583E7FC00390367 /* Buttons */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EDADD4B92EFF4B290059050F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				978722582583D86700390367 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EDADD4BA2EFF4C690059050F /* Goalies */ = {
+			isa = PBXGroup;
+			children = (
+				97C3CB28258AB3D3002CE839 /* AddNewGoalieAlert.swift */,
+				975252E4259CD6F500C395CA /* GoaliePickerView.swift */,
+			);
+			path = Goalies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
