@@ -7,7 +7,7 @@
 
 import Foundation
 
-class gameCalculator {
+class GameCalculator {
     static func calculateSavePercent(savesVar: Double, goalsVar: Double) -> Double {
         var savePercentVar = Double(savesVar/(savesVar + goalsVar))
         //var totalShotsVar = savesVar + goalsVar

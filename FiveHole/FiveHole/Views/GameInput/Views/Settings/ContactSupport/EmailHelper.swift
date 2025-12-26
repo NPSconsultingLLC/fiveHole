@@ -1,5 +1,5 @@
 //
-//  emailHelper.swift
+//  EmailHelper.swift
 //  FiveHole
 //
 //  Created by Nathan Stryker on 12/24/20.
