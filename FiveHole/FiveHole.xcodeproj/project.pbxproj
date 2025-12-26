@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,7 +41,7 @@
 		ED2E3A51259534E500297584 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A50259534E500297584 /* CreditsView.swift */; };
 		ED2E3A6025953E2200297584 /* emailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A5F25953E2200297584 /* emailHelper.swift */; };
 		ED2E3A74259559A700297584 /* GameReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A73259559A700297584 /* GameReviewView.swift */; };
-		F54E6DCD5403067A1EFB8B35 /* Pods_FiveHole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5ECFF0B69032B52E8C14AA /* Pods_FiveHole.framework */; };
+		EDADD4B12EFF200C0059050F /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = EDADD4B02EFF200C0059050F /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A5ECFF0B69032B52E8C14AA /* Pods_FiveHole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiveHole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		400AF8D5B991431BDDA948B5 /* Pods-FiveHole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveHole.release.xcconfig"; path = "Target Support Files/Pods-FiveHole/Pods-FiveHole.release.xcconfig"; sourceTree = "<group>"; };
 		9718B6652593FC890072C63B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9718B6682593FD3A0072C63B /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		973CBF8425A39C9900C5D5AA /* toDelete_AdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDelete_AdView.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 		ED2E3A50259534E500297584 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		ED2E3A5F25953E2200297584 /* emailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailHelper.swift; sourceTree = "<group>"; };
 		ED2E3A73259559A700297584 /* GameReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewView.swift; sourceTree = "<group>"; };
-		EFB794ED2FD370A8D7D6EC52 /* Pods-FiveHole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveHole.debug.xcconfig"; path = "Target Support Files/Pods-FiveHole/Pods-FiveHole.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +108,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDADD4B12EFF200C0059050F /* GoogleMobileAds in Frameworks */,
 				9718B6662593FC890072C63B /* StoreKit.framework in Frameworks */,
 				97AE92DB257DE976000FF8C2 /* CloudKit.framework in Frameworks */,
 				976C7D702755690700422169 /* FirebasePerformance in Frameworks */,
 				976C7D6E2755690700422169 /* FirebaseCrashlytics in Frameworks */,
 				976C7D6C2755690700422169 /* FirebaseAnalyticsSwift-Beta in Frameworks */,
-				F54E6DCD5403067A1EFB8B35 /* Pods_FiveHole.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +170,6 @@
 				97742ECE256EA9280074EF6F /* FiveHoleUITests */,
 				97742EAB256EA9260074EF6F /* Products */,
 				97AE92D9257DE976000FF8C2 /* Frameworks */,
-				F7FAAF4D98900E95D7F3ECB9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -337,7 +333,6 @@
 				9718B6652593FC890072C63B /* StoreKit.framework */,
 				9748C337257DECEA005D3EE2 /* GoogleMobileAds.xcframework */,
 				97AE92DA257DE976000FF8C2 /* CloudKit.framework */,
-				1A5ECFF0B69032B52E8C14AA /* Pods_FiveHole.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -368,15 +363,6 @@
 			path = "Contact Support";
 			sourceTree = "<group>";
 		};
-		F7FAAF4D98900E95D7F3ECB9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EFB794ED2FD370A8D7D6EC52 /* Pods-FiveHole.debug.xcconfig */,
-				400AF8D5B991431BDDA948B5 /* Pods-FiveHole.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -384,11 +370,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97742ED4256EA9280074EF6F /* Build configuration list for PBXNativeTarget "FiveHole" */;
 			buildPhases = (
-				A3E9B37961DBB7747EF35C8E /* [CP] Check Pods Manifest.lock */,
 				97742EA6256EA9260074EF6F /* Sources */,
 				97742EA7256EA9260074EF6F /* Frameworks */,
 				97742EA8256EA9260074EF6F /* Resources */,
-				9DBCDCB7FC0FF258D88059E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +383,7 @@
 				976C7D6B2755690700422169 /* FirebaseAnalyticsSwift-Beta */,
 				976C7D6D2755690700422169 /* FirebaseCrashlytics */,
 				976C7D6F2755690700422169 /* FirebasePerformance */,
+				EDADD4B02EFF200C0059050F /* GoogleMobileAds */,
 			);
 			productName = FiveHole;
 			productReference = 97742EAA256EA9260074EF6F /* FiveHole.app */;
@@ -446,8 +431,9 @@
 		97742EA2256EA9260074EF6F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					97742EA9256EA9260074EF6F = {
 						CreatedOnToolsVersion = 12.1;
@@ -473,6 +459,7 @@
 			mainGroup = 97742EA1256EA9260074EF6F;
 			packageReferences = (
 				976C7D6A2755690700422169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EDADD4AF2EFF200C0059050F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 97742EAB256EA9260074EF6F /* Products */;
 			projectDirPath = "";
@@ -513,48 +500,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9DBCDCB7FC0FF258D88059E3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FiveHole/Pods-FiveHole-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FiveHole/Pods-FiveHole-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FiveHole/Pods-FiveHole-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A3E9B37961DBB7747EF35C8E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FiveHole-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		97742EA6256EA9260074EF6F /* Sources */ = {
@@ -653,8 +598,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B53QXK3N3S;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -674,6 +621,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -714,8 +662,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B53QXK3N3S;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -728,6 +678,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -736,14 +687,12 @@
 		};
 		97742ED5256EA9280074EF6F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFB794ED2FD370A8D7D6EC52 /* Pods-FiveHole.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FiveHole/FiveHole.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiveHole/Preview Content\"";
-				DEVELOPMENT_TEAM = B53QXK3N3S;
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = FiveHole/Info.plist;
@@ -762,14 +711,12 @@
 		};
 		97742ED6256EA9280074EF6F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 400AF8D5B991431BDDA948B5 /* Pods-FiveHole.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FiveHole/FiveHole.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiveHole/Preview Content\"";
-				DEVELOPMENT_TEAM = B53QXK3N3S;
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = FiveHole/Info.plist;
@@ -789,10 +736,8 @@
 		97742ED8256EA9280074EF6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B53QXK3N3S;
 				INFOPLIST_FILE = FiveHoleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -811,10 +756,8 @@
 		97742ED9256EA9280074EF6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B53QXK3N3S;
 				INFOPLIST_FILE = FiveHoleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -833,9 +776,7 @@
 		97742EDB256EA9280074EF6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B53QXK3N3S;
 				INFOPLIST_FILE = FiveHoleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -853,9 +794,7 @@
 		97742EDC256EA9280074EF6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B53QXK3N3S;
 				INFOPLIST_FILE = FiveHoleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -920,6 +859,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		EDADD4AF2EFF200C0059050F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.14.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -937,6 +884,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 976C7D6A2755690700422169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebasePerformance;
+		};
+		EDADD4B02EFF200C0059050F /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDADD4AF2EFF200C0059050F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 

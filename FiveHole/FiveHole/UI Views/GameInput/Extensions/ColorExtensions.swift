@@ -26,7 +26,7 @@ extension Color {
 extension Color {
     init(hex: String) {
         let scanner = Scanner(string: hex)
-        scanner.scanLocation = 0
+        scanner.currentIndex = scanner.string.startIndex
         var rgbValue: UInt64 = 0
         scanner.scanHexInt64(&rgbValue)
 
