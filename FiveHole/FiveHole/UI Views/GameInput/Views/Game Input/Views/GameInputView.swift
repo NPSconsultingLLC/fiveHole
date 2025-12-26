@@ -2,8 +2,7 @@
 //  GameInputView.swift
 //  FiveHole
 //
-//  Created by Stryker, Nathan P on 11/25/20.
-//  Updated for iOS 15+ and Google Mobile Ads SDK 11.x - 12/26/24
+//  Banner positioned ABOVE tab bar (respects safe area)
 //
 
 import SwiftUI
@@ -15,17 +14,12 @@ struct GameInputView: View {
     
     var body: some View {
         ZStack {
-            NavigationView {
+            // Main content with banner - NO edgesIgnoringSafeArea on bottom!
+            VStack(spacing: 0) {
+                // MAIN CONTENT AREA
                 ZStack {
-                    // ✅ Modern ad implementation (Option 1: Using the new AdBannerView)
-                    // Uncomment this line if you've added AdBannerView.swift to your project:
-                     StandardBannerAd()
-                    
-                    // ✅ Or use the fixed adView (Option 2: Keep using toDelete_AdView.swift)
-                    //adView()
-                    
                     LinearGradient(Color.NPSBackgroundGradientStart)
-                        .edgesIgnoringSafeArea(.all)
+                        .edgesIgnoringSafeArea(.top) // Only ignore top safe area
                     
                     VStack {
                         UserInputView(showGoalDetailsView: $showGoalDetailsView)
@@ -43,24 +37,45 @@ struct GameInputView: View {
                                         .stroke(Color.NPSButtonEnd, lineWidth: 2)
                                 )
                         }
+                        
+                        Spacer()
                     }
                     .blur(radius: showGoalDetailsView || showingSaveGameView ? 30 : 0)
                     .padding()
+                    .padding(.bottom, 50) // Add space for banner
                 }
+                
+                // AD BANNER - Sits just above tab bar
+                StandardBannerAd()
+                    .background(Color.black.opacity(0.05))
             }
+            // DON'T ignore safe area at bottom - this pushes banner above tab bar!
             
-            // Goal details overlay
+            // OVERLAYS (Goal details and Save game)
             if showGoalDetailsView {
+                Color.black.opacity(0.3)
+                    .edgesIgnoringSafeArea(.all)
+                    .onTapGesture {
+                        showGoalDetailsView = false
+                    }
+                
                 GoalLocationView(showGoalDetailsView: $showGoalDetailsView)
+                    .transition(.scale)
             }
             
-            // Save game overlay
             if showingSaveGameView {
+                Color.black.opacity(0.3)
+                    .edgesIgnoringSafeArea(.all)
+                    .onTapGesture {
+                        showingSaveGameView = false
+                    }
+                
                 GameReviewView(
                     showingSaveGameView: $showingSaveGameView,
                     userScore: "0",
                     opponentScore: "10"
                 )
+                .transition(.scale)
             }
         }
         .animation(.spring(), value: showGoalDetailsView)
