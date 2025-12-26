@@ -9,21 +9,21 @@ This modernization package updates your FiveHole goalie stats app from iOS 14.0/
 ## 📁 Files Provided
 
 ### Configuration Files
-1. **Podfile** - Updated for iOS 15.0 and Google Mobile Ads SDK 11.x
-2. **Package.resolved** - Updated Firebase dependencies to 11.5.0
-3. **Info.plist** - Fixed privacy descriptions and added ATT permission
+1. **Package.resolved** - Updated Firebase dependencies to 11.5.0
+2. **Info.plist** - Fixed privacy descriptions and added ATT permission
 
 ### Core Application Files
-4. **FiveHoleApp.swift** - Modernized app entry point
-5. **Persistence.swift** - Enhanced Core Data with async/await
-6. **TabContainerView.swift** - Updated with proper SF Symbols icons
+3. **FiveHoleApp.swift** - Modernized app entry point
+4. **Persistence.swift** - Enhanced Core Data with async/await
+5. **TabContainerView.swift** - Updated with proper SF Symbols icons
 
 ### New/Replacement Components
-7. **AdBannerView.swift** - Modern Google Mobile Ads implementation
-8. **StoreManager.swift** - Complete StoreKit 2 rewrite for iOS 15+
+6. **AdBannerView.swift** - Modern Google Mobile Ads implementation (SPM compatible)
+7. **StoreManager.swift** - Complete StoreKit 2 rewrite for iOS 15+
 
 ### Documentation
-9. **MODERNIZATION_GUIDE.md** - Comprehensive 50-page guide
+8. **REMOVE_COCOAPODS_GUIDE.md** - Complete guide to remove CocoaPods
+9. **MODERNIZATION_GUIDE.md** - Comprehensive update guide
 10. **UPDATE_CHECKLIST.md** - Step-by-step checklist
 11. **README.md** - This file
 
@@ -102,14 +102,14 @@ if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScen
 
 ## 🚀 Quick Start
 
-### Option 1: Manual Integration (Recommended)
-Follow the **UPDATE_CHECKLIST.md** step-by-step
+### Option 1: Complete Migration (Recommended)
+1. Follow **REMOVE_COCOAPODS_GUIDE.md** to remove CocoaPods
+2. Then follow **UPDATE_CHECKLIST.md** for the iOS 15+ update
 
-### Option 2: Quick Copy
+### Option 2: Quick File Copy
 ```bash
 # Backup your project first!
-cp Podfile /path/to/FiveHole/
-cp Package.resolved /path/to/FiveHole/FiveHole.xcworkspace/xcshareddata/swiftpm/
+cp Package.resolved /path/to/FiveHole/FiveHole.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
 cp Info.plist /path/to/FiveHole/FiveHole/
 cp FiveHoleApp.swift /path/to/FiveHole/FiveHole/
 cp Persistence.swift /path/to/FiveHole/FiveHole/CoreData/
@@ -117,10 +117,14 @@ cp TabContainerView.swift /path/to/FiveHole/FiveHole/UI\ Views/GameInput/Views/T
 cp AdBannerView.swift /path/to/FiveHole/FiveHole/UI\ Views/GameInput/Views/Game\ Input/Views/
 cp StoreManager.swift /path/to/FiveHole/FiveHole/UI\ Views/GameInput/Views/Settings/In-app\ purchases/
 
-# Update dependencies
+# Remove CocoaPods (see REMOVE_COCOAPODS_GUIDE.md for full instructions)
 cd /path/to/FiveHole
 pod deintegrate
-pod install
+rm -rf Pods/ Podfile Podfile.lock FiveHole.xcworkspace
+
+# Open project file (not workspace!)
+open FiveHole.xcodeproj
+# Then add Google Mobile Ads via SPM in Xcode (see guide)
 ```
 
 ---
