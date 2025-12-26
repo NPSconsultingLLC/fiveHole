@@ -159,10 +159,12 @@ class PersistenceController: ObservableObject {
     /// Fetch games for a specific goalie
     func fetchGames(for goalie: Goalies) async throws -> [Games] {
         let context = container.viewContext
+        let goalieID = goalie.objectID
         
         return try await context.perform {
+            let goalieInContext = context.object(with: goalieID) as! Goalies
             let request = Games.fetchRequest()
-            request.predicate = NSPredicate(format: "toGoalie == %@", goalie)
+            request.predicate = NSPredicate(format: "toGoalie == %@", goalieInContext)
             request.sortDescriptors = [
                 NSSortDescriptor(keyPath: \Games.gameDate, ascending: false)
             ]
@@ -181,9 +183,11 @@ class PersistenceController: ObservableObject {
     /// Async delete
     func deleteAsync(_ object: NSManagedObject) async throws {
         let context = container.viewContext
+        let objectID = object.objectID
         
         await context.perform {
-            context.delete(object)
+            let objectToDelete = context.object(with: objectID)
+            context.delete(objectToDelete)
         }
         try await saveAsync()
     }

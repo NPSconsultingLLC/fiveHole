@@ -215,16 +215,4 @@ enum StoreError: LocalizedError {
     }
 }
 
-// MARK: - Product Extensions
 
-extension Product {
-    /// Formatted price with currency
-    var displayPrice: String {
-        displayPrice
-    }
-    
-    /// Description for UI
-    var description: String {
-        description
-    }
-}
