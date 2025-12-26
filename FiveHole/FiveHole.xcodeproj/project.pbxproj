@@ -138,12 +138,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9718B6672593FD230072C63B /* In-app purchases */ = {
+		9718B6672593FD230072C63B /* InAppPurchases */ = {
 			isa = PBXGroup;
 			children = (
 				9718B6682593FD3A0072C63B /* StoreManager.swift */,
 			);
-			path = "In-app purchases";
+			path = InAppPurchases;
 			sourceTree = "<group>";
 		};
 		97525343259E1D8000C395CA /* Views */ = {
@@ -194,7 +194,7 @@
 			children = (
 				97AE92D5257DE939000FF8C2 /* FiveHole.entitlements */,
 				97779783256EAA60004BEBF8 /* CoreData */,
-				97779782256EAA4B004BEBF8 /* UI Views */,
+				97779782256EAA4B004BEBF8 /* Views */,
 				97742EAD256EA9260074EF6F /* FiveHoleApp.swift */,
 				97742EB1256EA9280074EF6F /* Assets.xcassets */,
 				97525350259E216000C395CA /* GoogleService-Info.plist */,
@@ -230,12 +230,12 @@
 			path = FiveHoleUITests;
 			sourceTree = "<group>";
 		};
-		97779782256EAA4B004BEBF8 /* UI Views */ = {
+		97779782256EAA4B004BEBF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				97779789256EB3BF004BEBF8 /* GameInput */,
 			);
-			path = "UI Views";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		97779783256EAA60004BEBF8 /* CoreData */ = {
@@ -261,37 +261,37 @@
 			isa = PBXGroup;
 			children = (
 				9778F4B9257D7D8E00C276C4 /* Settings */,
-				9778F4B5257D7BCA00C276C4 /* Tab Container */,
-				97AE92BC257DBB6D000FF8C2 /* Add Goalie */,
-				9778F4A3257D791900C276C4 /* Game Review */,
-				97ABDFB6257D5B2A008686C3 /* Game Input */,
+				9778F4B5257D7BCA00C276C4 /* TabContainer */,
+				97AE92BC257DBB6D000FF8C2 /* AddGoalie */,
+				9778F4A3257D791900C276C4 /* GameReview */,
+				97ABDFB6257D5B2A008686C3 /* GameInput */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9778F4A3257D791900C276C4 /* Game Review */ = {
+		9778F4A3257D791900C276C4 /* GameReview */ = {
 			isa = PBXGroup;
 			children = (
 				ED2E3A73259559A700297584 /* GameReviewView.swift */,
 			);
-			path = "Game Review";
+			path = GameReview;
 			sourceTree = "<group>";
 		};
-		9778F4B5257D7BCA00C276C4 /* Tab Container */ = {
+		9778F4B5257D7BCA00C276C4 /* TabContainer */ = {
 			isa = PBXGroup;
 			children = (
 				9778F4AD257D7B4800C276C4 /* TabContainerView.swift */,
 			);
-			path = "Tab Container";
+			path = TabContainer;
 			sourceTree = "<group>";
 		};
 		9778F4B9257D7D8E00C276C4 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				ED2E3A5E25953E0500297584 /* Contact Support */,
+				ED2E3A5E25953E0500297584 /* ContactSupport */,
 				ED2E3A5D25953DFB00297584 /* Credits */,
-				9718B6672593FD230072C63B /* In-app purchases */,
-				97F6CBF22593F1720012853B /* Easter Eggs */,
+				9718B6672593FD230072C63B /* InAppPurchases */,
+				97F6CBF22593F1720012853B /* EasterEggs */,
 				9778F4BA257D7D9A00C276C4 /* SettingsView.swift */,
 				97B86B8E2593E76A004231DC /* SettingsDetailView.swift */,
 				97F6CBE62593E9760012853B /* RemoveAdsCollection.swift */,
@@ -315,22 +315,22 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		97ABDFB6257D5B2A008686C3 /* Game Input */ = {
+		97ABDFB6257D5B2A008686C3 /* GameInput */ = {
 			isa = PBXGroup;
 			children = (
 				97525344259E1D9200C395CA /* Controllers */,
 				97525343259E1D8000C395CA /* Views */,
 			);
-			path = "Game Input";
+			path = GameInput;
 			sourceTree = "<group>";
 		};
-		97AE92BC257DBB6D000FF8C2 /* Add Goalie */ = {
+		97AE92BC257DBB6D000FF8C2 /* AddGoalie */ = {
 			isa = PBXGroup;
 			children = (
 				97BA9EE2258A8AD000D1B675 /* GoalieAddSelectPage.swift */,
 				97C3CB28258AB3D3002CE839 /* AddNewGoalieAlert.swift */,
 			);
-			path = "Add Goalie";
+			path = AddGoalie;
 			sourceTree = "<group>";
 		};
 		97AE92D9257DE976000FF8C2 /* Frameworks */ = {
@@ -343,14 +343,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		97F6CBF22593F1720012853B /* Easter Eggs */ = {
+		97F6CBF22593F1720012853B /* EasterEggs */ = {
 			isa = PBXGroup;
 			children = (
 				97F6CBF32593F1720012853B /* FireworksParticleView.swift */,
 				97F6CBF42593F1720012853B /* FireWorks.sks */,
 				97F6CBEC2593EEA30012853B /* Assets.xcassets */,
 			);
-			path = "Easter Eggs";
+			path = EasterEggs;
 			sourceTree = "<group>";
 		};
 		ED2E3A5D25953DFB00297584 /* Credits */ = {
@@ -361,12 +361,12 @@
 			path = Credits;
 			sourceTree = "<group>";
 		};
-		ED2E3A5E25953E0500297584 /* Contact Support */ = {
+		ED2E3A5E25953E0500297584 /* ContactSupport */ = {
 			isa = PBXGroup;
 			children = (
 				ED2E3A5F25953E2200297584 /* emailHelper.swift */,
 			);
-			path = "Contact Support";
+			path = ContactSupport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
