@@ -41,6 +41,7 @@
 		ED2E3A6025953E2200297584 /* emailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A5F25953E2200297584 /* emailHelper.swift */; };
 		ED2E3A74259559A700297584 /* GameReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E3A73259559A700297584 /* GameReviewView.swift */; };
 		EDADD4B12EFF200C0059050F /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = EDADD4B02EFF200C0059050F /* GoogleMobileAds */; };
+		EDADD4B32EFF2DE40059050F /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADD4B22EFF2DE40059050F /* AdBannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		ED2E3A50259534E500297584 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		ED2E3A5F25953E2200297584 /* emailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailHelper.swift; sourceTree = "<group>"; };
 		ED2E3A73259559A700297584 /* GameReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewView.swift; sourceTree = "<group>"; };
+		EDADD4B22EFF2DE40059050F /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		97525343259E1D8000C395CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EDADD4B22EFF2DE40059050F /* AdBannerView.swift */,
 				978074742587ED0F00C572B8 /* UserInputView.swift */,
 				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
 				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
@@ -516,6 +519,7 @@
 				97C3CB29258AB3D3002CE839 /* AddNewGoalieAlert.swift in Sources */,
 				ED2E3A51259534E500297584 /* CreditsView.swift in Sources */,
 				9778F4AE257D7B4800C276C4 /* TabContainerView.swift in Sources */,
+				EDADD4B32EFF2DE40059050F /* AdBannerView.swift in Sources */,
 				97742EAE256EA9260074EF6F /* FiveHoleApp.swift in Sources */,
 				97BA9EE3258A8AD000D1B675 /* GoalieAddSelectPage.swift in Sources */,
 				978722592583D86700390367 /* ColorExtensions.swift in Sources */,
