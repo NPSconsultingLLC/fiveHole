@@ -55,11 +55,11 @@
 	</dict>
 	
 	<!-- Required Device Capabilities -->
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-	
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>arm64</string>
+    </array>
+    
 	<!-- Supported Interface Orientations - iPhone -->
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
@@ -144,7 +144,7 @@
 		</dict>
 		<dict>
 			<key>SKAdNetworkIdentifier</key>
-			<string>hs6bdukanm.skadnetwork</key>
+			<string>hs6bdukanm.skadnetwork</string>
 		</dict>
 		<dict>
 			<key>SKAdNetworkIdentifier</key>

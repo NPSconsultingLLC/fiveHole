@@ -28,11 +28,13 @@ struct SettingsDetailView: View {
     var body: some View {
         Group {
             if detailView == .removeAds {
-            RemoveAdsCollection(storeManager: storeManager)
-                .onAppear(perform: {
-                    SKPaymentQueue.default().add(storeManager)
-                    storeManager.getProducts(productIDs: productIDs)
-                })
+                RemoveAdsCollection(storeManager: storeManager)
+                    .task {
+                        // Modern SwiftUI async modifier
+                        if storeManager.products.isEmpty {
+                            await storeManager.loadProducts()
+                        }
+                    }
             } else if detailView == .credits {
                 CreditsView()
             }

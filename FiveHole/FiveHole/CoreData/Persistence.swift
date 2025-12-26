@@ -6,9 +6,10 @@
 //  Updated for iOS 15+ on 12/26/24
 //
 
-import CoreData
+@preconcurrency import CoreData
 import Combine
 
+@MainActor
 class PersistenceController: ObservableObject {
     static let shared = PersistenceController()
 
@@ -110,7 +111,7 @@ class PersistenceController: ObservableObject {
             print("Error Info: \(nsError.userInfo)")
             
             // Handle specific errors
-            if nsError.code == NSValidationError {
+            if nsError.code == NSManagedObjectValidationError {
                 print("❌ Validation error - check your data model constraints")
             }
         }
@@ -118,46 +119,54 @@ class PersistenceController: ObservableObject {
     
     /// Async save (iOS 15+) - use for background saves
     func saveAsync() async throws {
-        try await container.viewContext.perform {
-            guard self.container.viewContext.hasChanges else { return }
-            try self.container.viewContext.save()
-            print("✅ Data saved asynchronously")
+        let context = container.viewContext
+        
+        try await context.perform {
+            guard context.hasChanges else { return }
+            try context.save()
         }
+        print("✅ Data saved asynchronously")
     }
     
     // MARK: - Fetch Methods (iOS 15+ async/await)
     
     /// Fetch all goalies asynchronously
     func fetchGoalies() async throws -> [Goalies] {
-        try await container.viewContext.perform {
+        let context = container.viewContext
+        
+        return try await context.perform {
             let request = Goalies.fetchRequest()
             request.sortDescriptors = [
                 NSSortDescriptor(keyPath: \Goalies.fName, ascending: true),
                 NSSortDescriptor(keyPath: \Goalies.lName, ascending: true)
             ]
-            return try self.container.viewContext.fetch(request)
+            return try context.fetch(request)
         }
     }
     
     /// Fetch selected goalie asynchronously
     func fetchSelectedGoalie() async throws -> Goalies? {
-        try await container.viewContext.perform {
+        let context = container.viewContext
+        
+        return try await context.perform {
             let request = Goalies.fetchRequest()
             request.predicate = NSPredicate(format: "selectedGoalie == YES")
             request.fetchLimit = 1
-            return try self.container.viewContext.fetch(request).first
+            return try context.fetch(request).first
         }
     }
     
     /// Fetch games for a specific goalie
     func fetchGames(for goalie: Goalies) async throws -> [Games] {
-        try await container.viewContext.perform {
+        let context = container.viewContext
+        
+        return try await context.perform {
             let request = Games.fetchRequest()
             request.predicate = NSPredicate(format: "toGoalie == %@", goalie)
             request.sortDescriptors = [
                 NSSortDescriptor(keyPath: \Games.gameDate, ascending: false)
             ]
-            return try self.container.viewContext.fetch(request)
+            return try context.fetch(request)
         }
     }
     
@@ -171,8 +180,10 @@ class PersistenceController: ObservableObject {
     
     /// Async delete
     func deleteAsync(_ object: NSManagedObject) async throws {
-        try await container.viewContext.perform {
-            self.container.viewContext.delete(object)
+        let context = container.viewContext
+        
+        await context.perform {
+            context.delete(object)
         }
         try await saveAsync()
     }
@@ -181,18 +192,19 @@ class PersistenceController: ObservableObject {
     
     /// Batch delete all games (useful for testing)
     func deleteAllGames() async throws {
+        let context = container.viewContext
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Games.fetchRequest()
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         batchDeleteRequest.resultType = .resultTypeObjectIDs
         
-        let result = try await container.viewContext.perform {
-            try self.container.viewContext.execute(batchDeleteRequest) as? NSBatchDeleteResult
+        let result = try await context.perform {
+            try context.execute(batchDeleteRequest) as? NSBatchDeleteResult
         }
         
         // Merge changes into context
         if let objectIDArray = result?.result as? [NSManagedObjectID] {
             let changes = [NSDeletedObjectsKey: objectIDArray]
-            NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [container.viewContext])
+            NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [context])
         }
     }
     
