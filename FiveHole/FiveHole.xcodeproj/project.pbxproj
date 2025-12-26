@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9718B6662593FC890072C63B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9718B6652593FC890072C63B /* StoreKit.framework */; };
 		9718B6692593FD3A0072C63B /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9718B6682593FD3A0072C63B /* StoreManager.swift */; };
-		973CBF8525A39C9900C5D5AA /* toDelete_AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CBF8425A39C9900C5D5AA /* toDelete_AdView.swift */; };
 		975252E5259CD6F500C395CA /* GoaliePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975252E4259CD6F500C395CA /* GoaliePickerView.swift */; };
 		97525337259E183D00C395CA /* gameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97525336259E183D00C395CA /* gameCalculator.swift */; };
 		97525351259E216100C395CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97525350259E216000C395CA /* GoogleService-Info.plist */; };
@@ -64,7 +63,6 @@
 /* Begin PBXFileReference section */
 		9718B6652593FC890072C63B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9718B6682593FD3A0072C63B /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
-		973CBF8425A39C9900C5D5AA /* toDelete_AdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDelete_AdView.swift; sourceTree = "<group>"; };
 		9748C337257DECEA005D3EE2 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
 		975252E4259CD6F500C395CA /* GoaliePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoaliePickerView.swift; sourceTree = "<group>"; };
 		97525336259E183D00C395CA /* gameCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameCalculator.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				977797DC256EEF78004BEBF8 /* GoalLocationView.swift */,
 				97779784256EAAA6004BEBF8 /* GameInputView.swift */,
 				975252E4259CD6F500C395CA /* GoaliePickerView.swift */,
-				973CBF8425A39C9900C5D5AA /* toDelete_AdView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -527,7 +524,6 @@
 				9718B6692593FD3A0072C63B /* StoreManager.swift in Sources */,
 				ED2E3A74259559A700297584 /* GameReviewView.swift in Sources */,
 				9778F4BB257D7D9A00C276C4 /* SettingsView.swift in Sources */,
-				973CBF8525A39C9900C5D5AA /* toDelete_AdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

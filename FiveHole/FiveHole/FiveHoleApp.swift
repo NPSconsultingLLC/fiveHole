@@ -3,6 +3,7 @@
 //  FiveHole
 //
 //  Created by Stryker, Nathan P on 11/25/20.
+//  Updated for iOS 15+ on 12/26/24
 //
 
 import SwiftUI
@@ -11,14 +12,16 @@ import GoogleMobileAds
 
 @main
 struct FiveHoleApp: App {
+    @StateObject private var persistenceController = PersistenceController.shared
     
-    let persistenceController = PersistenceController.shared
-    
-    init(){
-        //config app -
-        // Simple Comment
+    init() {
+        // Configure Firebase
         FirebaseApp.configure()
-        MobileAds.shared.start(completionHandler: nil)
+        
+        // Initialize Google Mobile Ads with completion handler
+        MobileAds.shared.start { status in
+            print("✅ Google Mobile Ads SDK initialized")
+        }
     }
 
     var body: some Scene {
@@ -29,8 +32,10 @@ struct FiveHoleApp: App {
     }
 }
 
+// MARK: - Preview Provider
 struct FiveHoleApp_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        TabContainerView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
