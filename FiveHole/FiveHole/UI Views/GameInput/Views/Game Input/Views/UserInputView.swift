@@ -2,17 +2,18 @@
 //  UserInputView.swift
 //  FiveHole
 //
-//  Created by Stryker, Nathan P on 11/25/20.
+//  Updated to track goal locations
 //
 
 import SwiftUI
 
 struct UserInputView: View {
     @Binding var showGoalDetailsView: Bool
+    @Binding var savesVar: Double
+    @Binding var goalsVar: Double
+    @Binding var goalLocations: [GoalLocation]
     
     @State var showGoaliePickerView = false
-    @State var savesVar = 0.0
-    @State var goalsVar = 0.0
     @State var savePercentVar = 100.0
     @State var totalShotsVar = 0.0
     
@@ -149,6 +150,11 @@ struct UserInputView: View {
                                     goalsVar -= 1
                                     savePercentVar = gameCalculator.calculateSavePercent(savesVar: savesVar, goalsVar: goalsVar)
                                     totalShotsVar = gameCalculator.calculateTotalShots(savesVar: savesVar, goalsVar: goalsVar)
+                                    
+                                    // Remove last goal from visualization
+                                    if !goalLocations.isEmpty {
+                                        goalLocations.removeLast()
+                                    }
                                 }
                             })
                 }
@@ -173,6 +179,11 @@ struct UserInputView: View {
 
 struct UserInputView_Previews: PreviewProvider {
     static var previews: some View {
-        UserInputView(showGoalDetailsView: .constant(true))
+        UserInputView(
+            showGoalDetailsView: .constant(false),
+            savesVar: .constant(10),
+            goalsVar: .constant(3),
+            goalLocations: .constant([.topLeft, .bottomMiddle, .middleRight])
+        )
     }
 }
