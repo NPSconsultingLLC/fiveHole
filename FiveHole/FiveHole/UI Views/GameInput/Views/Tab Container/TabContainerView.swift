@@ -3,42 +3,43 @@
 //  FiveHole
 //
 //  Created by Stryker, Nathan P on 12/6/20.
+//  Updated for iOS 15+ on 12/26/24
 //
 
 import SwiftUI
 
 struct TabContainerView: View {
-    @State var selectedTab = 0
-    @State var showGoalDetailsView = false
-    @State var showAddnewGoalie = false
+    @State private var selectedTab = 0
+    
     var body: some View {
-        //TODO: update icons
         TabView(selection: $selectedTab) {
-            GameInputView(showGoalDetailsView: showGoalDetailsView)
+            GameInputView()
                 .tabItem {
-                    Image(systemName: "star")
-                    Text("Game")
+                    Label("Game", systemImage: "sportscourt.fill")
                 }
                 .tag(0)
-            GoalieAddSelectPage(showingAddNewGoalie: showAddnewGoalie)
+            
+            GoalieAddSelectPage(showingAddNewGoalie: false)
                 .tabItem {
-                    Image(systemName: "star.fill")
-                    Text("Goalies")
+                    Label("Goalies", systemImage: "person.3.fill")
                 }
                 .tag(1)
+            
             SettingsView()
-            //toDelete_AdView()
                 .tabItem {
-                    Image(systemName: "star.fill")
-                    Text("Settings")
+                    Label("Settings", systemImage: "gearshape.fill")
                 }
                 .tag(2)
-        }.accentColor(.NPSButtonStart)
+        }
+        .tint(.NPSButtonStart) // iOS 15+ replacement for accentColor
     }
 }
 
+// MARK: - Preview Provider
 struct TabContainerView_Previews: PreviewProvider {
     static var previews: some View {
         TabContainerView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .preferredColorScheme(.dark)
     }
 }
