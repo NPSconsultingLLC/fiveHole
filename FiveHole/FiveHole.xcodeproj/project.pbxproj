@@ -696,7 +696,7 @@
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = FiveHole/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -720,7 +720,7 @@
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = FiveHole/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

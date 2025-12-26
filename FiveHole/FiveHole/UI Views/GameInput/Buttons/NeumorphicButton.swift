@@ -37,7 +37,7 @@ struct ColorfulButtonStyle: ButtonStyle {
             .background(
                 ColorfulBackground(isHighlighted: configuration.isPressed, shape: Circle())
             )
-            .animation(nil)
+            .animation(nil, value: configuration.isPressed)
     }
 }
 
@@ -49,7 +49,7 @@ struct ColorfulSquareButtonStyle: ButtonStyle {
             .background(
                 ColorfulBackground(isHighlighted: configuration.isPressed, shape: Rectangle())
             )
-            .animation(nil)
+            .animation(nil, value: configuration.isPressed)
     }
 }
 

@@ -52,7 +52,9 @@ struct GameInputView: View {
 .hidden()
             }
             
-        }.animation(.spring())
+        }
+        .animation(.spring(), value: showGoalDetailsView)
+        .animation(.spring(), value: showingSaveGameView)
     }
 }
 
